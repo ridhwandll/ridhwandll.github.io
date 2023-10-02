@@ -6,13 +6,13 @@ defaultcontentlanguage = "en"
 
 paginate = 20
 
-disqusShortname = "yourdiscussshortname"
+disqusShortname = ""
 
 [markup.highlight]
 style = "github-dark"
 
 [params]
-  author = "Fahim Fuad"
+  author = "Ridhwan"
   info = "Typical maniac student by day & psycopath programmer by night"
   description = "Rid's site, where he gets a place and posts cringe"
   keywords = "blog,developer,personal"
