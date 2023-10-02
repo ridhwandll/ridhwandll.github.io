@@ -1,0 +1,31 @@
+Logs/
+Electro/assets/SPIRvCache
+ElectroRuntime/Bin
+
+**/bin/
+bin-int/
+build/
+Build/
+cmake-build-debug/
+out/
+
+#Intel VTune
+GPUCache/
+**/VTune Profiler Results/
+debug.log
+
+# Visual Studio files and folder
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.csproj
+**.csproj.user
+**.csproj.filters
+
+# CLion files
+.idea/
+
+#Others
+**.json

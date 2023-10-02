@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on RidLines</title>
+    <link>https://fahimfuad.github.io/posts/</link>
+    <description>Recent content in Posts on RidLines</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Oct 2023 22:28:05 +0600</lastBuildDate><atom:link href="https://fahimfuad.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My first POST!</title>
+      <link>https://fahimfuad.github.io/posts/firstpost/</link>
+      <pubDate>Mon, 02 Oct 2023 22:28:05 +0600</pubDate>
+      
+      <guid>https://fahimfuad.github.io/posts/firstpost/</guid>
+      <description>So you clicked in the link huh? Curious? I got nothing at this moment. Here is a JOKE for you</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RidLines</title>
+    <link>https://fahimfuad.github.io/</link>
+    <description>Recent content on RidLines</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Oct 2023 22:28:05 +0600</lastBuildDate><atom:link href="https://fahimfuad.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My first POST!</title>
+      <link>https://fahimfuad.github.io/posts/firstpost/</link>
+      <pubDate>Mon, 02 Oct 2023 22:28:05 +0600</pubDate>
+      
+      <guid>https://fahimfuad.github.io/posts/firstpost/</guid>
+      <description>So you clicked in the link huh? Curious? I got nothing at this moment. Here is a JOKE for you</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://fahimfuad.github.io/about/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fahimfuad.github.io/about/</guid>
+      <description>It&amp;rsquo;s me, you know me, else you wouldn&amp;rsquo;t be here.
+Nothing to describe actually, you know me. But do I know you?
+So here is a joke to make your vist to this website a fruitful investment of your time &amp;amp; life: Joke</description>
+    </item>
+    
+  </channel>
+</rss>
