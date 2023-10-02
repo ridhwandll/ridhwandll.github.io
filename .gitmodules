@@ -1,0 +1,3 @@
+[submodule "RidSite/themes/hugo-coder"]
+	path = RidSite/themes/hugo-coder
+	url = https://github.com/luizdepra/hugo-coder
