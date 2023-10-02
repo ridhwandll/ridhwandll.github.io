@@ -1,0 +1,102 @@
+baseURL = 'https://fahimfuad.github.io/'
+title = "RidLines"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+
+disqusShortname = "yourdiscussshortname"
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Fahim Fuad"
+  info = "Typical maniac student by day & psycopath programmer by night"
+  description = "Rid's site, where he gets a place and posts cringe"
+  keywords = "blog,developer,personal"
+  #avatarurl = "images/avatar.jpg"
+  gravatar = "fahimfuad.dev@gmail.com"
+  dateFormat = "02 Jan 2006"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2020
+
+  enableTwemoji = true
+
+  colorScheme = "dark"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/fahimfuad/"
+  target = "_blank"
+[[params.social]]
+  name = "Facebook"
+  icon = "fa fa-facebook fa-2x"
+  weight = 2
+  url = "https://www.facebook.com/rdxreductor/"
+  target = "_blank"
+[[params.social]]
+  name = "Discord"
+  icon = "fa fa-discord fa-2x"
+  weight = 3
+  url = "https://discord.com/users/776686994457362443/"
+  target = "_blank"
+[[params.social]]
+  name = "Reddit"
+  icon = "fa fa-reddit fa-2x"
+  weight = 4
+  url = "https://www.reddit.com/user/FahimFuad"
+  target = "_blank"
+[[params.social]]
+  name = "Steam"
+  icon = "fa fa-steam fa-2x"
+  weight = 5
+  url = "https://steamcommunity.com/id/Rid88/"
+  target = "_blank"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 6
+  url = "https://twitter.com/RidDev88"
+  target = "_blank"
+[[params.social]]
+  name = "Spotify"
+  icon = "fa fa-spotify fa-2x"
+  weight = 7
+  url = "https://open.spotify.com/user/1qc5lti5spulomctjjmipuflz"
+  target = "_blank"
+[[params.social]]
+  name = "Twitch"
+  icon = "fa fa-twitch fa-2x"
+  weight = 8
+  url = "https://www.twitch.tv/rid88888"
+  target = "_blank"
+
+# Menu links
+[[menu.main]]
+  name = "TheLines"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
