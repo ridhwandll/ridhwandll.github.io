@@ -9,5 +9,7 @@ Encrypted message for someone which might go live after few months
 [The Message](https://drive.google.com/file/d/14v_Uft6wEcLkXACRYIJpbzgpuwR6c-ni/view?usp=sharing)
 
 Don't click the link, it's not for you.
-Why post it here? I got reasons.
+Why post it here? I got reasons. <br>
 Now Shoo.
+
+[![HitCount](https://hits.dwyl.com/FahimFuad/003.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/003)

@@ -12,3 +12,5 @@ series = []
 
 So you clicked in the link huh? Curious? I got nothing at this moment.
 Here is a [JOKE](https://random-puns.vercel.app/) for you
+
+[![HitCount](https://hits.dwyl.com/FahimFuad/003.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/003)
