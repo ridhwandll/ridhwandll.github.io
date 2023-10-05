@@ -1,7 +1,10 @@
 ﻿+++ 
 date = 2023-10-05T22:11:26+06:00
 title = "MovieReview001 - Uncharted"
-author = "F. Fuad"
+authors = ["Ridhwan"]
+tags = [ "MovieReview" ]
+categories = [ "MovieReview" ]
+series = ["Theme Demo" ]
 +++
 
 ## Uncharted (Adventure/Action): 6.5/10
