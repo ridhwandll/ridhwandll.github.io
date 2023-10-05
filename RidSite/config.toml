@@ -13,9 +13,9 @@ style = "github-dark"
 
 [params]
   author = "Ridhwan"
-  info = "Typical maniac student by day & psycopath programmer by night"
+  info = "Maniac student sharing His thoughts about life in this site"
   description = "Rid's site, where he gets a place and posts cringe"
-  keywords = "blog,developer,personal"
+  keywords = "blog, developer, personal"
   #avatarurl = "images/avatar.jpg"
   gravatar = "fahimfuad.dev@gmail.com"
   dateFormat = "02 Jan 2006"
@@ -93,10 +93,10 @@ style = "github-dark"
 
 # Menu links
 [[menu.main]]
-  name = "TheLines"
+  name = "The Lines"
   weight = 1
   url  = "posts/"
 [[menu.main]]
-  name = "About"
+  name = "About Rid"
   weight = 2
   url = "about/"
