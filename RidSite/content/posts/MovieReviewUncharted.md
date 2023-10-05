@@ -19,8 +19,10 @@ the ending was not upto the mark, I thought of some sorta ending relationship be
 to watch. 😛
 
 Not a complete waste of time, recommended if you have a LOT of time.
-Ok now I ran out of lines to write, don't wanna give any more spoilers<br>
-<hr>
+Ok now I ran out of lines to write, don't wanna give any more spoilers
+
+<br>
+<br>
 
 Thank you for reading this shit, you are AWESOME. 💙
 
