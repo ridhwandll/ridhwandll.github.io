@@ -4,7 +4,6 @@ title = "MovieReview001 - Uncharted"
 authors = ["Ridhwan"]
 tags = [ "MovieReview" ]
 categories = [ "MovieReview" ]
-series = ["Theme Demo" ]
 +++
 
 ## Uncharted (Adventure/Action): 6.5/10
