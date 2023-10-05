@@ -20,9 +20,9 @@ style = "github-dark"
   gravatar = "fahimfuad.dev@gmail.com"
   dateFormat = "02 Jan 2006"
 
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+  faviconSVG = "/static/favicon.svg"
+  favicon_32 = "/static/favicon-32x32.png"
+  favicon_16 = "/static/favicon-16x16.png"
 
   since = 2020
 
