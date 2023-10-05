@@ -17,3 +17,6 @@ Maybe, maybeee~~ this is the start of my Admission Journey - The last run.<br>
 This start is full of denial and vagueness, which I totally didn't expect.<br>
 
 **//F.F.R.**
+
+[![HitCount](https://hits.dwyl.com/FahimFuad/fahimfuad.github.io.svg?style=flat)](http://hits.dwyl.com/FahimFuad/fahimfuad.github.io)
+
