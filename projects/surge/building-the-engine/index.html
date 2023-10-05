@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Building the Engine | Surge</title>
+    <meta name="description" content="How to build the Surge game engine from source: clone, generate the Visual Studio solution on Windows, set up the Android toolchain, and what to expect on iOS and macOS.">
+    <meta name="theme-color" content="#060606">
+    <meta property="og:title" content="Building the Surge engine">
+    <meta property="og:description" content="Clone, generate, build. Windows with ClangCL and the Vulkan SDK, Android with one setup script. No submodules.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ridhwandll.github.io/projects/surge/assets/img/Player-RuntimeToon2.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="../../../assets/img/favicon.png">
+    <link rel="preload" href="../../../assets/fonts/EncodeSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../assets/fonts/EncodeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/site.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HCMYB3Y895"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-HCMYB3Y895');</script>
+</head>
+<body>
+<a class="skip" href="#clone">Skip to content</a>
+
+<header class="nav" id="nav">
+    <nav class="crumb" aria-label="Breadcrumb">
+        <a href="../../../" title="Fahim Fuad">&lt;- ~</a><span class="crumb-mid">/</span><a class="crumb-mid" href="../../">projects</a><span class="crumb-mid">/</span><a class="crumb-mid" href="../">surge</a><span>/</span>
+    </nav>
+    <a class="brand" href="../" aria-label="Surge home">
+        <img src="../assets/img/mark.png" alt="" width="28" height="28">
+        <span>SURGE</span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#clone">Clone</a>
+        <a href="#windows">Windows</a>
+        <a href="#android">Android</a>
+        <a href="#apple">iOS / macOS</a>
+        <a href="#layout">Layout</a>
+    </nav>
+    <a class="btn btn-ghost nav-gh" href="https://github.com/ridhwandll/Surge_Expired" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+</header>
+
+<main>
+<section class="page-head">
+    <div class="wrap">
+        <p class="eyebrow"><span class="dot"></span>Surge &middot; Build guide</p>
+        <h1>Building the engine</h1>
+        <p class="section-lede">No submodules and no package manager. Every dependency is vendored with its own CMake list, so a plain clone is all you need. Pick your platform below.</p>
+        <div class="toc">
+            <a href="#clone">1. Clone</a>
+            <a href="#windows">2. Windows</a>
+            <a href="#android">3. Android</a>
+            <a href="#apple">4. iOS / macOS</a>
+            <a href="#layout">5. Folder structure</a>
+        </div>
+    </div>
+</section>
+
+<!-- CLONE =============================================================================== -->
+<section class="section" id="clone">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Clone the repository</h2>
+            <p class="section-lede">No need for recursive clones, the repository has <b>no git submodules</b>. Vendor code is baked in with a custom <code>CMakeLists.txt</code> for each one.</p>
+        </header>
+        <div class="cmd reveal"><code>git clone https://github.com/ridhwandll/Surge_Expired</code><button data-copy aria-label="Copy">Copy</button></div>
+    </div>
+</section>
+
+<!-- WINDOWS ============================================================================= -->
+<section class="section section-alt" id="windows">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Windows</h2>
+            <p class="section-lede">Surge builds as a static library, and the Editor and Player link against it. The solution is generated as <code>.slnx</code>.</p>
+        </header>
+
+        <ul class="reqs reveal" aria-label="Requirements">
+            <li><span>&#9656;</span> Visual Studio, recent</li>
+            <li><span>&#9656;</span> C++ Clang (ClangCL) toolset</li>
+            <li><span>&#9656;</span> CMake</li>
+            <li><span>&#9656;</span> Vulkan SDK (from the LunarG website)</li>
+        </ul>
+
+        <ol class="steps">
+            <li class="reveal">
+                <h3>Generate the projects</h3>
+                <p>Run the script from the repository root. It generates <code>build/Surge.slnx</code>.</p>
+                <div class="cmd"><code>Scripts\WindowsGenProjects.bat</code><button data-copy aria-label="Copy">Copy</button></div>
+            </li>
+            <li class="reveal">
+                <h3>Build</h3>
+                <p>Build in Visual Studio, or from the command line:</p>
+                <div class="cmd"><code>msbuild build/Surge.slnx -p:Configuration=Release</code><button data-copy aria-label="Copy">Copy</button></div>
+            </li>
+            <li class="reveal">
+                <h3>Set the startup project</h3>
+                <p>Set <b>Editor</b> (not <b>Player</b>) as the startup project. The working directory is <b>always</b> the repository root.</p>
+            </li>
+        </ol>
+
+        <div class="note reveal">
+            <p><b>Build the whole solution in Release mode before running the Editor.</b></p>
+            <p>Shaders are compiled to SPIR-V with shaderc on Windows and cached in <code>Engine/Assets/Shaders/SPIRV/</code>.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ANDROID ============================================================================= -->
+<section class="section" id="android">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Android</h2>
+            <p class="section-lede">On Android Surge builds as a <code>.so</code> (<code>libSurgePlayer.so</code>, via the Gradle project in <code>android/</code>). One script sets up everything you need to export an <code>.apk</code> or <code>.aab</code> from the Editor.</p>
+        </header>
+
+        <ol class="steps">
+            <li class="reveal">
+                <h3>Run the setup script</h3>
+                <p>Accept everything when prompted (press <kbd>Y</kbd>). Android Studio is optional, you can press <kbd>N</kbd> there. That downloads <b>everything</b> you need.</p>
+                <div class="cmd"><code>Scripts\AndroidSetup.bat</code><button data-copy aria-label="Copy">Copy</button></div>
+            </li>
+            <li class="reveal">
+                <h3>Export from the Editor</h3>
+                <p>Open the Editor's <b>Export</b> panel and export an <b>APK</b> or <b>AAB</b>.</p>
+            </li>
+        </ol>
+        <div class="android-specs reveal">
+            <span>arm64-v8a</span><span>NDK 27.3</span><span>minSdk 29</span><span>c++_static</span>
+        </div>
+    </div>
+</section>
+
+<!-- APPLE =============================================================================== -->
+<section class="section section-alt" id="apple">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>iOS / macOS</h2>
+            <p class="section-lede">Planned, but I can't work on it because I don't have any Apple devices. Linux and macOS desktop builds are intentionally unsupported for now. The plan is a native Metal rendering backend on iOS and macOS.</p>
+        </header>
+    </div>
+</section>
+
+<!-- LAYOUT ============================================================================== -->
+<section class="section" id="layout">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Folder structure</h2>
+            <p class="section-lede">Where things live once you have cloned the repository.</p>
+        </header>
+<pre class="tree reveal"><b>Engine/</b>                     Surge static library
+  Source/Surge/             Main Engine source; All Systems + ECS
+  Source/SurgeReflect/      In-house reflection (enum &lt;-&gt; string, registry)
+  Source/SurgeMath/         AABB, Frustum and math helpers
+  Assets/Shaders/           One .glsl per program (+ Include/*.glsli)
+  Vendor/                   Third-party code with custom CMakeLists.txt
+<b>Editor/</b>                     Windows-only editor via Dear ImGui
+<b>Player/</b>                     Runtime executable (Windows + Android entry points)
+<b>android/</b>                    Gradle project, builds libSurgePlayer.so
+<b>Scripts/</b>                    Project generation</pre>
+    </div>
+</section>
+
+<!-- OUTRO =============================================================================== -->
+<section class="outro">
+    <div class="wrap">
+        <p class="outro-quote reveal">Built it? Go break something.</p>
+        <div class="cta center reveal">
+            <a class="btn btn-amber" href="https://github.com/ridhwandll/Surge_Expired" target="_blank" rel="noopener">Get the source</a>
+            <a class="btn btn-ghost" href="../">Back to Surge</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-inner">
+        <img src="../assets/img/ridtech.png" alt="rid TECH" width="72" height="71" loading="lazy">
+        <p>Surge is distributed under the <a href="https://github.com/ridhwandll/Surge_Expired/blob/master/LICENSE" target="_blank" rel="noopener">Surge Engine License</a>. Third-party libraries keep their own licenses.<br>
+        Set in Encode Sans and JetBrains Mono. Part of <a href="../../../">Fahim Fuad's portfolio</a>.</p>
+    </div>
+</footer>
+
+<script type="module" src="../assets/js/building.js"></script>
+</body>
+</html>

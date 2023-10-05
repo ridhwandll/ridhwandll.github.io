@@ -1,0 +1,191 @@
+{
+    "headline": "Graphics & Game Engine Programmer",
+    "summary": "Self-taught engine programmer. I've been writing game engines since 2020; right now that's Surge, a Vulkan engine I built to run well on phones first and scale up on desktop. I'm a Chemical Engineering student at BUET.",
+    "sections": [
+        {
+            "title": "Projects",
+            "items": [
+                {
+                    "title": "Surge Engine",
+                    "org": "Creator",
+                    "period": "2021 - Present // 2022 - 2025 Absent",
+                    "link": "projects/surge/",
+                    "points": [
+                        "Vulkan 1.1 renderer for Windows x64 and Android arm64, with a render graph that works out barriers and skips passes that have nothing to draw.",
+                        "Instancing, cascaded shadows, GTAO, HDR bloom, a GPU-friendly particle system and a retained-mode game UI & shader reflection via SPIR-V Cross",
+                        "Jolt physics, Lua 5.4 scripting with properties reflected on the editor.",
+                        "An ImGui editor (multiple scene views, undo/redo, particle and UI editors) that cooks assets and exports APK/AAB builds.",
+                        "AND A LOT MORE!"
+                    ]
+                },
+                {
+                    "title": "Spike Engine",
+                    "org": "Creator",
+                    "period": "2020 - 2021",
+                    "link": "projects/project.html?id=spike",
+                    "points": [
+                        "C++17 engine with OpenGL and DirectX 11 backends, EnTT ECS, C# scripting through Mono, Box2D physics and an ImGui editor with gizmos.",
+                        "Ran smoothly on 2011-era hardware (Radeon HD 5570). Basically a learning project."
+                    ]
+                },
+                {
+                    "title": "N-Body Gravitational Simulator",
+                    "org": "ChE 208 project, BUET",
+                    "period": "2026",
+                    "link": "projects/project.html?id=nbody",
+                    "points": [
+                        "Vectorized O(N^2) gravity, symplectic Velocity Verlet integrator, impulse-based collisions, live energy monitor and MP4 export in MATLAB App Designer.",
+                        "This was our ChE 208 group project submission"
+                    ]
+                },
+                {
+                    "title": "SurgeReflect",
+                    "org": "Open-source library",
+                    "period": "2021",
+                    "link": "projects/project.html?id=surgereflect",
+                    "points": [
+                        "C++17 reflection library that works without RTTI: classes, members and functions with access modifiers."
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Game Jams",
+            "items": [
+                {
+                    "title": "ShapeSplitter",
+                    "org": "BUET CSE Game Jam",
+                    "period": "2026",
+                    "points": [
+                        "Built in 100 hours.",
+                        "Became 2nd Runners Up!"
+
+                    ]
+                },
+                {
+                    "title": "SilentHeels",
+                    "org": "IUT Game Jam 2026",
+                    "period": "2026",
+                    "points": [
+                        "Built in 7 days."
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Education",
+            "items": [
+                {
+                    "title": "B.Sc. in Chemical Engineering",
+                    "org": "Bangladesh University of Engineering and Technology (BUET)",
+                    "period": "In progress",
+                    "points": []
+                },
+                {
+                    "title": "Higher Secondary Certificate (Science)",
+                    "org": "St. Joseph Higher Secondary School, Dhaka",
+                    "period": "2023",
+                    "points": [
+                        "Dhaka Board scholarship (general grade, full free studentship)."
+                    ]
+                },
+                {
+                    "title": "Senior School Certificate (Science)",
+                    "org": "Ideal School & College, Dhaka",
+                    "period": "2021",
+                    "points": [
+                        "All subject A+ // GPA 5.00"
+                    ]
+                },
+                {
+                    "title": "Junior School Certificate",
+                    "org": "Ideal School & College, Dhaka",
+                    "period": "2018",
+                    "points": [
+                        "All subject A+ // GPA 5.00"
+                    ]
+                },
+                {
+                    "title": "Primary Education Completion Examination",
+                    "org": "Ideal School & College, Dhaka",
+                    "period": "2015",
+                    "points": [
+                        "All subject A+ // GPA 5.00"
+                    ]
+                }
+
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "group": "Languages",
+            "items": [
+                "C++ 20s",
+                "C",
+                "C#",
+                "Lua",
+                "GLSL",                
+                "HLSL",
+                "Python",
+                "MATLAB"
+            ]
+        },
+        {
+            "group": "Graphics",
+            "items": [
+                "Vulkan",
+                "OpenGL",
+                "DirectX 11",
+                "Shaders",
+                "Shader Reflection via SPIR-V",
+                "Render graphs",
+                "In Game UI (HUD)",
+                "2D Batch Renderer",
+                "Cascaded Shadow Maps / GTAO / Bloom / Instanced Rendering"
+            ]
+        },
+        {
+            "group": "Engine tech",
+            "items": [
+                "Jolt Physics",
+                "NVIDIA PhysX",
+                "Box2D",
+                "EnTT",
+                "Dear ImGui",
+                "Lua 5.4",
+                "mono",
+                "sol2",
+                "Basis Universal",
+                "cgltf",
+                "meshoptimizer",
+                "C++ Reflection"
+            ]
+        },
+        {
+            "group": "Tooling",
+            "items": [
+                "CMake",
+                "Premake 5",
+                "Visual Studio",
+                "CLion",
+                "Android NDK + Gradle",
+                "Git"
+            ]
+        },
+        {
+            "group": "Others",
+            "items": [
+                "Premiere Pro",
+                "Adobe Illustratior",
+                "Adobe Photoshop",
+                "Figma"
+            ]
+        }
+    ],
+    "languages": [
+        "Bengali (native)",
+        "English",
+        "German (proud 120 day streak lost on Duolingo)"
+    ]
+}
