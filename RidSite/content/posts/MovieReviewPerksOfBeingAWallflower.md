@@ -26,4 +26,4 @@ The movie is Worth your time, good watch.
 
 Thank you for reading this post, you are PREETY. 💙
 
-[![HitCount](https://hits.dwyl.com/FahimFuad/005x.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/005x)
+[![HitCount](https://hits.dwyl.com/FahimFuad/005y.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/005y)
