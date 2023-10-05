@@ -18,5 +18,5 @@ This start is full of denial and vagueness, which I totally didn't expect.<br>
 
 **//F.F.R.**
 
-[![HitCount](https://hits.dwyl.com/FahimFuad/fahimfuad.github.io.svg?style=flat)](http://hits.dwyl.com/FahimFuad/fahimfuad.github.io)
+[![HitCount](https://hits.dwyl.com/FahimFuad/003.svg?style=flat)](http://hits.dwyl.com/FahimFuad/003)
 
