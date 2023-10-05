@@ -1,7 +1,6 @@
 ﻿+++ 
-draft = true
 date = 2023-10-05T22:11:26+06:00
-title = "Movie Review #001 - Uncharted"
+title = "MovieReview001 - Uncharted"
 author = "F. Fuad"
 +++
 
