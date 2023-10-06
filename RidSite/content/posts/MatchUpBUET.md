@@ -20,15 +20,23 @@ I never thought of relationship as motivation for BUET because it sounds rubbish
 But this, this is something. This is suffering from success. This is something which is possible.<br>
 
 So am I taking this as a motivation?
+<br>
 - Simple answer: NO
+<br>
 Why?
+<br>
 - Because NO
+<br>
 What NO?
+<br>
 - Ok maybe yes? Time will tell... But this is something, something I will remember for a long time.
-
+<br>
 So why I am writing this here?
+<br>
 - Don't know, I just want to capture the feeling I guess. It's my shitposting website afterall, what are you doing here?
+<br>
 
 **//F.F.R.**
-
+<br>
+<br>
 [![HitCount](https://hits.dwyl.com/FahimFuad/007a.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/007a)
