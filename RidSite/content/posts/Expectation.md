@@ -17,7 +17,7 @@ do all that 😭
 <br>
 
 Time passed so fast that I didn't realize that I am a grown up boy now, people are expecting something from me and here I am writing this shit. Maybe I will income a lot when I get into 
-reputed Uni, but for now I really don't care, shouldn't care. The pressure of expection is real bad, really bad. I costed me my dream college and I learnt a good lesson from it. People
+reputed Uni, but for now I really don't care, shouldn't care. The pressure of expection is real bad, really bad. It costed me my dream college and I learnt a good lesson from it. People
 starts panic when there are expectations on them, experienced that. My mother shows outside that she never expects something from me but, hell, I read minds. She wants.
 <br>
 
