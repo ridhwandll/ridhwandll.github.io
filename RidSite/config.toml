@@ -7,6 +7,7 @@ defaultcontentlanguage = "en"
 paginate = 20
 
 disqusShortname = ""
+googleAnalytics = "G-7FT5H63ZTX"
 
 [markup.highlight]
 style = "github-dark"
