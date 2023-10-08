@@ -2,6 +2,8 @@
 date = 2023-10-05T13:36:04+06:00
 title = "Message For Future, For Someone"
 authors = ["Ridhwan"]
+tags = [ "Life" ]
+categories = [ "Life" ]
 +++
 
 Encrypted message for someone which might go live after few months

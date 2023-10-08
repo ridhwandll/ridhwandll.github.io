@@ -2,8 +2,8 @@
 date = 2023-10-05T13:59:45+06:00
 title = "The Last Run"
 authors = ["Ridhwan"]
-tags = [ "Admission" ]
-categories = [ "Admission" ]
+tags = [ "Admission", "Life" ]
+categories = [ "Admission", "Life" ]
 +++
 
 So, I finally completed my HSC, hopefully I will pass a with a good marks with my friends. I always thought that finishing HSC will be a blast and enjoyable, but everything feels so vague.<br>
