@@ -1,16 +1,6 @@
 <head>
-{{ template "_internal/google_analytics.html" . }}
-{{ template "_internal/google_analytics_async.html" . }}
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FT5H63ZTX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7FT5H63ZTX');
-</script>
+  {{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
 </head>
 
 <nav class="navigation">
