@@ -14,3 +14,5 @@ deserve a chance to study in prestigious institutions? According to our country,
 
 [Author](https://www.facebook.com/alvie31213)
 
+
+[![HitCount](https://hits.dwyl.com/FahimFuad/012x.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/012x)
