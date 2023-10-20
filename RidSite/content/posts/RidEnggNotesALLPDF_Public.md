@@ -7,13 +7,14 @@ tags = [ "Admission" ]
 categories = [ "Admission", "Paper" ]
 +++
 
-Hey little brain & little IQ(probably negative IQ) entity,
+Hey little brain & little IQ(probably negative IQ) entity
 <br>
-Here I will list all the Notes of my Engineering Entrance Preparation:
-Links will be updated chapterwise. Why I am making all this public? Well there are two reasons, one is I want to keep an online PDF in case I lose my orginal copy, and second one is
-"If you love something, set it free". Oh shit কবি হয়ে গেলাম। Anyways, here are the notes, enjoy!
 
-(I will upload the links to the PDF gradually)
+Here I will list all the Notes of my Engineering Entrance Preparation Links will be updated chapterwise. Why I am making all this public? Well there are two reasons, one is I want to keep an online PDF in case I lose my orginal copy, and second one is
+"If you love something, set it free". Oh shit কবি হয়ে গেলাম। Anyways, here are the notes, enjoy!
+<br>
+
+(I will upload the links to the PDF gradually as I create them)
 
  # Physics:
 
@@ -73,4 +74,4 @@ Links will be updated chapterwise. Why I am making all this public? Well there a
  - Statics(💀):
  - Dynamics(💀):
 
-[![HitCount](https://hits.dwyl.com/FahimFuad/010x.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/010x)
+[![HitCount](https://hits.dwyl.com/FahimFuad/069.svg?style=flat-square&show=unique)](http://hits.dwyl.com/FahimFuad/069)
