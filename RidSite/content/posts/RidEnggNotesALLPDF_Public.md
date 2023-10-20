@@ -19,7 +19,8 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
  # Physics 1st Paper
 
  - Vector: [NOTE](https://drive.google.com/file/d/15n2rECBBXbugomvcEqkNtQo5Rxx6m_va/view?usp=share_link)
- - Newtonian Mechanics:
+ - Newtonian Mechanics(Linear): [NOTE](https://drive.google.com/file/d/19eZ77TSGnnPZtFPxUeqyYU8OcilIauGe/view?usp=share_link)
+ - Newtonian Mechanics(Angular):
  - Work, Power & Energy:
  - Gravity & Gravitation:
  - Structural Properties of Matter:
