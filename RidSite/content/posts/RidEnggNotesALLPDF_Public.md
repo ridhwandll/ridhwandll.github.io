@@ -16,9 +16,7 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
 
 (I will upload the links to the PDF gradually as I create them)
 
- # Physics:
-
- ## 1st Paper
+ # Physics 1st Paper
 
  - Vector: [NOTE](https://drive.google.com/file/d/15n2rECBBXbugomvcEqkNtQo5Rxx6m_va/view?usp=share_link)
  - Newtonian Mechanics:
@@ -28,7 +26,7 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
  - Periodic Motion:
  - Ideal Gas:
 
- ## 2nd Paper
+ # Physics 2nd Paper
 
  - Thermodynamics:
  - Static Electricity:
@@ -38,25 +36,21 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
  - Modern Physics:
  - Semiconductor & Electronics:
 
- # Chemistry:
-
- ## 1st Paper
+ # Chemistry 1st Paper
 
  - Qualitative Chemistry:
  - Periodic Properties of Elements and Chemical Bond
  - Chemical Changes(Kp Kc):
  - Vinegar:
 
- ## 2nd Paper
+ # Chemistry 2nd Paper
 
  - Environmental Chemistry:
  - ORGANIC CHEMISTRY:
  - Stoichiometric Chemistry:
  - Electro Chemistry:
 
- # Higher Mathematics:
-
- ## 1st Paper
+ # Higher Mathematics 1st Paper
 
  - Matrix & Determinant:
  - Straight Lines: [NOTE](https://drive.google.com/file/d/1XmmWFyagkYGXjbHJGwobQIOZsMvrWoFY/view?usp=share_link)
@@ -65,7 +59,7 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
  - Differentiation:
  - Integration:
 
- ## 2nd Paper
+ # Higher Mathematics 2nd Paper
 
  - Complex Numbers:
  - Polynomial & Polynomial Equation:
