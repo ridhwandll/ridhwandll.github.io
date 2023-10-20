@@ -85,12 +85,6 @@ style = "github-dark"
   weight = 7
   url = "https://open.spotify.com/user/1qc5lti5spulomctjjmipuflz"
   target = "_blank"
-[[params.social]]
-  name = "Twitch"
-  icon = "fa fa-twitch fa-2x"
-  weight = 8
-  url = "https://www.twitch.tv/rid88888"
-  target = "_blank"
 
 # Menu links
 [[menu.main]]
