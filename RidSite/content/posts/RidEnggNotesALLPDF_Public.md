@@ -20,7 +20,7 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
 
  ## 1st Paper
 
- - Vector: [Note](https://drive.google.com/file/d/15n2rECBBXbugomvcEqkNtQo5Rxx6m_va/view?usp=share_link)
+ - Vector: [NOTE](https://drive.google.com/file/d/15n2rECBBXbugomvcEqkNtQo5Rxx6m_va/view?usp=share_link)
  - Newtonian Mechanics:
  - Work, Power & Energy:
  - Gravity & Gravitation:
@@ -59,7 +59,7 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
  ## 1st Paper
 
  - Matrix & Determinant:
- - Straight Lines:
+ - Straight Lines: [NOTE](https://drive.google.com/file/d/1XmmWFyagkYGXjbHJGwobQIOZsMvrWoFY/view?usp=share_link)
  - Circle:
  - Trigonometry:
  - Differentiation:
