@@ -1,6 +1,6 @@
 ﻿+++ 
 date = 2023-10-20T23:06:03+06:00
-title = "All my EngineeringEntrance notes PDF"
+title = "My Engineering Entrance Notes"
 description = "ACS+Rid Notes"
 authors = [ "Ridhwan" ]
 tags = [ "Admission" ]
