@@ -20,7 +20,7 @@ Here I will list all the Notes of my Engineering Entrance Preparation. Links wil
 
  - Vector: [NOTE](https://drive.google.com/file/d/15n2rECBBXbugomvcEqkNtQo5Rxx6m_va/view?usp=share_link)
  - Newtonian Mechanics(Linear): [NOTE](https://drive.google.com/file/d/19eZ77TSGnnPZtFPxUeqyYU8OcilIauGe/view?usp=share_link)
- - Newtonian Mechanics(Angular):
+ - Newtonian Mechanics(Angular): [NOTE](https://drive.google.com/file/d/1OUA1HgQrbvTkogAn1ZAYS9PgG93Ig_9q/view?usp=share_link)
  - Work, Power & Energy:
  - Gravity & Gravitation:
  - Structural Properties of Matter:
