@@ -1,4 +1,5 @@
 ﻿+++ 
+draft = "true"
 date = 2023-10-20T23:06:03+06:00
 title = "My Engineering Entrance Notes"
 description = "ACS+Rid Notes"

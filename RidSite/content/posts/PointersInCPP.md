@@ -1,4 +1,5 @@
 ﻿+++ 
+draft = "true"
 date = 2023-10-06T12:20:22+06:00
 title = "Pointers in C/C++"
 authors = [ "Ridhwan" ]
