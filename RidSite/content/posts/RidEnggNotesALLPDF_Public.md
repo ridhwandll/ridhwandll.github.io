@@ -1,5 +1,4 @@
 ﻿+++ 
-draft = "true"
 date = 2023-10-20T23:06:03+06:00
 title = "My Engineering Entrance Notes"
 description = "ACS+Rid Notes"
@@ -7,15 +6,6 @@ authors = [ "Ridhwan" ]
 tags = [ "Admission" ]
 categories = [ "Admission", "Paper" ]
 +++
-
-Hey little brain & little IQ(probably negative IQ) entity
-<br>
-
-Here I will list all the Notes of my Engineering Entrance Preparation. Links will be updated chapterwise. Why I am making all these public? Well there are two reasons, one is I want to keep an online PDF in case I lose my orginal copy, and second one is
-"If you love something, set it free". Oh shit কবি হয়ে গেলাম। Anyways, here are the notes, enjoy!
-<br>
-
-(I will upload the links to the PDF gradually as I create them)
 
  # Physics 1st Paper
 
