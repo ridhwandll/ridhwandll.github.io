@@ -1,5 +1,4 @@
 +++ 
-draft = "true"
 date = 2023-10-05T13:36:04+06:00
 title = "Message For Future, For Someone"
 authors = ["Ridhwan"]
