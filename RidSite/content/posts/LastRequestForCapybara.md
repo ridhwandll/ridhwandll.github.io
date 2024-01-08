@@ -8,7 +8,7 @@ categories = [ "Hidden" ]
 
 Ok, I gave our situation another 'day' worth thought. Let me recall how the butterfly effect hit us. Writing it here as discord has 3000 word limit xD
 
-So, our conversations started on 14 March 2022, via Whatsapp, where my mother commanded me to give you all the questions of the Test Exam of St. Joseph. I gave you all the question and our conversation started. **That was all strictly platonic**, I never thought of you like this, not even in my sub-concious mind.
+So, our conversations started via Whatsapp, where my mother commanded me to give you all the questions of the Test Exam of St. Joseph. I gave you all the question and our conversation started. **That was all strictly platonic**, I never thought of you like this, not even in my sub-concious mind.
 
 One day, in messenger these stuff striked in my brain, I got an emotional strike then and started to think about non-platonic stuff. You didn't know the meaning of eloping either. So none is your fault, seriously. I am not afraid to tell this, because falling for someone & loving someone is never a crime. Then when you cleared stuff out, I was sad, really sad (Before HSC ICT exam maybe). Then after approximately 20 days I got over, really, and finised my HSC exams, practicals etc. I was back in platonic mode.
 
