@@ -2,8 +2,8 @@
 date = 2024-01-09T00:59:46+06:00
 title = "Smile or Scar"
 authors = [ "Ridhwan" ]
-tags = [ "C++ Lines" ]
-categories = [ "Programming" ]
+tags = [ "None" ]
+categories = [ "Hidden" ]
 +++
 
 Ok, I gave our situation another 'day' worth thought. Let me recall how the butterfly effect hit us. Writing it here as discord has 3000 word limit xD
