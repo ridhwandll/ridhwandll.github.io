@@ -1,6 +1,6 @@
 +++ 
 date = 2024-01-09T00:59:46+06:00
-title = "Pointers in C/C++"
+title = "Smile or Scar"
 authors = [ "Ridhwan" ]
 tags = [ "C++ Lines" ]
 categories = [ "Programming" ]
