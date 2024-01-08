@@ -18,11 +18,11 @@ A lot happened to my emotional status since then, then one day you blocked me, I
 
 Do you know what hurts more? Losing you as friend hurts me more than your rejection, believe it or not. You were talking about astrology that day. I must say I was delusional that day on instagram. I never believed in astrology but after doing some research on it, damn I might believe in it. Look at these pictures. I am a pisces, twelfth and final astrological sign in the zodiac which contains all the traits of all other zodiacs. Look at these pictures, these awfully matches with me:
 
-[ImgA](/images/image1.png)
+![ImgA](/images/image1.png)
 
 <br>
 
-[ImgB](/images/image2.png)
+![ImgB](/images/image2.png)
 
 In fact, all the traits of a Pisces strongly matches with me. Ok enough astrology, I still think it as a scam.
 
