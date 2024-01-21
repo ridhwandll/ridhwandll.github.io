@@ -14,4 +14,4 @@ title = "R I D M E M E S"
 
 <br>
 
-![4](/images/memes/teabdmm.png)
+![4](/images/memes/teabdmm.jpg)
