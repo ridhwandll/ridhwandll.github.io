@@ -1,7 +1,7 @@
 +++
 title = "Memes?"
 date = "2024-01-22"
-author = [ "Ridhwan"]
+author = [ "Ridhwan" ]
 +++
 
 Pesonal meme storage, I store meme here. 👶
