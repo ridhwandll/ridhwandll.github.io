@@ -1,4 +1,6 @@
-Pesonal meme storage, I store meme here. 👶
++++
+title = "R I D M E M E S"
++++
 
 ![1](/images/memes/dog1.png)
 
