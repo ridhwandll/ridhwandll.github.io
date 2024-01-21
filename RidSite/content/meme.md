@@ -6,7 +6,7 @@ author = "Ridhwan"
 
 Pesonal meme storage, I store meme here. 👶
 
-![1](/memes/dog1.png)
-![2](/memes/weekend.png)
-![3](/memes/khaown.png)
+![1](/images/memes/dog1.png)
+![2](/images/memes/weekend.png)
+![3](/images/memes/khaown.png)
 
