@@ -98,4 +98,4 @@ style = "github-dark"
 [[menu.main]]
   name = "RidMeme"
   weight = 3
-  url = "meme/"
+  url = "memes/"
