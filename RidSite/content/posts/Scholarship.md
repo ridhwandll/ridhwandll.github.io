@@ -12,7 +12,7 @@ But hey, 048th in general in not bad, 1st from Joseph EV ✌️
 
 <br>
 
-I shouldn't be content with, but I am happy this because I achieved all these 100% by myself, had none to help around me during exams, I was the G there.
+I shouldn't be content with this, but I am happy because I achieved all these 100% by myself, had none to help around me during exams, I was the G there.
 
 <br>
 
