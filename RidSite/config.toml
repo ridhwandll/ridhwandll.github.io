@@ -14,7 +14,7 @@ style = "github-dark"
 
 [params]
   author = "Ridhwan"
-  info = "Professional Dumbass, what else?"
+  info = "Иногда хаос может быть... прекрасным"
   description = "Rid's site, where he gets a place and posts cringe"
   keywords = "blog, developer, personal"
   #avatarurl = "images/avatar.jpg"
@@ -95,3 +95,7 @@ style = "github-dark"
   name = "About Rid"
   weight = 2
   url = "about/"
+[[menu.main]]
+  name = "Meme Storage"
+  weight = 3
+  url = "meme/"
