@@ -8,7 +8,7 @@ Got a dream down today, finally. I lowkey expected talentpool, which started fro
 
 <br>
 
-But hey, 048th in general in not bad, 1st from Joseph EV ✌️
+But hey, 048th in general is not bad, 1st from Joseph EV ✌️
 
 <br>
 
