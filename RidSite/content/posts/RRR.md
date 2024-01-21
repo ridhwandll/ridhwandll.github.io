@@ -28,7 +28,7 @@ Exactly. Another one from my great bangla teacher:
 
 <br>
 
-Can confirm that mine ***was*** love.
+Can confirm that mine *was* love.
 
 <br>
 
