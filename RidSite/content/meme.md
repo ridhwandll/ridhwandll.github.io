@@ -1,8 +1,12 @@
 +++
 title = "Memes?"
-description = "Description of why this place exists and why you are here"
-date = "2023-10-02"
+date = "2024-01-22"
 author = "Ridhwan"
 +++
 
-Pesonal meme storage, I will store meme here. 👶
+Pesonal meme storage, I store meme here. 👶
+
+![1](/memes/dog1.png)
+![2](/memes/weekend.png)
+![3](/memes/khaown.png)
+
