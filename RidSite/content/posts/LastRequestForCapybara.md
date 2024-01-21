@@ -1,9 +1,7 @@
 +++ 
 date = 2024-01-09T00:59:46+06:00
-title = "Mess is mine"
+title = "Misunderstanding"
 authors = [ "Ridhwan" ]
 +++
 
-Mtt ja yarrrr.....
-
-Nothing here, someone misunderstood me and I have to fix that after my Uni selection face to face.
+Nothing here, someone misunderstood me and I will leave it as it is.
