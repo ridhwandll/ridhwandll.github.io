@@ -23,5 +23,3 @@ So here is my life(a joke) to make your vist to this website a fruitful investme
 
 So you are still here? Buy me a burger from Burger Xpress then, ok? That's all I want.
 
-
-[![spotify-github-profile](https://spotify-github-profile.vercel.app/api/view?uid=1qc5lti5spulomctjjmipuflz&cover_image=true&theme=default&show_offline=false&background_color=212121&interchange=false&bar_color=bb51e1&bar_color_cover=true)](https://spotify-github-profile.vercel.app/api/view?uid=1qc5lti5spulomctjjmipuflz&redirect=true)
