@@ -1,6 +1,6 @@
 +++ 
 date = 2024-01-21T23:00:11+06:00
-title = "RidJourney W01: UnIntegration"
+title = "RidJourney Week01: UnIntegration"
 authors = [ "Idiots of the Cave" ]
 +++
 
