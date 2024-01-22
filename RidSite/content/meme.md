@@ -10,6 +10,10 @@ title = "R I D M E M E S"
 
 <br>
 
+![5](/images/memes/90s.jpg)
+
+<br>
+
 ![3](/images/memes/khaown.png)
 
 <br>
