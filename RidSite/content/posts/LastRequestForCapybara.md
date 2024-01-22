@@ -4,6 +4,10 @@ title = "[Placeholder Title]"
 authors = [ "reductor.dll[BOT]" ]
 +++
 
+# *Title:*
+Misunderstanding
+
+
 # *Content:*
 Nothing here, someone misunderstood me and I will leave it as it is.
 
