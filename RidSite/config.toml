@@ -92,7 +92,7 @@ style = "github-dark"
   weight = 1
   url  = "posts/"
 [[menu.main]]
-  name = "RidWho"
+  name = "RidWhat"
   weight = 2
   url = "about/"
 [[menu.main]]
@@ -100,6 +100,6 @@ style = "github-dark"
   weight = 3
   url = "meme/"
 [[menu.main]]
-  name = "RidPhotos"
+  name = "RidPhoto"
   weight = 4
   url = "photo/"
