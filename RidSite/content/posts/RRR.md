@@ -10,7 +10,7 @@ People don't value love, really. They value it when they are in danger, they val
 
 I lov**ed** someone who didn't value my existance? I have no options. I offered frienship to her, she denied that too, I have no problem with that, I lost nothing, she lost someone which she regrets, I can bet on that. That's good. If she can't compromise her ego then dumping her ass is the only option.
 
-Listen well brothers, never run for girls, NEVER. 90% of the girls are just after your looks and money, none sees the inner YOU. Build yourself first, then girls are an added bonus. I mean I got asked out by a girl out of nowhere, you have high chances.
+Listen well brothers, never run for girls, NEVER. 90% of the girls are just after your looks and money, none sees the inner YOU. Build yourself first, then girls are an added bonus. I mean I got asked out by a girl out of nowhere, you have high chances. **The right person will find you and reach you out, don't make it first move, I've got a good lesson**
 
 <br>
 
