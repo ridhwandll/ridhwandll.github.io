@@ -6,6 +6,16 @@ title = "R I D M E M E S"
 
 <br>
 
+![7](/images/memes/sis.jpg)
+
+^ My little sis
+
+<br>
+
+![6](/images/memes/faucet.jpg)
+
+<br>
+
 ![2](/images/memes/weekend.png)
 
 <br>
