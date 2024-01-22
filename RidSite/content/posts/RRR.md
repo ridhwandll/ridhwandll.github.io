@@ -1,10 +1,10 @@
 +++ 
 date = 2024-01-18T22:14:13+06:00
-title = "Someone I ...."
+title = "Rid is Rid of Rid"
 authors = [ "Ridhwan" ]
 +++
 
-People don't value love, really. They value it when they are in danger, they value it when they know that they can't replace me. The days when I will become the richest man on my blood-line are hopefully near, I mean I already started a company which is undercover, I am in dreams of changing this country, sadly in this journey, I leaked some of my emotions to a ruthless person(questionable), who doesn't even value if I die? Seriously?
+People don't value love, really. They value it when they are in danger, they value it when they know that they can't replace me. The days when I will become the richest man on my blood-line are hopefully near, I mean I already started a company which is undercover, I am in dreams of changing this country's **tech industry**, sadly in this journey, I leaked some of my emotions to a ruthless person(questionable), who doesn't even value if I die? Seriously?
 
 <br>
 
