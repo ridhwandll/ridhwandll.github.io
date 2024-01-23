@@ -13,7 +13,7 @@ Bro who is BUP selecting then? Quota idiots? 😂
 
 <br>
 
-I know I shouldn't care about BUP, we don't care for BUP, it was more like a tourist exam.... but it fees sad for some reason even though I didn't prepare for it, getting rejected is tough.
+I know I shouldn't care about BUP, we don't care for BUP, it was more like a tourist exam.... but it feels sad for some reason even though I didn't prepare for it, getting rejected is tough.
 
 
 Waiting for the people to say
