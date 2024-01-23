@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Site Update on RidLines</title>
+    <link>https://fahimfuad.github.io/tags/site-update/</link>
+    <description>Recent content in Site Update on RidLines</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 23 Jan 2024 17:03:47 +0600</lastBuildDate><atom:link href="https://fahimfuad.github.io/tags/site-update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Site Update x01</title>
+      <link>https://fahimfuad.github.io/posts/updatex01/</link>
+      <pubDate>Tue, 23 Jan 2024 17:03:47 +0600</pubDate>
+      
+      <guid>https://fahimfuad.github.io/posts/updatex01/</guid>
+      <description>Making this site after dumping all my socials is getting addictive xD
+UpdatesLink to headingMade a ton of speed improvements Images now loads 2x faster, saved with better compression Hidden Memories section are moved into public RidDiary section. Deleted hidden memories Quality of life updates Fixed broken dark mode light mode switch Made with 💙 by ridhwan.dll</description>
+    </item>
+    
+  </channel>
+</rss>
