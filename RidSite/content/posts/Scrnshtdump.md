@@ -1,7 +1,11 @@
 +++ 
-date = 2024-01-21T23:00:11+06:00
-title = "Screenshot Dump"
-authors = [ "Idiots of the Cave" ]
+date = 2024-01-23T23:00:11+06:00
+title = "Update+BugFix"
+authors = [ "Ridhwans" ]
 +++
 
-I dump memories here, fuck threads, I have to deactivate insta.
+Making this site after dumping all my socials is getting addictive xD
+
+<br>
+
+Made a ton of improvements today, memories are moved into RidDiary section.
