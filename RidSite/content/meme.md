@@ -25,3 +25,6 @@ title = "R I D M E M E S"
 
 
 ![teabdmm.jpg](/images/memes/teabdmm.jpg)
+
+
+![memeshades.jpg](/images/memes/memeshades.jpg)
