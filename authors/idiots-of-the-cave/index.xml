@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Idiots of the Cave on RidLines</title>
+    <title>Idiots of the cave on RidLines</title>
     <link>https://fahimfuad.github.io/authors/idiots-of-the-cave/</link>
-    <description>Recent content in Idiots of the Cave on RidLines</description>
+    <description>Recent content in Idiots of the cave on RidLines</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Jan 2024 23:00:11 +0600</lastBuildDate><atom:link href="https://fahimfuad.github.io/authors/idiots-of-the-cave/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Jan 2024 21:58:33 +0600</lastBuildDate><atom:link href="https://fahimfuad.github.io/authors/idiots-of-the-cave/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Screenshot Dump</title>
-      <link>https://fahimfuad.github.io/posts/scrnshtdump/</link>
-      <pubDate>Sun, 21 Jan 2024 23:00:11 +0600</pubDate>
+      <title>The Pensieve</title>
+      <link>https://fahimfuad.github.io/posts/dump/</link>
+      <pubDate>Wed, 24 Jan 2024 21:58:33 +0600</pubDate>
       
-      <guid>https://fahimfuad.github.io/posts/scrnshtdump/</guid>
-      <description>I dump memories here, fuck threads, I have to deactivate insta.</description>
+      <guid>https://fahimfuad.github.io/posts/dump/</guid>
+      <description>I wish I could replace threads and make this site so customizeable that I could change colors, run music in background, run custom HTML snippets et cetera&amp;hellip;. I can do that but I&amp;rsquo;m too lazy(Actually, no I&amp;rsquo;ve got other things to do) :/
+This is where I dump memories, anything. Acts like The Pensieve of Albus.
+One simply siphons the excess thoughts from one&amp;rsquo;s mind, pours them into the basin, and examines them at one&amp;rsquo;s leisure</description>
     </item>
     
   </channel>

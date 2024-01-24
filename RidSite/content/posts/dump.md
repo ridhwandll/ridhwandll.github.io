@@ -1,0 +1,16 @@
++++ 
+date = 2024-01-24T21:58:33+06:00
+title = "The Pensieve"
+authors = [ "Idiots of the cave" ]
++++
+
+I wish I could replace threads and make this site so customizeable that I could change colors, run music in background, run custom HTML snippets et cetera.... I can do that but I'm too lazy(Actually, no I've got other things to do) :/
+
+<br>
+
+This is where I dump memories, anything. Acts like The Pensieve of Albus. 
+
+<br>
+
+*One simply siphons the excess thoughts from one's mind, pours them into the basin, and examines them at one's leisure*
+
