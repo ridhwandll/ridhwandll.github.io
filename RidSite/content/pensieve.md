@@ -1,8 +1,7 @@
-+++ 
-date = 2024-01-24T21:58:33+06:00
-title = "The Pensieve"
-authors = [ "Ridhwan", "REDUCTOR.DLL[BOT]" ]
 +++
+title = "RidPensieve"
++++
+
 
 I wish I could replace threads and make this site so customizeable that I could change colors, run music in background, run custom HTML snippets et cetera.... I can do that but I'm too lazy(Actually, no I've got other things to do) :/
 
