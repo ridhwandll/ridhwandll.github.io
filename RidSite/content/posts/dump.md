@@ -12,5 +12,5 @@ This is where I dump memories, anything. Acts like The Pensieve of Albus.
 
 <br>
 
-*One simply siphons the excess thoughts from one's mind, pours them into the basin, and examines them at one's leisure*
+*One simply siphons the excess thoughts from one's mind, pours them into the basin, and examines them at one's leisure. It becomes easier to spot patterns and links, you understand, when they are in this form*
 
