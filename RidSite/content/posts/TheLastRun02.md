@@ -26,5 +26,5 @@ I am not a misogynist nor a feminist, but if writing a hate speech towards these
 
 <br>
 
-Anyeays, hopefully reading all these after 2 months will be worth it. Will be managing my leisure by shitposting on my website (RidDiary section), let's see if I can hit 12hours per day.
+Anyways, hopefully reading all these after 2 months will be worth it. Will be managing my leisure by shitposting on my website (RidDiary section), let's see if I can hit 12hours per day.
 
