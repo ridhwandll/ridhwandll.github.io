@@ -20,3 +20,7 @@ This is where I dump memories, anything. Acts like The Pensieve of Albus.
 ![Memory2](/images/mem/Mem1.png)
 
 >A very Tragic Moment, motivation in one hand, brokie on the other. - Ridhwan
+
+![Memory3](/images/mem/Mem3.png)
+
+>Medical এ পায়া গেলে upset - Ridhwan
