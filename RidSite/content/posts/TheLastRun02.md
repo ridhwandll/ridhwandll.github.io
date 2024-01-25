@@ -1,6 +1,6 @@
 +++ 
 date = 2024-01-25T18:29:38+06:00
-title = "The Last Run 02"
+title = "The Last Run 🔽"
 authors = [ "Ridhwan" ]
 tags = [ "Admission" ]
 +++
