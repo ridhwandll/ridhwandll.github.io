@@ -5,11 +5,6 @@ authors = [ "Ridhwan" ]
 tags = [ "Admission" ]
 +++
 
-
-<img src="/images/pic01.png" width="700" height="505">
-
-
-
 A lot happened since the admission started, and I am on the last month. Time for me to go in full exile, for next one month. After next month, the journey will be over, hopefully next EID will be mine. Praying and practicing for now. Maybe I will be posting updates on RidDiary evey week, it's hard to live alone, without socials, but it will be worth it in the end. Hope so.
 
 <br>
@@ -31,4 +26,6 @@ I am not a misogynist nor a feminist, but if writing a hate speech towards these
 <br>
 
 Anyways, hopefully reading all these after 2 months will be worth it. Will be managing my leisure by shitposting on my website (RidDiary section), let's see if I can hit 12hours per day.
+
+![ImgA](/images/pic01.png)
 
