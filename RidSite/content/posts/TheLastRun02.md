@@ -6,7 +6,7 @@ tags = [ "Admission" ]
 +++
 
 
-A lot happpened since the admission started, and I am on the last month. Time for me to go in full exile, for next one month. After next month, the journey will be over, hopefully next EID will be mine. Praying and practicing for now. Maybe I will be posting updates on RidDiary evey week, it's hard to live alone, without socials, but it will be worth it in the end. Hope so.
+A lot happened since the admission started, and I am on the last month. Time for me to go in full exile, for next one month. After next month, the journey will be over, hopefully next EID will be mine. Praying and practicing for now. Maybe I will be posting updates on RidDiary evey week, it's hard to live alone, without socials, but it will be worth it in the end. Hope so.
 
 <br>
 
