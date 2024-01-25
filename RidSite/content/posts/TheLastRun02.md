@@ -10,7 +10,7 @@ A lot happpened since the admission started, and I am on the last month. Time fo
 
 <br>
 
-And yes, Rid failed to kill love. I realized it still exists within me, and that's the reason I can't say something hurtful to her, even in her abscence. But I will never approach ever her again by myself because my self respect comes first, already made a mistake making the first move and by being frank. People start to think that they are the all you have if you give them value, in reality it's not the case. Actually if I give this a second thought, she did a good thing rejecting me as admission time is not the time for this. I realized this on the start of this year.
+And yes, Rid failed to kill love. I realized it still exists within me, and that's the reason I can't say something hurtful to her, even in her abscence. But I will never approach her ever again by myself because my self respect comes first, already made a mistake making the first move and by being frank. People start to think that they are the all you have if you give them value, in reality it's not the case. Actually if I give this a second thought, she did a good thing rejecting me as admission time is not the time for this. I realized this on the start of this year.
 
 <br>
 
