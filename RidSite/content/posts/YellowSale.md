@@ -1,6 +1,6 @@
 +++ 
 date = 2024-01-25T21:43:16+06:00
-title = "Yellow Sale"
+title = "হলুদ বিক্রি"
 authors = [ "Ridhwan" ]
 +++
 
