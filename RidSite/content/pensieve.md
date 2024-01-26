@@ -13,6 +13,10 @@ This is where I dump memories, anything. Acts like The Pensieve of Albus.
 
 *One simply siphons the excess thoughts from one's mind, pours them into the basin, and examines them at one's leisure. It becomes easier to spot patterns and links, you understand, when they are in this form*
 
+![Memory4](/images/mem/Mem4.png)
+
+>Differentiation-Integration(DI) method aka Table method, pretty cool - Ridhwan
+
 ![Memory1](/images/mem/Mem2.png)
 
 >Some people can work upto 18hrs a day, you call them জানোয়ার - Ridhwan
