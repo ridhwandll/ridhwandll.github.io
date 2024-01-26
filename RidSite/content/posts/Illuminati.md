@@ -9,7 +9,7 @@ If you are a muslim, then you should know the Dajjal, the one eyed satanic form 
 
 <br>
 
-Many famous people, Zuck, Elon, Gate, Beyonce, Swift etc. are **thought to be** a part of the Illuminati. It's basically an organization to control the people of the world in it's way, in a dark way. Think of it in this way, you are controlled by the Metaverse, Facebook, Instagram. Eveyday you hit up the socials and spend time on it, you think what is showed to you and you act what is presented to you.
+Many famous people, Zuck, Elon, Gates, Beyonce, Swift etc. are **thought to be** a part of the Illuminati. It's basically an organization to control the people of the world in it's way, in a dark way. Think of it in this way, you are controlled by the Metaverse, Facebook, Instagram. Eveyday you hit up the socials and spend time on it, you think what is showed to you and you act what is presented to you.
 
 >Did you know Zuck, the founder of Meta is a Jew? People protest on these jewish media for Palestine. I agree it spreads awareness but you are manipulated to share these.
 
