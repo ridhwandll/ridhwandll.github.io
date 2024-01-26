@@ -11,3 +11,9 @@ title: "RidDiary 02"
 (প্যাডও আর অন্য নারদ দের কেটে দিসি, ওহাতসাপ্প কল ইস গুড)
 
 ![ImgA](/images/IntegrationByPartsTodo.jpg)
+
+*Hopefully we will retain the smile. //Early hours of 27 January*
+
+<br>
+
+Man it's fun to upload life on your OWN site and **not** on the usual social media!
