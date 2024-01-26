@@ -13,7 +13,7 @@ Many famous people, Zuck, Elon, Gated, Beyonce, Swift etc. are **thought to be**
 
 >Did you know Zuck, the founder of Meta is a Jew? People protest on these jewish media for Palestine. I agree it spreads awareness but you are manipulated to share these.
 
-"One eye" is the symbol of Illuminati aka FreeMasons. Do you know what is printed on the 1 USD note? Yes "The eye", it's a clear eye representing Illuminati, which everyone ignores. Not only 1 USD note, you can see the eye on the "Seal of the United States", not on the front, but on the back(Yes, this seal has 2 sides). The eagle on the seal has 13 arrows(13 is an Illuminati code).
+"One eye" is the symbol of Illuminati aka FreeMasons. Do you know what is printed on the 1 USD note? Yes "The eye", it's a clear eye representing Illuminati, which everyone ignores. Not only 1 USD note, you can see the eye on the "Seal of the United States", not on the front, but on the back(Yes, this seal has 2 sides). The eagle on the seal has 13 arrows(13 is an Illuminati code). Also **Gigi Hadid's evil eye shoe** is another thing.
 
 >Do you know the cartoon "Simpsons"? Do you know that they make predictions about future world in their episodes? Jewish Rabbi's and stuff.
 
@@ -26,7 +26,7 @@ Heckel of sulemani is the thing Jews are after, they think that it is inside Mas
 
 <br>
 
-If I write about this in Facebook, pretty sure that it will be taken down, but hey my site is free from any jewish impact and zero viewers(lol). Why do you think celebritie's ID goes down(ishowspeed for example) if they share support for Palestine? Yes. Illuminati sees everything.
+If I write about this in Facebook, pretty sure that it will be taken down, but hey my site is free from any jewish impact and zero viewers(lol). Why do you think celebrities ID goes down(ishowspeed for example) if they share support for Palestine? Yes. Illuminati sees everything.
 
 
 
