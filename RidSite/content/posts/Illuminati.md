@@ -5,9 +5,6 @@ authors = [ "Ridhwan" ]
 categories = [ "Dark" ]
 +++
 
-
-Okay so what is illuminati and what I know about this, gonna write on this after I end integration, pretty nice thing to waste my time on ;)
-
 If you are a muslim, then you should know the Dajjal, the one eyed satanic form which will come before the doomsday. Just to be clear, I am a practicing muslim and conveying my thoughts and knowledge via this site, this is an unbiased thought on the Illuminati.
 
 <br>
