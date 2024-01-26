@@ -18,7 +18,7 @@ Many famous people, Zuck, Elon, Gated, Beyonce, Swift etc. are **thought to be**
 >Do you know the cartoon "Simpsons"? Do you know that they make predictions about future world in their episodes? Jewish Rabbi's and stuff.
 
 Illuminati is real, very real. They act to get the world ready for Dajjal. Why do you think USA supports Israel and Russia doesn't?
-The whole USA, top to bottom is degraded by Illuminati. Israel will will eventually, Palestine will fall one day, sooner or later. They will destroy the Masjid Al-Aqsa and build the **third temple for Dajjal** in place of it. People makes fun of United Nations that it does nothing. In fact UN is the only reason Israel and the West didn't destroy the Masjid, yet. Palestine is destined to fall one day. (Of course in no way I want palestine to fall, but Quran says it will fall).
+The whole USA, top to bottom is degraded by Illuminati. Israel will win eventually, Palestine will fall one day, sooner or later. They will destroy the Masjid Al-Aqsa and build the **third temple for Dajjal** in place of it. People makes fun of United Nations that it does nothing. In fact UN is the only reason Israel and the West didn't destroy the Masjid, yet. Palestine is destined to fall one day. (Of course in no way I want palestine to fall, but Quran says it will fall).
 
 <br>
 
