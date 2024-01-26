@@ -1,6 +1,6 @@
 +++
-title: "RidDiary 02"
 date: 2024-01-27T02:23:25+06:00
+title: "RidDiary 02"
 authors = [ "Ridhwan" ]
 +++
 
