@@ -16,4 +16,4 @@ title: "RidDiary 02"
 
 <br>
 
-Man it's fun to upload life on your OWN site and **not** on the usual social media! Funny how no one knows about this site, maybe it will be a nice asset to look on if we crack admission.
+Man it's fun to upload life on your OWN site and **not** on the usual social media!
