@@ -18,8 +18,12 @@ This is their [YouTube Channel](https://www.youtube.com/@KingMustaque113)
 
 <br>
 
-Jokes apart, this is a magnificent source of recreaction, I will buy this book no matter what. I wonder how that girl is with that old man, money? Bruh, for money? Most likley that old man suffers from erectile dysfunction, I mean I have seen them a lot long ago they were hidden, but this... they are public now. I just want to know how in the world that lady is with that old man, I want to know the psychology behind this, for money is a cheap answer, that girl looks so happy...\
+I will buy this book no matter what. Jokes apart, this is a magnificent source of recreaction. I wonder how that girl is with that old man, money? Bruh, for money? Most likley that old man suffers from erectile dysfunction, I mean I have seen them a lot long ago they were hidden, but this... they are public now. I just want to know how in the world that lady is with that old man, I want to know the psychology behind this, for money is a cheap answer, that girl looks so happy...\
 I WANT TO KNOW HOW SHE IS SO HAPPY...
+
+<br>
+
+This girl claims that she is beautiful, what the fuck...
 
 ![cake](/images/isc.png)
 
