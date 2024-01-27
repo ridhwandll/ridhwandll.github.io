@@ -23,8 +23,7 @@ I WANT TO KNOW HOW SHE IS SO HAPPY...
 
 <br>
 
-This girl claims that she is beautiful, what the fuck...
-
+This girl claims that she is beautiful... 'ভালবাসার কসম এর কারনে ৮ কেজি ওজন বেড়ে গেসে'... what the fuck?...
 ![cake](/images/isc.png)
 
 <br>
