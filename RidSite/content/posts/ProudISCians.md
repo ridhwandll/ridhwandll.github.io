@@ -18,3 +18,13 @@ Jokes apart, this is a magnificent source of recreaction, I will buy this book n
 I WANT TO KNOW HOW SHE IS SO HAPPY...
 
 ![cake](/images/isc.png)
+
+<br>
+
+Never been a fan of IELC, but "My পীর Anus" is coming at ISC. Intrigued and concerned(slightly) at the same time. If you don't know who "My পীর Anus" is then you should not exist.
+
+![cake2](/images/anasisc.jpg)
+
+
+Funny how I write all these stuff and no one reads, I got nothing to do...\
+Bet all these will be fun to see after entrance.
