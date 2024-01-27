@@ -6,11 +6,15 @@ authors = [ "Ridhwan" ]
 
 Gregorians: Our school provides great education and boasts a prestigious alumni.
 What does your school have?\
-ISCians: Bangladeshi [Jeffrey Epsteins](https://fb.watch/pQyIpcgxhV/) and alumni's are added bonus.
+ISCians: Bangladeshi [Jeffrey Epsteins](https://en.wikipedia.org/wiki/Jeffrey_Epstein) and alumni's are added bonus.
 
 <br>
 
 [See, love doesn't see looks & money, it sees pure admiration.](https://fb.watch/pQyIpcgxhV/)
+
+<br>
+
+This is their [YouTube Channel](https://www.youtube.com/@KingMustaque113)
 
 <br>
 
@@ -28,5 +32,5 @@ My homies are IELC freaks, but I have never been a fan of IELC, but "My পী�
 ![cake2](/images/anasisc.jpg)
 
 
-Funny how I write and make all these stuff and got no one to read, it's only me, I got nothing to do in breaks...\
+Funny how I write and make all these stuff and got no one to read all these, I got nothing to do in breaks...\
 Bet all these will be fun to see after entrance.
