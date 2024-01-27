@@ -28,5 +28,5 @@ My homies are IELC freaks, but I have never been a fan of IELC, but "My পী�
 ![cake2](/images/anasisc.jpg)
 
 
-Funny how I write all these stuff and no one reads, I got nothing to do...\
+Funny how I write and make all these stuff and got no one to read, it's only me, I got nothing to do in breaks...\
 Bet all these will be fun to see after entrance.
