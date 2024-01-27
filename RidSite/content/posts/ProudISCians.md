@@ -21,7 +21,9 @@ I WANT TO KNOW HOW SHE IS SO HAPPY...
 
 <br>
 
-Never been a fan of IELC, but "My পীর Anus" is coming at ISC. Intrigued and concerned(slightly) at the same time. If you don't know who "My পীর Anus" is then you should not exist.
+# IELC:
+
+My homies are IELC freaks, but I have never been a fan of IELC, but "My পীর Anus" is coming at ISC. Intrigued and concerned(slightly) at the same time. If you don't know who "My পীর Anus" is then you should not exist. Homies left IELC panels long ago, I see this club has turned into a complete joke now. Learn something from ISTARC, they bring Apar Bhai, and you all bring shits. 
 
 ![cake2](/images/anasisc.jpg)
 
