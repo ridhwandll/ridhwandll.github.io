@@ -104,6 +104,7 @@ style = "github-dark"
   weight = 4
   url = "diary/"
 [[menu.main]]
-  name = "MessageRid"
+  name = "TextRid"
   weight = 5
   url = "https://ngl.link/ridhwan.dll"
+  target = "_blank"
