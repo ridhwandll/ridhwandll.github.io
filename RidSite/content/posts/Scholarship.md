@@ -1,6 +1,6 @@
 +++ 
 date = 2024-01-21T17:09:10+06:00
-title = "Dream A"
+title = "Scholarship"
 authors = [ "Ridhwan" ]
 +++
 
