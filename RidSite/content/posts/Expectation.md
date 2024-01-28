@@ -1,6 +1,6 @@
 ﻿+++ 
 date = 2023-10-07T11:47:20+06:00
-title = "Expectation Sucks"
+title = "RidExpectationSucks"
 authors = [ "Ridhwan" ]
 tags = [ "Admission", "BUET", "Life" ]
 categories = [ "Admission" ]

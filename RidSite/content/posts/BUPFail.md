@@ -1,6 +1,6 @@
 +++ 
 date = 2024-01-24T01:41:33+06:00
-title = "BUP Fail"
+title = "RidBUPFail"
 authors = [ "Ridhwan" ]
 tags = [ "Admission" ]
 +++

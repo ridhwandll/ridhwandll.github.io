@@ -1,6 +1,6 @@
 +++ 
 date = 2024-01-21T00:10:50+06:00
-title = "BUP Drill"
+title = "RidBUPDrill"
 authors = [ "Ridhwan" ]
 tags = [ "Admission" ]
 +++
