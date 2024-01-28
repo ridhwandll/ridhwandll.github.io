@@ -96,7 +96,7 @@ style = "github-dark"
   weight = 2
   url = "about/"
 [[menu.main]]
-  name = "RidPensieve"
+  name = "RidMem"
   weight = 3
   url = "pensieve/"
 [[menu.main]]
