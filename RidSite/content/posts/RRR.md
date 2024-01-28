@@ -1,16 +1,22 @@
 +++ 
 date = 2024-01-18T22:14:13+06:00
-title = "Rid is Rid of Rid"
+title = "Rid Scar"
 authors = [ "Ridhwan" ]
 +++
 
-People don't value love, really. They value it when they are in danger, they value it when they know that they can't replace me. The days when I will become the richest man on my blood-line are hopefully near, I mean I already started a company which is undercover, I am in dreams of changing this country's **tech industry**, sadly in this journey, I leaked some of my emotions to a ruthless person(questionable), who doesn't even value if I die? Seriously?
+People don't value admiration, really. They value it when they are in danger, they value it when they know that they can't replace you. I am in a journey of changing the tech industry of Bangladesh and sadly in this journey, I leaked some of my emotions to a ruthless person(questionable maybe), who doesn't even value if I die? Seriously? Damn that hurts.
 
 <br>
 
-I lov**ed** someone who didn't value my existance? I have no options. I offered frienship to her, she denied that too, I have no problem with that, I lost nothing, she lost someone which she regrets, I can bet on that. That's good. If she can't compromise her ego then dumping her ass is the only option.
+Listen well brothers, never run for girls, NEVER. 90% of the girls are just after your looks and money, none sees the inner YOU. Build yourself first, then girls are like an added bonus. As they say, don't chase butterflies, make a garden instead.
 
-Listen well brothers, never run for girls, NEVER. 90% of the girls are just after your looks and money, none sees the inner YOU. Build yourself first, then girls are an added bonus. I mean I got asked out by a girl out of nowhere, you have high chances. **The right person will find you and reach you out, don't make it first move, I've got a good lesson**
+<br>
+
+So did I chase her? No, I just expressed how I felt to her, really frankly and I regret being frank. I don't mind the rejection, not at all. But losing a person & with ending on bad terms and misunderstanding pokes me.
+
+<br>
+
+I lov**ed** someone who didn't value my existance? I offered frienship to her, she denied that too, I have no problem with that, I lost nothing, wait, I actually I lost someone whom I admired the existance of. She lost someone which maybe she regrets, bet?. That's good. If she can't compromise her ego then dumping her ass and leaving is the only option. I still don't get why she is acting like that, I mean that's not normal behaviour...
 
 <br>
 
@@ -22,16 +28,13 @@ My miss used to say this:
 
 >If you end up on bad terms with someone that doesn't mean the journey itself was wasteful. The time you spent was good for both which you should cherish.
 
-Exactly. Another one from my great bangla teacher:
-
->কাউকে দেখে যদি তার উপর ঝাপিয়ে পরতে মনে চায় তাহলে সেটা attraction, love না। এর জন্য মনের মিল থাকতে হয়,পারস্পরিক বোঝাপোরা থাকতে হয় যদিও সে হয়তোবা ততটা সুন্দর নয়-
+I showed her my good side only, my dark side still remains intact, everyone has a dark side. Even with my dark side & even after getting hurt a lot by her words, I can't wish her something bad or unluck, It doesn't feel right to me. I want to forge the hate but...
 
 <br>
 
-Can confirm that mine *was* love.
+I remember her without any reason at unexpected times. I have no hopes of fixing this complicated relationship with her as I won't reach her out, if she reaches out then that's awesome, else remains as a scar. The problem is this shit pokes me, for example right now it's poking me. Scar indeed, which I have no way to fix.
 
 <br>
 
-Funnily I showed her my good side only, my dark side still remains intact. So that's good. Infact who knows my dark side? Only one person. Nothing new about that. Time for me to go in exile. Got dreams to chase.
+**//FFR 18/01/2024; 10:21:06PM (Edit: 23/01/2024; 12:23:20AM)**
 
-**//FFR 10:21:06 PM**
