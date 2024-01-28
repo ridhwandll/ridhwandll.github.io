@@ -88,18 +88,22 @@ style = "github-dark"
 
 # Menu links
 [[menu.main]]
-  name = "Lines"
+  name = "RidPosts"
   weight = 1
   url  = "posts/"
 [[menu.main]]
-  name = "What"
+  name = "RidWhat"
   weight = 2
   url = "about/"
 [[menu.main]]
-  name = "Pensieve"
+  name = "RidPensieve"
   weight = 3
   url = "pensieve/"
 [[menu.main]]
-  name = "Diary"
+  name = "RidDiary"
   weight = 4
   url = "diary/"
+[[menu.main]]
+  name = "MessageRid"
+  weight = 5
+  url = "https://ngl.link/ridhwan.dll"
