@@ -3,7 +3,7 @@ date = 2024-01-18T22:14:13+06:00
 title = "RidSCAR"
 authors = [ "Ridhwan" ]
 +++
-*Edit: 23/01/2024; 12:23:20AM*
+*Edit: 29/01/2024; 12:23:20AM*
 
 <br>
 
@@ -19,7 +19,7 @@ So did I chase her? No, I just expressed how I felt to her, really frankly. I do
 
 <br>
 
-For some reason I know that she felt the same and I am right & sure about this, over 100%. But she thinks she can't take the rejection back, so there is nothing I can do. As I said, I mistimes stuff.
+For some reason I know that she felt the same and I am right & sure about this, over 100%. But she thinks she can't take the rejection back, so there is nothing I can do. As I said, I mistimed stuff.
 
 <br>
 
@@ -39,7 +39,7 @@ I showed her my good side only, my dark side still remains intact, everyone has 
 
 <br>
 
-I remember her without any reason at unexpected times. I have no hopes of fixing this complicated relationship with her as I won't reach her out even if we both get into the same Uni, if she reaches out then that's awesome, else this remains as a scar. The problem is this shit pokes me, for example right now it's poking me. Scar indeed, which I have no way to fix.
+I remember her without any reason at unexpected times. I have no hopes of fixing this complicated relationship with her as I won't reach her out even if we both get into the same Uni, if she reaches out then that's awesome, else this remains as a scar. The problem is that this shit pokes me, for example right now it's poking me, that's why I am writing this up. Scar indeed, which I have no way to fix.
 
 <br>
 
