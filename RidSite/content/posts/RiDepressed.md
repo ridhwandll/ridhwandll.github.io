@@ -1,5 +1,4 @@
 +++ 
-draft = "true"
 date = 2024-01-29T22:54:46+06:00
 title = "RiDepressed"
 authors = [ "Ridhwan" ]
@@ -31,3 +30,6 @@ It has been fun developing this site and writing stuff up.
 <br>
 
 **Bye!**
+
+
+![ImgA](/images/flower.jpg)
