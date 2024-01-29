@@ -18,9 +18,9 @@ I still got a ton revision left... will apply "যতক্ষণ সজাগ �
 
 If any admission candidate is reading this(According to my previous "Reader Test", I have zero readers xD), here are some useful stuff for you:
 
-1. "Alarmy" App, will get the shit out of your sleep, works for a dead deep sleeper like me.\
-2. Pomodoro App\
-3. This one is my focus technique, during study breaks stare at walls and do something boring. Your brain will crave hardwork. ;)\
+1. "Alarmy" App, will get the shit out of your sleep, works for a dead deep sleeper like me.
+2. Pomodoro App
+3. This one is my focus technique, during study breaks stare at walls and do something boring. Your brain will crave hardwork. ;)
 4. Don't do ACS English + Physics Recap classes, they are dogshit
 
 <br>
