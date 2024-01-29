@@ -15,7 +15,7 @@ Listen well brothers, never run for girls, NEVER. 90% of the girls are just afte
 
 <br>
 
-So did I chase her? No, I just expressed how I felt to her, really frankly. I don't mind the rejection, not at all. But losing a person & ending on bad terms and misunderstanding pokes me, she thinks me as possesive and "MrRight" kinda person. Understandable because I try to speak straight to the point, without any sugarcoating, with everyone. Also she thinks that she is the only girl I have talked too xD. That happens when you have really less face to face interaction.
+So did I chase her? No, I just expressed how I felt to her, really frankly. I don't mind the rejection, not at all. But losing a person & ending on bad terms and misunderstanding pokes me, she thinks me as possesive and "MrRight" kinda person. Understandable because I try to speak straight to the point, without any sugarcoating, with everyone. Also she thinks that she is the only girl I have talked to xD. That happens when you have really less face to face interaction.
 
 <br>
 
@@ -23,7 +23,7 @@ For some reason I know that she felt the same and I am right & sure about this, 
 
 <br>
 
-I lov**ed** someone who didn't value my existance? I offered frienship to her, she denied that too, I have no problem with that, I lost nothing, wait, I actually I lost someone whom I admired the existance of. She lost someone which maybe she regrets, bet? That's good. If she can't compromise her ego then dumping her ass and leaving is the only option. I still don't get why she is acting like that, I mean that's not normal behaviour...
+I lov**ed** someone who didn't value my existance? I offered frienship to her, she denied that too, I have no problem with that, I lost nothing, wait, I actually lost someone whom I admired the existance of. She lost someone which maybe she regrets, bet? That's good. If she can't compromise her ego then dumping her ass and leaving is the only option. I still don't get why she is acting like that, I mean that's not normal behaviour...
 
 <br>
 
