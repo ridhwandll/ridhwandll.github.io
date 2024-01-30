@@ -8,7 +8,7 @@ I dump memories here, jokes, scars, anything I find unique
 
 Mah | Kimg
 --- | ---
-![](/images/talent1.png) | ![](/images/talent2.png)
+![](/images/mem/talent1.png) | ![](/images/mem/talent2.png)
 
 > King 💙
 
