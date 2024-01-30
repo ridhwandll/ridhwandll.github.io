@@ -4,7 +4,13 @@ title = "RidMem"
 
 I dump memories here, jokes, scars, anything I find unique
 
-**MemCount: 04**
+**MemCount: 05**
+
+Mah | Kimg
+--- | ---
+![](/images/talent1.png) | ![](/images/talent2.png)
+
+> King 💙
 
 ![Memory4](/images/mem/Mem4.png)
 
