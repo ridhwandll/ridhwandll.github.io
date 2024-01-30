@@ -106,5 +106,5 @@ style = "github-dark"
 [[menu.main]]
   name = "WhatsAppRid"
   weight = 5
-  url = "wa.link/6l0r29"
+  url = "https://wa.link/6l0r29"
   target = "_blank"
