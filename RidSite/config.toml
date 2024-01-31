@@ -108,3 +108,7 @@ style = "github-dark"
   weight = 5
   url = "https://wa.link/6l0r29"
   target = "_blank"
+[[menu.main]]
+  name = "MEME"
+  weight = 6
+  url = "meme/"
