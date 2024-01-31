@@ -4,7 +4,11 @@ title = "RidMem"
 
 I dump memories here, jokes, scars, anything I find unique
 
-**MemCount: 05**
+**MemCount: 06**
+
+![](/images/mem/reproduction.png)
+
+>কত বড় নুব হইলে এডই পরে?
 
 | Mah | Kimg |
 | --- | --- |
