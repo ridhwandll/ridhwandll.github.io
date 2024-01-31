@@ -6,9 +6,9 @@ I dump memories here, jokes, scars, anything I find unique
 
 **MemCount: 05**
 
-Mah | Kimg
---- | ---
-![](/images/mem/talent1.png) | ![](/images/mem/talent2.png)
+| Mah | Kimg |
+| --- | --- |
+| ![](/images/mem/talent1.png) | ![](/images/mem/talent2.png) |
 
 > King 💙
 
