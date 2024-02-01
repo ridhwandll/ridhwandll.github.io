@@ -88,7 +88,7 @@ style = "github-dark"
 
 # Menu links
 [[menu.main]]
-  name = "RidLines"
+  name = "RidTweets"
   weight = 1
   url = "line/"
 [[menu.main]]
