@@ -2,7 +2,7 @@
 title = "RidLines(Threads but it's RID)"
 +++
 
-
+> Rid sad because he could not save the atlantis, the other side was way too non-cooperative
 
 >Everything is fun and games until you ask me to share a burger with you
 
