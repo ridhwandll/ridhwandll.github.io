@@ -4,11 +4,7 @@ title = "RidMem"
 
 I dump memories here, jokes, scars, anything I find unique
 
-**MemCount: 07**
-
-![](/images/mem/Mem6.png)
-
->This deserves a place here, old memories struck again after scholarship result. She's is a kid, main thing is that she lacks maturity(and brain)
+**MemCount: 06**
 
 ![](/images/mem/reproduction.png)
 
