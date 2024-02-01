@@ -88,21 +88,21 @@ style = "github-dark"
 
 # Menu links
 [[menu.main]]
-  name = "RidPosts"
+  name = "RidLines"
   weight = 1
+  url = "line/"
+[[menu.main]]
+  name = "RidPosts"
+  weight = 2
   url  = "posts/"
 [[menu.main]]
   name = "RidWhat"
-  weight = 2
+  weight = 3
   url = "about/"
 [[menu.main]]
   name = "RidMem"
-  weight = 3
-  url = "pensieve/"
-[[menu.main]]
-  name = "RidLines"
   weight = 4
-  url = "line/"
+  url = "pensieve/"
 [[menu.main]]
   name = "RidDiary"
   weight = 5
