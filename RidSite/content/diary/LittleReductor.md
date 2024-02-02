@@ -1,5 +1,5 @@
 ---
-title: "LittleReductor"
+title: "RidDiary 05"
 date: 2024-02-02T14:16:19+06:00
 ---
 
