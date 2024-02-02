@@ -1,5 +1,5 @@
 ---
-title: "RidDiary07"
+title: "RidDiary 07"
 date: 2024-02-02T17:10:10+06:00
 ---
 
