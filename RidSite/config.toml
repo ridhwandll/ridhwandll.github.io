@@ -100,14 +100,6 @@ style = "github-dark"
   weight = 3
   url = "about/"
 [[menu.main]]
-  name = "RidMem"
-  weight = 4
-  url = "pensieve/"
-[[menu.main]]
   name = "RidDiary"
-  weight = 5
+  weight = 4
   url = "diary/"
-[[menu.main]]
-  name = "MEME"
-  weight = 6
-  url = "meme/"
