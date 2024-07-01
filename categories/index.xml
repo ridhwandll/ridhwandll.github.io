@@ -4,35 +4,8 @@
     <title>Categories on RIDHWAN</title>
     <link>https://fahimfuad.github.io/categories/</link>
     <description>Recent content in Categories on RIDHWAN</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Feb 2024 00:00:53 +0600</lastBuildDate><atom:link href="https://fahimfuad.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>RidMobile</title>
-      <link>https://fahimfuad.github.io/categories/ridmobile/</link>
-      <pubDate>Thu, 01 Feb 2024 00:00:53 +0600</pubDate>
-      
-      <guid>https://fahimfuad.github.io/categories/ridmobile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Dark</title>
-      <link>https://fahimfuad.github.io/categories/dark/</link>
-      <pubDate>Fri, 26 Jan 2024 17:32:52 +0600</pubDate>
-      
-      <guid>https://fahimfuad.github.io/categories/dark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Admission</title>
-      <link>https://fahimfuad.github.io/categories/admission/</link>
-      <pubDate>Sat, 07 Oct 2023 11:47:20 +0600</pubDate>
-      
-      <guid>https://fahimfuad.github.io/categories/admission/</guid>
-      <description></description>
-    </item>
-    
+    <atom:link href="https://fahimfuad.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

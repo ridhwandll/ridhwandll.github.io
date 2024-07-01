@@ -1,4 +1,5 @@
 +++ 
+draft = true
 date = 2024-01-26T17:32:52+06:00
 title = "RidIlluminatiThought"
 authors = [ "Ridhwan" ]
