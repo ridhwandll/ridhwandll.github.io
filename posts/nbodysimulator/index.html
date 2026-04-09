@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+   · RIDHWAN
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Fahim Fuad Ridhwan">
+<meta name="description" content="
+  N-Body Gravitational Simulator
+  
+    
+    Link to heading
+  
+
+A real-time interactive gravitational N-body simulator built in MATLAB App Designer. Simulates the motion of N celestial bodies under mutual gravitational attraction using Newton&rsquo;s law of gravitation and the Velocity Verlet integration method.
+
+
+  Table of Contents
+  
+    
+    Link to heading
+  
+
+
+Overview
+Features
+Requirements
+Getting Started
+Physics
+Presets
+Controls
+Export
+Project Structure
+Known Limitations
+Authors
+
+
+
+  Overview
+  
+    
+    Link to heading
+  
+
+The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.">
+<meta name="keywords" content="blog, developer, personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="RIDHWAN">
+  <meta name="twitter:description" content="N-Body Gravitational Simulator Link to heading A real-time interactive gravitational N-body simulator built in MATLAB App Designer. Simulates the motion of N celestial bodies under mutual gravitational attraction using Newton’s law of gravitation and the Velocity Verlet integration method.
+Table of Contents Link to heading Overview Features Requirements Getting Started Physics Presets Controls Export Project Structure Known Limitations Authors Overview Link to heading The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.">
+
+<meta property="og:url" content="https://fahimfuad.github.io/posts/nbodysimulator/">
+  <meta property="og:site_name" content="RIDHWAN">
+  <meta property="og:title" content="RIDHWAN">
+  <meta property="og:description" content="N-Body Gravitational Simulator Link to heading A real-time interactive gravitational N-body simulator built in MATLAB App Designer. Simulates the motion of N celestial bodies under mutual gravitational attraction using Newton’s law of gravitation and the Velocity Verlet integration method.
+Table of Contents Link to heading Overview Features Requirements Getting Started Physics Presets Controls Export Project Structure Known Limitations Authors Overview Link to heading The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+
+
+
+<link rel="canonical" href="https://fahimfuad.github.io/posts/nbodysimulator/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.f6b1b35a7b02521b25338f6cf58975f9980a6c12847763fe35a48307758cd1e7.css" integrity="sha256-9rGzWnsCUhslM49s9Yl1&#43;ZgKbBKEd2P&#43;NaSDB3WM0ec=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.ad48f476275974885bdc03d5251e3cdbe1678c54a63ff772376b0ed2adc468dd.css" integrity="sha256-rUj0didZdIhb3APVJR482&#43;FnjFSmP/dyN2sO0q3EaN0=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/static/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-dark">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/posts">RidPosts</a>
+    <a href="/about">RidWhat</a>
+  </nav>
+  <h1></h1>
+</header>
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://fahimfuad.github.io/posts/nbodysimulator/">
+              
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                01 Jan 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      
+
+
+      <div class="post-content">
+        
+        <h1 id="n-body-gravitational-simulator">
+  N-Body Gravitational Simulator
+  <a class="heading-link" href="#n-body-gravitational-simulator">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>A real-time interactive gravitational N-body simulator built in MATLAB App Designer. Simulates the motion of N celestial bodies under mutual gravitational attraction using Newton&rsquo;s law of gravitation and the Velocity Verlet integration method.</p>
+<hr>
+<h2 id="table-of-contents">
+  Table of Contents
+  <a class="heading-link" href="#table-of-contents">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li><a href="#overview" >Overview</a></li>
+<li><a href="#features" >Features</a></li>
+<li><a href="#requirements" >Requirements</a></li>
+<li><a href="#getting-started" >Getting Started</a></li>
+<li><a href="#physics" >Physics</a></li>
+<li><a href="#presets" >Presets</a></li>
+<li><a href="#controls" >Controls</a></li>
+<li><a href="#export" >Export</a></li>
+<li><a href="#project-structure" >Project Structure</a></li>
+<li><a href="#known-limitations" >Known Limitations</a></li>
+<li><a href="#authors" >Authors</a></li>
+</ul>
+<hr>
+<h2 id="overview">
+  Overview
+  <a class="heading-link" href="#overview">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.</p>
+<p>This simulator computes pairwise gravitational forces between all N bodies simultaneously using vectorized MATLAB matrix operations, integrates their motion using the symplectic Velocity Verlet method, and visualizes the result in real time with trail rendering, energy monitoring, and collision detection.</p>
+<p><img src="Assets/NBSWelcome_Page.png" alt="Welcome Screen"></p>
+<hr>
+<h2 id="features">
+  Features
+  <a class="heading-link" href="#features">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="physics">
+  Physics
+  <a class="heading-link" href="#physics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>O(N²) all-pairs gravitational force computation</strong> using fully vectorized N×N matrix operations — no explicit loops</li>
+<li><strong>Velocity Verlet integration</strong> — symplectic integrator that conserves energy over long runs, unlike Euler or RK4</li>
+<li><strong>Softening parameter ε</strong> — prevents singularities during close encounters by smoothing the gravitational potential</li>
+<li><strong>Elastic and inelastic collision detection</strong> using impulse-based resolution with configurable restitution coefficient</li>
+</ul>
+<h3 id="visualization">
+  Visualization
+  <a class="heading-link" href="#visualization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Real-time body rendering using MATLAB rectangle objects with mass-proportional sizing</li>
+<li><strong>Gradient trail system</strong> showing orbital history for each body</li>
+<li><strong>Dynamic star field</strong> that rescales with the camera zoom</li>
+<li><strong>Soft color palette</strong> using HSV color model at reduced saturation for comfortable viewing</li>
+<li>Auto-zooming camera that keeps all bodies in frame at all times</li>
+</ul>
+<h3 id="energy-monitor">
+  Energy Monitor
+  <a class="heading-link" href="#energy-monitor">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Live plot of <strong>Kinetic Energy (KE)</strong>, <strong>Potential Energy (PE)</strong>, and <strong>Total Energy (TE)</strong></li>
+<li>Flat total energy line confirms integrator accuracy</li>
+<li>Spikes in KE/PE during close encounters with conservation of total energy visible in real time</li>
+</ul>
+<h3 id="ui">
+  UI
+  <a class="heading-link" href="#ui">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>16 simulation presets with per-preset auto-configuration of G, dt, steps/tick, and radius</li>
+<li><strong>Auto-Configure</strong> checkbox — locks optimal parameters per preset or allows manual override</li>
+<li>Configurable: gravitational constant, timestep, steps per tick, body count, collision mode, trail toggle, star toggle</li>
+<li>Real-time stats display: simulation time, step count, FPS</li>
+<li>Preset descriptions explaining the physics of each configuration</li>
+<li>Welcome screen on launch</li>
+<li>Button press sound feedback</li>
+</ul>
+<h3 id="export">
+  Export
+  <a class="heading-link" href="#export">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Record simulation to <code>.mp4</code> video file with configurable FPS and quality presets</li>
+<li>Smooth camera tracking reproduced in exported video</li>
+<li>ESC to cancel mid-export</li>
+<li>Estimated time remaining display during export</li>
+<li>Graceful handling of window close during export</li>
+</ul>
+<hr>
+<h2 id="requirements">
+  Requirements
+  <a class="heading-link" href="#requirements">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>MATLAB R2019b or later</li>
+<li>App Designer support (included in base MATLAB)</li>
+<li>No additional toolboxes required</li>
+</ul>
+<hr>
+<h2 id="getting-started">
+  Getting Started
+  <a class="heading-link" href="#getting-started">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>Clone or download this repository</li>
+<li>Open MATLAB and navigate to the project folder</li>
+<li>Run the app:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-matlab" data-lang="matlab"><span style="display:flex;"><span>NBS
+</span></span></code></pre></div><ol start="4">
+<li>Press any key or click to dismiss the welcome screen</li>
+<li>Select a preset from the dropdown</li>
+<li>Click <strong>RUN</strong> to start the simulation</li>
+</ol>
+<p>The app will launch maximized. All controls are in the left panel. The energy visualizer and preset description are in the right panel.</p>
+<hr>
+<h2 id="physics-1">
+  Physics
+  <a class="heading-link" href="#physics-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="gravitational-acceleration-kernel">
+  Gravitational Acceleration Kernel
+  <a class="heading-link" href="#gravitational-acceleration-kernel">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For each body i, the net gravitational acceleration from all other bodies j is:</p>
+<pre tabindex="0"><code>aᵢ = Σⱼ  G · mⱼ · (rⱼ - rᵢ) / |rⱼ - rᵢ|³
+</code></pre><p>Computed as fully vectorized N×N matrix operations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-matlab" data-lang="matlab"><span style="display:flex;"><span>dx    = pos(:,<span style="color:#a5d6ff">1</span>)<span style="color:#ff7b72;font-weight:bold">&#39;</span> <span style="color:#ff7b72;font-weight:bold">-</span> pos(:,<span style="color:#a5d6ff">1</span>);          <span style="color:#8b949e;font-style:italic">% N×N pairwise x-distances</span>
+</span></span><span style="display:flex;"><span>dy    = pos(:,<span style="color:#a5d6ff">2</span>)<span style="color:#ff7b72;font-weight:bold">&#39;</span> <span style="color:#ff7b72;font-weight:bold">-</span> pos(:,<span style="color:#a5d6ff">2</span>);          <span style="color:#8b949e;font-style:italic">% N×N pairwise y-distances</span>
+</span></span><span style="display:flex;"><span>r2    = dx<span style="color:#ff7b72;font-weight:bold">.^</span><span style="color:#a5d6ff">2</span> <span style="color:#ff7b72;font-weight:bold">+</span> dy<span style="color:#ff7b72;font-weight:bold">.^</span><span style="color:#a5d6ff">2</span> <span style="color:#ff7b72;font-weight:bold">+</span> e2;            <span style="color:#8b949e;font-style:italic">% squared distance + softening</span>
+</span></span><span style="display:flex;"><span>invR3 = r2<span style="color:#ff7b72;font-weight:bold">.^</span>(<span style="color:#ff7b72;font-weight:bold">-</span><span style="color:#a5d6ff">1.5</span>);                    <span style="color:#8b949e;font-style:italic">% 1/r³ — no sqrt needed</span>
+</span></span><span style="display:flex;"><span>invR3(<span style="color:#a5d6ff">1</span>:N<span style="color:#ff7b72;font-weight:bold">+</span><span style="color:#a5d6ff">1</span>:<span style="color:#ff7b72">end</span>) = <span style="color:#a5d6ff">0</span>;                  <span style="color:#8b949e;font-style:italic">% zero diagonal (no self-force)</span>
+</span></span><span style="display:flex;"><span>fac   = G <span style="color:#ff7b72;font-weight:bold">*</span> (m<span style="color:#ff7b72;font-weight:bold">&#39;</span>) <span style="color:#ff7b72;font-weight:bold">.*</span> invR3;             <span style="color:#8b949e;font-style:italic">% gravitational factor per pair</span>
+</span></span><span style="display:flex;"><span>acc   = [sum(fac<span style="color:#ff7b72;font-weight:bold">.*</span>dx, <span style="color:#a5d6ff">2</span>), <span style="color:#8b949e;font-style:italic">...          % net acceleration per body</span>
+</span></span><span style="display:flex;"><span>         sum(fac<span style="color:#ff7b72;font-weight:bold">.*</span>dy, <span style="color:#a5d6ff">2</span>)];
+</span></span></code></pre></div><h3 id="velocity-verlet-integration-kick-drift-kick">
+  Velocity Verlet Integration (Kick-Drift-Kick)
+  <a class="heading-link" href="#velocity-verlet-integration-kick-drift-kick">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<pre tabindex="0"><code>a₁      = acc(pos(t))                  % acceleration at current position
+v(t+dt/2) = v(t) + a₁ · dt/2          % half kick
+pos(t+dt) = pos(t) + v(t+dt/2) · dt   % full drift
+a₂      = acc(pos(t+dt))              % acceleration at new position
+v(t+dt) = v(t+dt/2) + a₂ · dt/2       % half kick
+</code></pre><p>This is a <strong>symplectic integrator</strong> — it preserves a shadow Hamiltonian, keeping total energy bounded rather than drifting unboundedly as with Euler integration.</p>
+<h3 id="energy-computation">
+  Energy Computation
+  <a class="heading-link" href="#energy-computation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<pre tabindex="0"><code>KE = Σᵢ  ½ · mᵢ · |vᵢ|²
+
+PE = Σᵢ Σⱼ₍ⱼ₎ᵢ  -G · mᵢ · mⱼ / rᵢⱼ
+
+TE = KE + PE  (should remain constant)
+</code></pre><h3 id="collision-resolution">
+  Collision Resolution
+  <a class="heading-link" href="#collision-resolution">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Impulse-based collision response:</p>
+<pre tabindex="0"><code>J = -(1 + e) · (v_rel · n̂) / (1/m₁ + 1/m₂)
+
+v₁&#39; = v₁ + (J/m₁) · n̂
+v₂&#39; = v₂ - (J/m₂) · n̂
+</code></pre><p>Where <code>e</code> is the restitution coefficient: <code>e=1</code> (elastic, energy conserved), <code>e=0.4</code> (inelastic, energy lost).</p>
+<hr>
+<h2 id="presets">
+  Presets
+  <a class="heading-link" href="#presets">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Preset</th>
+          <th>Bodies</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Figure 8</strong></td>
+          <td>3</td>
+          <td>Chenciner-Montgomery choreographic solution — three equal masses tracing a figure-eight</td>
+      </tr>
+      <tr>
+          <td><strong>Yarn</strong></td>
+          <td>3</td>
+          <td>Choreographic solution with intertwined woven trajectories</td>
+      </tr>
+      <tr>
+          <td><strong>Butterfly</strong></td>
+          <td>3</td>
+          <td>Periodic three-body orbit from the Moore family</td>
+      </tr>
+      <tr>
+          <td><strong>Broucke</strong></td>
+          <td>3</td>
+          <td>Broucke periodic orbit with repeated close encounters</td>
+      </tr>
+      <tr>
+          <td><strong>Lagrange</strong></td>
+          <td>3</td>
+          <td>Rotating equilateral triangle — classical Lagrange central configuration</td>
+      </tr>
+      <tr>
+          <td><strong>Henon</strong></td>
+          <td>3</td>
+          <td>Hierarchical three-body system producing spirograph patterns</td>
+      </tr>
+      <tr>
+          <td><strong>Random Cluster</strong></td>
+          <td>N</td>
+          <td>Gravitational collapse from random initial conditions</td>
+      </tr>
+      <tr>
+          <td><strong>Solar System</strong></td>
+          <td>up to 12</td>
+          <td>Keplerian orbits with logarithmic planet spacing</td>
+      </tr>
+      <tr>
+          <td><strong>Binary System</strong></td>
+          <td>N</td>
+          <td>Two central stars with circumbinary planet orbits</td>
+      </tr>
+      <tr>
+          <td><strong>Square 4</strong></td>
+          <td>4</td>
+          <td>Four bodies at square corners with tangential velocities</td>
+      </tr>
+      <tr>
+          <td><strong>Pentagon 5</strong></td>
+          <td>5</td>
+          <td>Regular pentagon configuration producing rosette patterns</td>
+      </tr>
+      <tr>
+          <td><strong>Hexagon 6</strong></td>
+          <td>6</td>
+          <td>Regular hexagon configuration</td>
+      </tr>
+      <tr>
+          <td><strong>Heptagon 7</strong></td>
+          <td>7</td>
+          <td>Regular heptagon configuration</td>
+      </tr>
+      <tr>
+          <td><strong>Octagon 8</strong></td>
+          <td>8</td>
+          <td>Regular octagon configuration</td>
+      </tr>
+      <tr>
+          <td><strong>Nonagon 9</strong></td>
+          <td>9</td>
+          <td>Regular nonagon configuration</td>
+      </tr>
+      <tr>
+          <td><strong>Decagon 10</strong></td>
+          <td>10</td>
+          <td>Regular decagon configuration</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="controls">
+  Controls
+  <a class="heading-link" href="#controls">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="left-panel">
+  Left Panel
+  <a class="heading-link" href="#left-panel">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Control</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Preset dropdown</strong></td>
+          <td>Select simulation configuration</td>
+      </tr>
+      <tr>
+          <td><strong>Auto-Configure</strong></td>
+          <td>Automatically sets optimal G, dt, steps/tick, and radius for the selected preset</td>
+      </tr>
+      <tr>
+          <td><strong>Gravitational Constant (G)</strong></td>
+          <td>Scales the strength of gravity</td>
+      </tr>
+      <tr>
+          <td><strong>Time step (dt)</strong></td>
+          <td>Integration step size — smaller = more accurate but slower</td>
+      </tr>
+      <tr>
+          <td><strong>Steps per tick</strong></td>
+          <td>Physics steps computed per render frame — controls simulation speed</td>
+      </tr>
+      <tr>
+          <td><strong>Radius multiplier</strong></td>
+          <td>Scales the visual and collision size of all bodies</td>
+      </tr>
+      <tr>
+          <td><strong>Collision → Enable</strong></td>
+          <td>Toggles collision detection</td>
+      </tr>
+      <tr>
+          <td><strong>Collision → Elastic</strong></td>
+          <td>Toggles elastic (energy-conserving) vs inelastic collisions</td>
+      </tr>
+      <tr>
+          <td><strong>Stars</strong></td>
+          <td>Toggles background star field decoration</td>
+      </tr>
+      <tr>
+          <td><strong>Trails</strong></td>
+          <td>Toggles orbital trail rendering</td>
+      </tr>
+      <tr>
+          <td><strong>RUN / PAUSE</strong></td>
+          <td>Start or pause the simulation</td>
+      </tr>
+      <tr>
+          <td><strong>STOP</strong></td>
+          <td>Stop and reset the simulation</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="right-panel">
+  Right Panel
+  <a class="heading-link" href="#right-panel">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Area</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Preset Title + Description</strong></td>
+          <td>Physics explanation of the current preset</td>
+      </tr>
+      <tr>
+          <td><strong>Simulation stats</strong></td>
+          <td>Live T (sim time), step count, FPS</td>
+      </tr>
+      <tr>
+          <td><strong>Energy Visualizer</strong></td>
+          <td>Real-time KE, PE, and Total Energy plot</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="export-1">
+  Export
+  <a class="heading-link" href="#export-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ol>
+<li>Check <strong>Export simulation</strong> before running</li>
+<li>Select export quality (Excellent / High / Normal / Low / Very Low)</li>
+<li>Set export FPS (15–60)</li>
+<li>Run the simulation — snapshots are recorded automatically</li>
+<li>Click <strong>STOP</strong> — rendering begins immediately</li>
+<li>Press <strong>ESC</strong> at any time to cancel export</li>
+<li>The <code>.mp4</code> file is saved to the same directory as <code>NBS.mlapp</code></li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Longer simulations and higher quality settings produce larger files and longer render times. The estimated time remaining is shown during export.</p>
+</blockquote>
+<hr>
+<h2 id="project-structure">
+  Project Structure
+  <a class="heading-link" href="#project-structure">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<pre tabindex="0"><code>NBS/
+├── NBS.mlapp               # Main App Designer file
+├── README.md               # This file
+└── Assets/
+    ├── NBSWelcome_Page.png  # Welcome screen image
+    └── ButtonPressed.mp3   # Button click sound effect
+</code></pre><hr>
+<h2 id="known-limitations">
+  Known Limitations
+  <a class="heading-link" href="#known-limitations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>The physics engine is O(N²) — performance degrades significantly above N=30 bodies</li>
+<li>Choreographic presets (Figure 8, Yarn, Broucke, Butterfly) are sensitive to timestep — changing dt while Auto-Configure is off will break the orbit</li>
+<li>Collision detection uses circular approximation — works best with equal-mass bodies</li>
+<li>Exported video frame rate is limited by render speed — very complex simulations may produce lower effective FPS than specified</li>
+<li>Simulation time <code>T</code> is in dimensionless simulation units, not real seconds</li>
+</ul>
+<hr>
+<h2 id="authors">
+  Authors
+  <a class="heading-link" href="#authors">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Developed for <strong>ChE 208 Sessional</strong> at <strong>BUET (Bangladesh University of Engineering and Technology)</strong>, Department of Chemical Engineering.</p>
+<ul>
+<li><strong>Fuad</strong> - Physics engine, integration, presets, energy monitor, export pipeline, UI architecture, Color system, video export, welcome screen, audio, deployment utilities</li>
+<li><strong>Arefin</strong> - Collision detection and resolution system</li>
+<li><strong>Mehran</strong> - Presets</li>
+</ul>
+<hr>
+<h2 id="references">
+  References
+  <a class="heading-link" href="#references">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<ul>
+<li>Moore, C. (1993). <em>Braids in classical dynamics</em>. Physical Review Letters, 70, 3675</li>
+<li>Chenciner, A. &amp; Montgomery, R. (2000). <em>A remarkable periodic solution of the three-body problem</em>. Annals of Mathematics, 152, 881–901</li>
+<li>Hénon, M. (1976). <em>A family of periodic solutions of the planar three-body problem</em>. Celestial Mechanics, 13, 267–285</li>
+<li>Šuvakov, M. &amp; Dmitrašinović, V. (2013). <em>Three classes of Newtonian three-body planar periodic orbits</em>. Physical Review Letters, 110, 114301</li>
+<li>Swope, W.C. et al. (1982). <em>A computer simulation method for the calculation of equilibrium constants</em>. Journal of Chemical Physics — original Velocity Verlet paper</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2020 -
+    
+    2026
+     Fahim Fuad Ridhwan 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FT5H63ZTX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7FT5H63ZTX');
+        }
+      </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
