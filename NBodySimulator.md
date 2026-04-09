@@ -1,16 +1,3 @@
-+++ 
-draft = false
-date = 2026-04-09T16:29:51+06:00
-title = "N-Body Simulator"
-description = ""
-slug = ""
-authors = [ "Ridhwan" ]
-tags = []
-categories = []
-externalLink = ""
-series = []
-+++
-
 # N-Body Gravitational Simulator
 
 A real-time interactive gravitational N-body simulator built in MATLAB App Designer. Simulates the motion of N celestial bodies under mutual gravitational attraction using Newton's law of gravitation and the Velocity Verlet integration method.
