@@ -13,7 +13,7 @@ googleAnalytics = "G-7FT5H63ZTX"
 style = "github-dark"
 
 [params]
-  author = "Ridhwan"
+  author = "Fahim Fuad Ridhwan"
   info = "Elite Dumbass, that's about it"
   description = "Rid's site, where he gets a place and posts cringe"
   keywords = "blog, developer, personal"
@@ -47,13 +47,13 @@ style = "github-dark"
   name = "Github"
   icon = "fa fa-github fa-2x"
   weight = 1
-  url = "https://github.com/fahimfuad/"
+  url = "https://github.com/ridhwandll/"
   target = "_blank"
 [[params.social]]
   name = "Facebook"
   icon = "fa fa-facebook fa-2x"
   weight = 2
-  url = "https://www.facebook.com/rdxreductor/"
+  url = "https://www.facebook.com/ridhwandll/"
   target = "_blank"
 [[params.social]]
   name = "Discord"
@@ -65,7 +65,7 @@ style = "github-dark"
   name = "Reddit"
   icon = "fa fa-reddit fa-2x"
   weight = 4
-  url = "https://www.reddit.com/user/FahimFuad"
+  url = "https://www.reddit.com/user/ridhwandll"
   target = "_blank"
 [[params.social]]
   name = "Steam"
@@ -77,7 +77,7 @@ style = "github-dark"
   name = "Twitter"
   icon = "fa fa-twitter fa-2x"
   weight = 6
-  url = "https://twitter.com/rdxreductor"
+  url = "https://twitter.com/ridhwandll"
   target = "_blank"
 [[params.social]]
   name = "Spotify"
@@ -88,18 +88,11 @@ style = "github-dark"
 
 # Menu links
 [[menu.main]]
-  name = "RidTweets"
-  weight = 1
-  url = "line/"
-[[menu.main]]
   name = "RidPosts"
-  weight = 2
+  weight = 1
   url  = "posts/"
 [[menu.main]]
   name = "RidWhat"
-  weight = 3
+  weight = 2
   url = "about/"
-[[menu.main]]
-  name = "RidDiary"
-  weight = 4
-  url = "diary/"
+
