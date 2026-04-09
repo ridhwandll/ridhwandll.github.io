@@ -1,10 +1,15 @@
-+++
-draft = true
-date = 2026-04-09T15:47:59+06:00
++++ 
+draft = false
+date = 2026-04-09T17:05:03+06:00
 title = "N-Body Simulator"
-authors = [ "Ridhwan" ]
+description = ""
+slug = ""
+authors = [ "Fahim Fuad" ]
+tags = []
+categories = []
+externalLink = ""
+series = []
 +++
-
 
 # N-Body Gravitational Simulator
 
