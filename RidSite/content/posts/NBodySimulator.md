@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2026-04-09T16:29:51+06:00
 title = "N-Body Simulator"
 description = ""
