@@ -21,13 +21,10 @@ A real-time interactive gravitational N-body simulator built in MATLAB App Desig
 
 - [Overview](#overview)
 - [Features](#features)
-- [Requirements](#requirements)
-- [Getting Started](#getting-started)
 - [Physics](#physics)
 - [Presets](#presets)
 - [Controls](#controls)
 - [Export](#export)
-- [Project Structure](#project-structure)
 - [Known Limitations](#known-limitations)
 - [Authors](#authors)
 
@@ -38,8 +35,6 @@ A real-time interactive gravitational N-body simulator built in MATLAB App Desig
 The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.
 
 This simulator computes pairwise gravitational forces between all N bodies simultaneously using vectorized MATLAB matrix operations, integrates their motion using the symplectic Velocity Verlet method, and visualizes the result in real time with trail rendering, energy monitoring, and collision detection.
-
-![Welcome Screen](Assets/NBSWelcome_Page.png)
 
 ---
 
@@ -81,71 +76,46 @@ This simulator computes pairwise gravitational forces between all N bodies simul
 
 ---
 
-## Requirements
-
-- MATLAB R2019b or later
-- App Designer support (included in base MATLAB)
-- No additional toolboxes required
-
----
-
-## Getting Started
-
-1. Clone or download this repository
-2. Open MATLAB and navigate to the project folder
-3. Run the app:
-```matlab
-NBS
-```
-4. Press any key or click to dismiss the welcome screen
-5. Select a preset from the dropdown
-6. Click **RUN** to start the simulation
-
-The app will launch maximized. All controls are in the left panel. The energy visualizer and preset description are in the right panel.
-
----
-
 ## Physics
 
-### Gravitational Acceleration Kernel
+### Gravitational Acceleration Calculation
 
 For each body i, the net gravitational acceleration from all other bodies j is:
 
 ```
-aᵢ = Σⱼ  G · mⱼ · (rⱼ - rᵢ) / |rⱼ - rᵢ|³
+ai = sum(G * mj * (rj - ri) / |rj - ri|^3)
 ```
 
 Computed as fully vectorized N×N matrix operations:
 
 ```matlab
-dx    = pos(:,1)' - pos(:,1);          % N×N pairwise x-distances
-dy    = pos(:,2)' - pos(:,2);          % N×N pairwise y-distances
-r2    = dx.^2 + dy.^2 + e2;            % squared distance + softening
-invR3 = r2.^(-1.5);                    % 1/r³ — no sqrt needed
-invR3(1:N+1:end) = 0;                  % zero diagonal (no self-force)
-fac   = G * (m') .* invR3;             % gravitational factor per pair
-acc   = [sum(fac.*dx, 2), ...          % net acceleration per body
-         sum(fac.*dy, 2)];
+dx = pos(:,1)' - pos(:,1);
+dy = pos(:,2)' - pos(:,2);
+r2 = dx.^2 + dy.^2 + e2;
+invR3 = r2.^(-1.5);
+invR3(1:N+1:end) = 0;
+fac = G * (m') .* invR3;
+acc = [sum(fac.*dx, 2), sum(fac.*dy, 2)];
 ```
 
 ### Velocity Verlet Integration (Kick-Drift-Kick)
 
 ```
-a₁      = acc(pos(t))                  % acceleration at current position
-v(t+dt/2) = v(t) + a₁ · dt/2          % half kick
-pos(t+dt) = pos(t) + v(t+dt/2) · dt   % full drift
-a₂      = acc(pos(t+dt))              % acceleration at new position
-v(t+dt) = v(t+dt/2) + a₂ · dt/2       % half kick
+a1 = acc(pos(t))  acceleration at current position
+v(t+dt/2) = v(t) + a1 * dt/2          % half kick
+pos(t+dt) = pos(t) + v(t+dt/2) * dt   % full drift
+a2 = acc(pos(t+dt)) %acceleration at new position
+v(t+dt) = v(t+dt/2) + a2 * dt/2       % half kick
 ```
 
-This is a **symplectic integrator** — it preserves a shadow Hamiltonian, keeping total energy bounded rather than drifting unboundedly as with Euler integration.
+This is a **symplectic integrator** that is, it preserves a shadow Hamiltonian, keeping total energy bounded rather than drifting unboundedly as with Euler integration.
 
 ### Energy Computation
 
 ```
-KE = Σᵢ  ½ · mᵢ · |vᵢ|²
+KE = sum(0.5 * mi * |vi|^2)
 
-PE = Σᵢ Σⱼ₍ⱼ₎ᵢ  -G · mᵢ · mⱼ / rᵢⱼ
+PE = sum(-G * mi * mj / rij)
 
 TE = KE + PE  (should remain constant)
 ```
@@ -155,10 +125,10 @@ TE = KE + PE  (should remain constant)
 Impulse-based collision response:
 
 ```
-J = -(1 + e) · (v_rel · n̂) / (1/m₁ + 1/m₂)
+J = -(1 + e) * (v_rel * n) / (1/m1 + 1/m2)
 
-v₁' = v₁ + (J/m₁) · n̂
-v₂' = v₂ - (J/m₂) · n̂
+v1' = v1 + (J/m1) * n
+v2' = v2 - (J/m2) * n
 ```
 
 Where `e` is the restitution coefficient: `e=1` (elastic, energy conserved), `e=0.4` (inelastic, energy lost).
@@ -169,14 +139,14 @@ Where `e` is the restitution coefficient: `e=1` (elastic, energy conserved), `e=
 
 | Preset | Bodies | Description |
 |---|---|---|
-| **Figure 8** | 3 | Chenciner-Montgomery choreographic solution — three equal masses tracing a figure-eight |
+| **Figure 8** | 3 | Chenciner-Montgomery choreographic solution//three equal masses tracing a figure-eight |
 | **Yarn** | 3 | Choreographic solution with intertwined woven trajectories |
-| **Butterfly** | 3 | Periodic three-body orbit from the Moore family |
+| **Butterfly** | 3 | Periodic three body orbit from the Moore family |
 | **Broucke** | 3 | Broucke periodic orbit with repeated close encounters |
-| **Lagrange** | 3 | Rotating equilateral triangle — classical Lagrange central configuration |
-| **Henon** | 3 | Hierarchical three-body system producing spirograph patterns |
+| **Lagrange** | 3 | Rotating equilateral triangle // classical Lagrange central configuration |
+| **Henon** | 3 | Hierarchical three body system producing spirograph patterns |
 | **Random Cluster** | N | Gravitational collapse from random initial conditions |
-| **Solar System** | up to 12 | Keplerian orbits with logarithmic planet spacing |
+| **Solar System** | N (max: 12) | Keplerian orbits with logarithmic planet spacing |
 | **Binary System** | N | Two central stars with circumbinary planet orbits |
 | **Square 4** | 4 | Four bodies at square corners with tangential velocities |
 | **Pentagon 5** | 5 | Regular pentagon configuration producing rosette patterns |
@@ -190,24 +160,24 @@ Where `e` is the restitution coefficient: `e=1` (elastic, energy conserved), `e=
 
 ## Controls
 
-### Left Panel
+### LEFT Panel
 
 | Control | Description |
 |---|---|
 | **Preset dropdown** | Select simulation configuration |
 | **Auto-Configure** | Automatically sets optimal G, dt, steps/tick, and radius for the selected preset |
 | **Gravitational Constant (G)** | Scales the strength of gravity |
-| **Time step (dt)** | Integration step size — smaller = more accurate but slower |
-| **Steps per tick** | Physics steps computed per render frame — controls simulation speed |
+| **Time step (dt)** | Integration step size // smaller = more accurate but slower |
+| **Steps per tick** | Physics steps computed per render frame // controls simulation speed |
 | **Radius multiplier** | Scales the visual and collision size of all bodies |
-| **Collision → Enable** | Toggles collision detection |
-| **Collision → Elastic** | Toggles elastic (energy-conserving) vs inelastic collisions |
+| **Collision > Enable** | Toggles collision detection |
+| **Collision > Elastic** | Toggles elastic (energy-conserving) vs inelastic collisions |
 | **Stars** | Toggles background star field decoration |
 | **Trails** | Toggles orbital trail rendering |
 | **RUN / PAUSE** | Start or pause the simulation |
 | **STOP** | Stop and reset the simulation |
 
-### Right Panel
+### RIGHT Panel
 
 | Area | Description |
 |---|---|
@@ -217,57 +187,47 @@ Where `e` is the restitution coefficient: `e=1` (elastic, energy conserved), `e=
 
 ---
 
-## Export
+## Simulation Exporting
 
 1. Check **Export simulation** before running
 2. Select export quality (Excellent / High / Normal / Low / Very Low)
 3. Set export FPS (15–60)
-4. Run the simulation — snapshots are recorded automatically
-5. Click **STOP** — rendering begins immediately
+4. Run the simulation // snapshots are recorded automatically
+5. Click **STOP** // rendering begins immediately
 6. Press **ESC** at any time to cancel export
-7. The `.mp4` file is saved to the same directory as `NBS.mlapp`
+7. The `.mp4` file is saved to the same directory as `NBS.mlapp`/`Installed .exe` directory
 
 > **Note:** Longer simulations and higher quality settings produce larger files and longer render times. The estimated time remaining is shown during export.
 
 ---
 
-## Project Structure
-
-```
-NBS/
-├── NBS.mlapp               # Main App Designer file
-├── README.md               # This file
-└── Assets/
-    ├── NBSWelcome_Page.png  # Welcome screen image
-    └── ButtonPressed.mp3   # Button click sound effect
-```
-
----
-
 ## Known Limitations
 
-- The physics engine is O(N²) — performance degrades significantly above N=30 bodies
-- Choreographic presets (Figure 8, Yarn, Broucke, Butterfly) are sensitive to timestep — changing dt while Auto-Configure is off will break the orbit
-- Collision detection uses circular approximation — works best with equal-mass bodies
-- Exported video frame rate is limited by render speed — very complex simulations may produce lower effective FPS than specified
-- Simulation time `T` is in dimensionless simulation units, not real seconds
+- The physics engine is O(N²) // performance degrades significantly above N = 30 bodies, so we maxed out the simulator at 30 bodies
+- Choreographic presets (Figure 8, Yarn, Broucke, Butterfly) are sensitive to timestep // changing dt while Auto-Configure is off will break the orbit(not visually appealing)
+- Collision detection uses circular approximation // works best with equal-mass bodies
+- Exported video frame rate is limited by render speed // very complex simulations may produce lower effective FPS than specified
+- Simulation time `T` is in dimensionless simulation units, not real seconds/time
 
 ---
 
 ## Authors
 
-Developed for **ChE 208 Sessional** at **BUET (Bangladesh University of Engineering and Technology)**, Department of Chemical Engineering.
+Developed for **ChE 208 Sessional**  
+**BUET (Bangladesh University of Engineering and Technology)**  
+ Department of Chemical Engineering
 
-- **Fuad** - Physics engine, integration, presets, energy monitor, export pipeline, UI architecture, Color system, video export, welcome screen, audio, deployment utilities 
-- **Arefin** - Collision detection and resolution system
-- **Mehran** - Presets
+- **Fahim Fuad** - Physics engine, integration, presets, energy monitor, export pipeline, UI architecture, Color system, video export, welcome screen, audio, deployment utilities 
+- **Arefin Arafah** - Collision detection and resolution system
+- **Mohammad Mehran Hossain** - Few Presets
+- **Md. Ashraful Islam Munna & Saidy** - Bug testing
 
 ---
 
 ## References
+**This simulator is heavily inspired form these!**
+- https://trisolarchaos.com/ 
+- https://en.wikipedia.org/wiki/Verlet_integration
+- https://www.youtube.com/watch?v=D89ngRr4uZg
 
-- Moore, C. (1993). *Braids in classical dynamics*. Physical Review Letters, 70, 3675
-- Chenciner, A. & Montgomery, R. (2000). *A remarkable periodic solution of the three-body problem*. Annals of Mathematics, 152, 881–901
-- Hénon, M. (1976). *A family of periodic solutions of the planar three-body problem*. Celestial Mechanics, 13, 267–285
-- Šuvakov, M. & Dmitrašinović, V. (2013). *Three classes of Newtonian three-body planar periodic orbits*. Physical Review Letters, 110, 114301
-- Swope, W.C. et al. (1982). *A computer simulation method for the calculation of equilibrium constants*. Journal of Chemical Physics — original Velocity Verlet paper
+
