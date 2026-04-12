@@ -40,14 +40,7 @@ Known Limitations
 Authors
 
 
-
-  Overview
-  
-    
-    Link to heading
-  
-
-The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.">
+">
 <meta name="keywords" content="blog, developer, personal">
 
 
@@ -55,13 +48,13 @@ The N-body problem asks: given N masses in space, each attracting every other th
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="N-Body Simulator">
   <meta name="twitter:description" content="N-Body Gravitational Simulator Link to heading A real-time interactive gravitational N-body simulator built in MATLAB App Designer. Simulates the motion of N celestial bodies under mutual gravitational attraction using Newton’s law of gravitation and the Velocity Verlet integration method.
-Table of Contents Link to heading Overview Features Physics Presets Controls Export Known Limitations Authors Overview Link to heading The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.">
+Table of Contents Link to heading Overview Features Physics Presets Controls Export Known Limitations Authors">
 
 <meta property="og:url" content="https://fahimfuad.github.io/posts/nbodysimulator/">
   <meta property="og:site_name" content="RIDHWAN">
   <meta property="og:title" content="N-Body Simulator">
   <meta property="og:description" content="N-Body Gravitational Simulator Link to heading A real-time interactive gravitational N-body simulator built in MATLAB App Designer. Simulates the motion of N celestial bodies under mutual gravitational attraction using Newton’s law of gravitation and the Velocity Verlet integration method.
-Table of Contents Link to heading Overview Features Physics Presets Controls Export Known Limitations Authors Overview Link to heading The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.">
+Table of Contents Link to heading Overview Features Physics Presets Controls Export Known Limitations Authors">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -205,23 +198,25 @@ Table of Contents Link to heading Overview Features Physics Presets Controls Exp
 <li><a href="#authors" >Authors</a></li>
 </ul>
 <hr>
-<h2 id="overview">
+<p><img src="/images/NBS.png" alt="ImgA"></p>
+<h1 id="overview">
   Overview
   <a class="heading-link" href="#overview">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
-<p>The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.</p>
+</h1>
+<p>The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not, the only way to study it is through numerical simulation.</p>
 <p>This simulator computes pairwise gravitational forces between all N bodies simultaneously using vectorized MATLAB matrix operations, integrates their motion using the symplectic Velocity Verlet method, and visualizes the result in real time with trail rendering, energy monitoring, and collision detection.</p>
+<p>You can get the submitted project files <a href="https://github.com/ridhwandll/NBodySim/releases/tag/v1.0"  class="external-link" target="_blank" rel="noopener">here!</a></p>
 <hr>
-<h2 id="features">
+<h1 id="features">
   Features
   <a class="heading-link" href="#features">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <h3 id="physics">
   Physics
   <a class="heading-link" href="#physics">
@@ -230,9 +225,9 @@ Table of Contents Link to heading Overview Features Physics Presets Controls Exp
   </a>
 </h3>
 <ul>
-<li><strong>O(N²) all-pairs gravitational force computation</strong> using fully vectorized N×N matrix operations — no explicit loops</li>
-<li><strong>Velocity Verlet integration</strong> — symplectic integrator that conserves energy over long runs, unlike Euler or RK4</li>
-<li><strong>Softening parameter ε</strong> — prevents singularities during close encounters by smoothing the gravitational potential</li>
+<li><strong>O(N^2) all-pairs gravitational force computation</strong> using fully vectorized N×N matrix operations // no explicit loops</li>
+<li><strong>Velocity Verlet integration</strong> // symplectic integrator that conserves energy over long runs, unlike Euler or RK4</li>
+<li><strong>Softening parameter ε</strong> // prevents singularities during close encounters by smoothing the gravitational potential</li>
 <li><strong>Elastic and inelastic collision detection</strong> using impulse-based resolution with configurable restitution coefficient</li>
 </ul>
 <h3 id="visualization">

@@ -30,20 +30,24 @@ A real-time interactive gravitational N-body simulator built in MATLAB App Desig
 
 ---
 
-## Overview
+![ImgA](/images/NBS.png)
 
-The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not — the only way to study it is through numerical simulation.
+# Overview
+
+The N-body problem asks: given N masses in space, each attracting every other through Newtonian gravity, how do they move over time? For two bodies this has an exact analytical solution. For three or more it generally does not, the only way to study it is through numerical simulation.
 
 This simulator computes pairwise gravitational forces between all N bodies simultaneously using vectorized MATLAB matrix operations, integrates their motion using the symplectic Velocity Verlet method, and visualizes the result in real time with trail rendering, energy monitoring, and collision detection.
 
+You can get the submitted project files [here!](https://github.com/ridhwandll/NBodySim/releases/tag/v1.0)
+
 ---
 
-## Features
+# Features
 
 ### Physics
-- **O(N²) all-pairs gravitational force computation** using fully vectorized N×N matrix operations — no explicit loops
-- **Velocity Verlet integration** — symplectic integrator that conserves energy over long runs, unlike Euler or RK4
-- **Softening parameter ε** — prevents singularities during close encounters by smoothing the gravitational potential
+- **O(N^2) all-pairs gravitational force computation** using fully vectorized N×N matrix operations // no explicit loops
+- **Velocity Verlet integration** // symplectic integrator that conserves energy over long runs, unlike Euler or RK4
+- **Softening parameter ε** // prevents singularities during close encounters by smoothing the gravitational potential
 - **Elastic and inelastic collision detection** using impulse-based resolution with configurable restitution coefficient
 
 ### Visualization
