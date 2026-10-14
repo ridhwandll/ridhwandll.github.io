@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Surge Engine | Fahim Fuad</title>
+    <meta name="description" content="Surge is a high-performance, mobile-first 2D/3D game engine on Vulkan 1.1. Built for the thermal, battery and memory budget of phones, scaling up on desktop.">
+    <meta name="theme-color" content="#060606">
+    <meta property="og:title" content="Surge Engine">
+    <meta property="og:description" content="A mobile-first 2D/3D game engine. Vulkan 1.1, Jolt Physics, Lua 5.4, a render graph and a full Editor.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://ridhwandll.github.io/projects/surge/assets/img/Player-RuntimeToon2.webp">
+    <meta property="og:url" content="https://ridhwandll.github.io/projects/surge/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+    <link rel="preload" href="../../assets/fonts/EncodeSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/EncodeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/",
+            "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js"
+        }
+    }
+    </script>
+</head>
+<body>
+<a class="skip" href="#budget">Skip to content</a>
+
+<header class="nav" id="nav">
+    <nav class="crumb" aria-label="Breadcrumb">
+        <a href="../../" title="Fahim Fuad">&lt;- ~</a><span class="crumb-mid">/</span><a class="crumb-mid" href="../">projects</a><span>/</span>
+    </nav>
+    <a class="brand" href="#top" aria-label="Surge home">
+        <img src="assets/img/mark.png" alt="" width="28" height="28">
+        <span>SURGE</span>
+    </a>
+    <nav class="nav-links" id="nav-links" aria-label="Sections">
+        <a href="#budget">Budget</a>
+        <a href="#graph">Render graph</a>
+        <a href="#systems">Systems</a>
+        <a href="#physics">Physics</a>
+        <a href="#scripting">Lua</a>
+        <a href="#editor">Editor</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#build">Build</a>
+    </nav>
+    <a class="btn btn-ghost nav-gh" href="https://github.com/ridhwandll/Surge_Expired" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+</header>
+
+<main>
+<!-- HERO ================================================================================ -->
+<section class="hero" id="top">
+    <canvas id="hero-canvas" aria-label="Interactive 3D physics scene: the word SURGE built from blocks"></canvas>
+    <div class="hero-fallback" aria-hidden="true">SURGE</div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+
+    <div class="hero-top">
+        <p class="eyebrow"><span class="dot"></span>Mobile-first 2D / 3D game engine</p>
+    </div>
+
+    <div class="hero-bottom">
+        <h1 class="hero-title"><span class="sr-only">Surge Engine. </span>Surge is my game engine.<br>It runs on phones first, and looks even better on a PC.</h1>
+        <p class="lede">I started it in 2021, after my first engine, Spike. It's C++20 on Vulkan&nbsp;1.1, with Jolt physics, Lua scripting and its own editor. Android is the main target, so everything has to fit a phone's heat, battery and memory budget first. On desktop it can afford heavier shadows, GTAO and a lot more lights.</p>
+        <div class="cta">
+            <a class="btn btn-amber" href="https://github.com/ridhwandll/Surge_Expired" target="_blank" rel="noopener">Get the source</a>
+            <a class="btn btn-ghost" href="#budget">Explore the engine</a>
+        </div>
+        <p class="hint" id="hero-hint"><kbd>Move</kbd> to push <span>·</span> <kbd>Click</kbd> to fire <span>·</span> <kbd>R</kbd> to rebuild</p>
+    </div>
+
+    <aside class="imgui hud" id="hud" data-ui aria-label="Renderer stats">
+        <button class="imgui-title" id="hud-toggle" aria-expanded="true"><span class="imgui-tri">▾</span>Renderer<span class="imgui-mini" id="s-mini"></span><span class="imgui-tabs"><b>Stats</b></span></button>
+        <div class="imgui-body">
+            <div class="sep-text">FRAME</div>
+            <dl class="kv">
+                <dt>FPS</dt><dd id="s-fps">--</dd>
+                <dt>Frame</dt><dd id="s-ms">--</dd>
+                <dt>Resolution</dt><dd id="s-res">--</dd>
+            </dl>
+            <div class="sep-text">GEOMETRY</div>
+            <dl class="kv">
+                <dt>Draw calls</dt><dd id="s-calls">--</dd>
+                <dt>Instances</dt><dd id="s-inst">--</dd>
+                <dt>Triangles</dt><dd id="s-tris">--</dd>
+            </dl>
+            <div class="sep-text">PHYSICS</div>
+            <dl class="kv">
+                <dt>Bodies awake</dt><dd id="s-awake">--</dd>
+                <dt>Fixed step</dt><dd>1/60 s, interpolated</dd>
+            </dl>
+            <div class="sep-text">BUDGET</div>
+            <div class="seg" role="group" aria-label="Quality budget">
+                <button data-quality="mobile">Mobile</button>
+                <button data-quality="desktop">Desktop</button>
+            </div>
+            <div class="imgui-row">
+                <button class="imgui-btn" id="hero-fire">Fire</button>
+                <button class="imgui-btn" id="hero-rebuild">Rebuild</button>
+            </div>
+        </div>
+    </aside>
+
+    <a class="scroll-cue" href="#budget" aria-label="Scroll down"><span></span></a>
+</section>
+
+
+
+<!-- BUDGET ============================================================================== -->
+<section class="section" id="budget">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Phones first</h2>
+            <p class="section-lede">If a feature can't be cheap on a phone, it doesn't go in. Desktop-only extras (more shadow cascades, GTAO, more lights) are optional and never make the Android path slower. In practice: fewer draw calls, fewer render passes, tile-friendly load/store ops, and no allocations every frame.</p>
+        </header>
+
+        <div class="budget reveal">
+            <div class="budget-switch" role="tablist" aria-label="Platform">
+                <button role="tab" aria-selected="true" data-platform="android">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="10" y="18" width="4" height="1.4" rx=".7" fill="currentColor"/></svg>
+                    Android arm64
+                </button>
+                <button role="tab" aria-selected="false" data-platform="desktop">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8"/></svg>
+                    Windows desktop
+                </button>
+                <span class="budget-switch-glow" aria-hidden="true"></span>
+            </div>
+
+            <div class="meters" id="meters">
+                <!-- filled by main.js -->
+            </div>
+            <p class="footnote">Platform defaults straight from <code>FrameBlackboard.hpp</code>. Every value is editable live in the Editor's Renderer panel, with Mobile/Desktop preset buttons.</p>
+        </div>
+
+        <div class="pillars">
+            <article class="pillar reveal">
+                <h3>Batched, non-blocking uploads</h3>
+                <p>Buffer and image data go through a recycled staging ring into one upload command buffer, submitted right before the frame. No one-time submits, no <code>vkQueueWaitIdle</code>.</p>
+            </article>
+            <article class="pillar reveal">
+                <h3>Frame pacing on Android</h3>
+                <p>Swappy presents on vsync at a target rate, so a 120&nbsp;Hz phone doesn't burn its battery rendering 120 frames nobody asked for.</p>
+            </article>
+            <article class="pillar reveal">
+                <h3>Render scale</h3>
+                <p>The 3D scene renders at 0.5&ndash;1.0&times;, UI and post-processing stay at native resolution. 0.8 on Android, 1.0 on desktop.</p>
+            </article>
+            <article class="pillar reveal">
+                <h3>Persistent pipeline cache</h3>
+                <p>A <code>VkPipelineCache</code> saved to device storage and header-validated against the current GPU and driver. Warm starts skip pipeline compilation.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- RENDER GRAPH ======================================================================== -->
+<section class="section section-alt" id="graph">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>The render graph</h2>
+            <p class="section-lede">Each pass says what it reads and writes, and <code>RenderGraph::Compile()</code> sorts them and works out the barriers and load/store ops. Culling and uploads happen in <code>Prepare</code>, before any render pass starts. If a whole group has nothing to draw it's skipped: no begin, no clear, no store. On mobile GPUs that's real bandwidth saved.</p>
+        </header>
+
+        <div class="graph imgui reveal" id="rg">
+            <div class="imgui-title"><span class="imgui-tri">▾</span>Renderer<span class="imgui-tabs"><i>Settings</i><b>Graph</b><i>Stats</i></span></div>
+            <div class="graph-body">
+                <div class="graph-lanes" id="rg-nodes"><!-- filled by main.js --></div>
+                <div class="graph-foot">
+                    <div class="graph-legend">
+                        <span><i class="lg lg-on"></i>Has work</span>
+                        <span><i class="lg lg-off"></i>Skipped: no begin / clear / store</span>
+                        <span><i class="lg lg-own"></i>Manages own execution</span>
+                    </div>
+                    <div class="graph-stats" id="rg-stats"></div>
+                </div>
+                <p class="graph-tip">Click a group to toggle whether it has work this frame.</p>
+            </div>
+        </div>
+
+        <ol class="phases reveal">
+            <li><b>Setup</b><span>Create targets, declare image reads and writes.</span></li>
+            <li><b>Prepare</b><span>Frustum culling, instancing, uniform and descriptor updates, for every enabled pass.</span></li>
+            <li><b>Compile</b><span>Sort, derive barriers and load/store ops, drop empty groups.</span></li>
+            <li><b>Execute</b><span>Record only. Nothing allocates, nothing uploads.</span></li>
+        </ol>
+    </div>
+</section>
+
+<!-- SYSTEMS ============================================================================= -->
+<section class="section" id="systems">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>What's in it</h2>
+        </header>
+
+        <div class="cards">
+            <article class="card reveal" data-tilt>
+                <h3>Rendering</h3>
+                <p>Thin, handle-based RHI over Vulkan 1.1. Layouts and vertex attributes generated from SPIR-V reflection.</p>
+                <ul>
+                    <li>Per-submesh frustum culling + automatic instancing</li>
+                    <li>Energy-conserving Blinn-Phong with PBR inputs, procedural Preetham sky</li>
+                    <li>Cascaded shadows, GTAO, HDR bloom, ACES, FXAA</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>Particles</h3>
+                <p>Up to 16 emitters per effect, built from plain-data modules. Curves and gradients baked to 64-entry LUTs.</p>
+                <ul>
+                    <li>Texture sheets, collision planes, sub-emitters</li>
+                    <li>SoA pools allocated once, vertex pulling from an SSBO</li>
+                    <li>Optional per-particle radix sort, one draw per texture run</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>Physics</h3>
+                <p>Jolt Physics on a fixed 1/60&nbsp;s step with render interpolation.</p>
+                <ul>
+                    <li>Box, sphere, capsule, cylinder, convex hull, triangle mesh</li>
+                    <li>Sensors, CCD, rotation locks, raycasts</li>
+                    <li>Contact and trigger events delivered to Lua</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>Lua scripting</h3>
+                <p>Lua 5.4 + sol2, compiled to bytecode at cook time, sandboxed, full tracebacks.</p>
+                <ul>
+                    <li>Multiple scripts per entity, each in its own environment</li>
+                    <li><code>require</code> modules that work the same on Android</li>
+                    <li>Inspector properties with zero per-frame cost</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>Game UI</h3>
+                <p>A retained widget tree with Unity-style rect transforms and a canvas scaler.</p>
+                <ul>
+                    <li>18 widgets: joystick, recycling ListView, InputField, modals&hellip;</li>
+                    <li>Sprites and MSDF text share one shader and pipeline</li>
+                    <li>CPU clipping keeps batches intact, multi-touch per pointer</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>Assets &amp; cooking</h3>
+                <p>Every asset has a stable UUID; the runtime only ever loads cooked binary data.</p>
+                <ul>
+                    <li>Textures to UASTC, transcoded to ASTC / ETC2 / BC7</li>
+                    <li>meshoptimizer'd glTF, MSDF font atlases, Lua bytecode</li>
+                    <li>Stale assets re-cook automatically in the Editor</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>Audio</h3>
+                <p>miniaudio, played from memory. Streamed clips decode as they play, the rest decode once and share PCM.</p>
+                <ul>
+                    <li>3D spatialized sources and a listener</li>
+                    <li>Inverse, linear or exponential attenuation</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>Input</h3>
+                <p>Keyboard, mouse, multi-touch with stable small IDs, and gamepads (XInput on Windows, joystick events on Android).</p>
+                <ul>
+                    <li>Touch-synthesized mouse events never double-handle a tap</li>
+                    <li>Android Back maps to Escape</li>
+                </ul>
+            </article>
+            <article class="card reveal" data-tilt>
+                <h3>ECS &amp; scenes</h3>
+                <p>EnTT-backed scenes, hierarchies, deferred destruction and frame-end callbacks.</p>
+                <ul>
+                    <li>Readable JSON for the Editor, reflection-driven binary at runtime</li>
+                    <li>A schema hash re-cooks scenes when a component changes</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- PHYSICS ============================================================================= -->
+<section class="section section-alt" id="physics">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Physics playground</h2>
+            <p class="section-lede">I stress test Surge with scenes like this one (the real thing is in the screenshots below). This version runs in your browser: blocks sleep until something hits them, the whole castle is one instanced draw, and the slider slows time down without slowing the frame rate. Click the castle.</p>
+        </header>
+
+        <div class="playground reveal">
+            <div class="playground-view">
+                <canvas id="castle-canvas" aria-label="Interactive 3D castle made of blocks. Click to fire cannonballs."></canvas>
+                <div class="playground-stats" id="castle-stats" aria-live="off"></div>
+            </div>
+            <div class="playground-panel" data-ui>
+                <div class="pg-title">SURGE ENGINE<small>Physics playground</small></div>
+                <button class="pg-btn pg-hot" id="castle-fire">Fire</button>
+                <button class="pg-btn pg-hot" id="castle-barrage">Barrage &times;8</button>
+                <button class="pg-btn" id="castle-slowmo">Slow motion</button>
+                <button class="pg-btn" id="castle-reset">Reset scene</button>
+                <label class="pg-slider">
+                    <span>Time scale <b id="castle-ts">1.00&times;</b></span>
+                    <input type="range" id="castle-timescale" min="0.1" max="1" step="0.05" value="1">
+                </label>
+            </div>
+        </div>
+        <p class="footnote center">This page simulates with cannon-es in your browser. Surge itself runs Jolt Physics natively: the Toytown demo in the gallery throws 500+ bodies around.</p>
+    </div>
+</section>
+
+<!-- SCRIPTING =========================================================================== -->
+<section class="section" id="scripting">
+    <div class="wrap split">
+        <header class="section-head reveal">
+            <h2>Lua scripting</h2>
+            <p class="section-lede">Scripts declare <code>Properties</code> that show up in the Inspector as typed fields. Values are saved sparsely per entity and written once before <code>OnCreate</code>, so they cost nothing per frame.</p>
+            <ul class="checks">
+                <li><code>OnCreate</code>, <code>OnEnable</code>, <code>OnFixedUpdate</code>, <code>OnUpdate</code>, <code>OnLateUpdate</code>, <code>OnDestroy</code></li>
+                <li>Collision and trigger callbacks straight from Jolt</li>
+                <li><code>Physics.Raycast</code>, <code>Particles.Play</code>, <code>Scene.Load</code>, <code>Time.*</code>, <code>Storage.*</code></li>
+                <li>Full VS Code IntelliSense ships in <code>SurgeAPI.lua</code></li>
+            </ul>
+        </header>
+
+        <div class="code imgui reveal" id="code">
+            <div class="imgui-title code-tabs" role="tablist">
+                <button role="tab" aria-selected="true" data-file="cannon">Cannon.lua</button>
+                <button role="tab" aria-selected="false" data-file="hud">HUD.lua</button>
+                <button role="tab" aria-selected="false" data-file="save">Progress.lua</button>
+                <button class="code-copy" id="code-copy" aria-label="Copy code">Copy</button>
+            </div>
+<pre class="code-body"><code id="code-view"></code></pre>
+        </div>
+    </div>
+</section>
+
+<!-- EDITOR ============================================================================== -->
+<section class="section section-alt" id="editor">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>The Editor</h2>
+            <p class="section-lede">Unity-style Scene views (as many as you want, each with its own camera and render graph), a Game view that can fake phone safe areas, undo/redo, and one-click Windows and Android builds.</p>
+        </header>
+
+        <figure class="editor-shot reveal" id="editor-shot">
+            <img src="assets/img/Editor-Hero.webp" alt="The Surge Editor with a Scene view and the Game view side by side, the Hierarchy and the Inspector" width="1920" height="1030" loading="lazy" decoding="async">
+        </figure>
+
+        <div class="panels">
+            <div class="panel-item reveal"><b>Viewports</b><span>Any number of Scene views, one Game view with aspect presets and safe-area simulation.</span></div>
+            <div class="panel-item reveal"><b>Gizmos &amp; picking</b><span>Translate / rotate / scale with snapping, clickable component icons, CPU ray picking with no GPU readback.</span></div>
+            <div class="panel-item reveal"><b>Hierarchy &amp; Inspector</b><span>Drag-and-drop parenting, multi-script entities, Lua properties as typed fields.</span></div>
+            <div class="panel-item reveal"><b>Particle Editor</b><span>Every module, curve and gradient, with an isolated live preview and shape gizmos.</span></div>
+            <div class="panel-item reveal"><b>UI Editor</b><span>WYSIWYG layout editing right in the Game view.</span></div>
+            <div class="panel-item reveal"><b>Material Editor</b><span>Edit parameters and textures with live results.</span></div>
+            <div class="panel-item reveal"><b>Renderer panel</b><span>Quality settings, Mobile / Desktop presets, live render graph visualizer, per-pass stats.</span></div>
+            <div class="panel-item reveal"><b>Content Browser</b><span>Async thumbnails, favorites, search, drag-and-drop import that keeps the registry in sync.</span></div>
+            <div class="panel-item reveal"><b>Export</b><span>Windows executables and Android APK / AAB via Gradle. Install, launch and stream device logcat.</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- PIPELINE ============================================================================ -->
+<section class="section" id="pipeline">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Asset cooking</h2>
+            <p class="section-lede">Shipped games can't load a <code>.gltf</code>, on purpose. The Editor cooks every source file into a small binary format first, so the Player doesn't carry importers or decoders around, and it loads faster.</p>
+        </header>
+
+        <div class="flow reveal" id="flow">
+            <div class="flow-head"><span>Source</span><span>Cooker</span><span>Runtime</span></div>
+            <div class="flow-row"><span class="chip">.png .jpg</span><i></i><span class="chip chip-amber">Basis UASTC KTX2</span><i></i><span class="chip">ASTC / ETC2 &middot; BC7</span></div>
+            <div class="flow-row"><span class="chip">.glb .gltf</span><i></i><span class="chip chip-amber">meshoptimizer</span><i></i><span class="chip">Mesh binary</span></div>
+            <div class="flow-row"><span class="chip">.ttf .otf</span><i></i><span class="chip chip-amber">msdf-atlas-gen</span><i></i><span class="chip">MSDF atlas</span></div>
+            <div class="flow-row"><span class="chip">.lua</span><i></i><span class="chip chip-amber">Lua compiler</span><i></i><span class="chip">Bytecode</span></div>
+            <div class="flow-row"><span class="chip">.srg .spfx .sui</span><i></i><span class="chip chip-amber">Reflection</span><i></i><span class="chip">Scene / FX / UI binary</span></div>
+            <div class="flow-row"><span class="chip">.wav .mp3 .ogg</span><i></i><span class="chip chip-amber">AssetStamp</span><i></i><span class="chip">Audio from memory</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY ============================================================================= -->
+<section class="section section-alt" id="gallery">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Screenshots</h2>
+        </header>
+
+        <div class="gallery">
+            <figure class="shot shot-wide reveal">
+                <button data-full="assets/img/Player-RuntimeToon2.webp"><img src="assets/img/Player-RuntimeToon2.webp" alt="Toytown: a toy cannon barrage smashing a block castle" loading="lazy" decoding="async" width="1920" height="1032"></button>
+                <figcaption>A barrage tears the toy block castle apart. Inked outlines, cartoon impacts, 500+ Jolt bodies.</figcaption>
+            </figure>
+            <figure class="shot reveal">
+                <button data-full="assets/img/Player-Runtime.webp"><img src="assets/img/Player-Runtime.webp" alt="Collapse at sunset: the citadel blown apart" loading="lazy" decoding="async" width="1920" height="1032"></button>
+                <figcaption>CCD cannonballs vs. a brick citadel. HDR bricks feed the bloom under cascaded shadows and GTAO.</figcaption>
+            </figure>
+            <figure class="shot reveal">
+                <button data-full="assets/img/Player-RuntimeNight.webp"><img src="assets/img/Player-RuntimeNight.webp" alt="Collapse at night: sparks and fireflies" loading="lazy" decoding="async" width="1920" height="1032"></button>
+                <figcaption>The same scene at night: spark showers, fireflies and lanterns lighting the debris.</figcaption>
+            </figure>
+            <figure class="shot reveal">
+                <button data-full="assets/img/Player-RuntimeToon.webp"><img src="assets/img/Player-RuntimeToon.webp" alt="Toytown at night: can towers toppling" loading="lazy" decoding="async" width="1920" height="1032"></button>
+                <figcaption>Soda can towers topple under trailed toy cannonballs.</figcaption>
+            </figure>
+            <figure class="shot reveal">
+                <button data-full="assets/img/Editor-Particles.webp"><img src="assets/img/Editor-Particles.webp" alt="The Particle Editor" loading="lazy" decoding="async" width="1920" height="1032"></button>
+                <figcaption>The Particle Editor: every module, curve and gradient, with a live isolated preview.</figcaption>
+            </figure>
+            <figure class="shot shot-wide reveal">
+                <button data-full="assets/img/Editor-Overview.webp"><img src="assets/img/Editor-Overview.webp" alt="Editing the Sanctuary scene in the Surge Editor" loading="lazy" decoding="async" width="1920" height="1030"></button>
+                <figcaption>Component icons, transform gizmos, mesh / rigidbody / collider components and the Content Browser.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<!-- BUILD =============================================================================== -->
+<section class="section" id="build">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Building it yourself</h2>
+            <p class="section-lede">No submodules, no package manager. Every dependency is vendored with its own CMake list.</p>
+        </header>
+
+        <div class="builds">
+            <article class="build reveal">
+                <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5.5 10 4.5v7H3zM11 4.4 21 3v8.5H11zM3 12.5h7v7L3 18.5zM11 12.5h10V21l-10-1.4z"/></svg>Windows</h3>
+                <p>Visual Studio with the C++ Clang (ClangCL) tools, CMake 3.20+ and the Vulkan SDK.</p>
+                <div class="cmd"><code>git clone https://github.com/ridhwandll/Surge_Expired</code><button data-copy aria-label="Copy">Copy</button></div>
+                <div class="cmd"><code>Scripts\WindowsGenProjects.bat</code><button data-copy aria-label="Copy">Copy</button></div>
+                <div class="cmd"><code>msbuild build/Surge.slnx -p:Configuration=Release</code><button data-copy aria-label="Copy">Copy</button></div>
+                <p class="small">Start project: <b>Editor</b>. The working directory is always the repository root.</p>
+            </article>
+            <article class="build reveal">
+                <h3><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.6 9.48l1.84-3.18a.38.38 0 0 0-.66-.38l-1.86 3.22A11.4 11.4 0 0 0 12 8.2c-1.77 0-3.43.39-4.92.94L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>Android</h3>
+                <p>One script installs the whole toolchain without Android Studio: JDK 17, SDK, NDK and CMake, pinned to what Gradle expects.</p>
+                <div class="cmd"><code>Scripts\AndroidSetup.bat</code><button data-copy aria-label="Copy">Copy</button></div>
+                <p class="small">Then export an <b>APK</b> or <b>AAB</b> from the Editor's Export panel, install it on a device and watch its logcat in the Console. Vulkan 1.1 needs Android 10 (API 29) or newer.</p>
+                <div class="android-specs">
+                    <span>arm64-v8a</span><span>NDK 27.3</span><span>minSdk 29</span><span>c++_static</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- STACK =============================================================================== -->
+<section class="section section-alt" id="stack">
+    <div class="wrap">
+        <header class="section-head reveal">
+            <h2>Dependencies</h2>
+        </header>
+        <div class="stack reveal">
+            <a href="https://github.com/KhronosGroup/Vulkan-Headers" target="_blank" rel="noopener"><b>Vulkan</b><span>Graphics API</span></a>
+            <a href="https://github.com/zeux/volk" target="_blank" rel="noopener"><b>volk</b><span>Loader</span></a>
+            <a href="https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator" target="_blank" rel="noopener"><b>VMA</b><span>GPU memory</span></a>
+            <a href="https://github.com/KhronosGroup/SPIRV-Cross" target="_blank" rel="noopener"><b>SPIRV-Cross</b><span>Shader reflection</span></a>
+            <a href="https://github.com/google/shaderc" target="_blank" rel="noopener"><b>shaderc</b><span>GLSL &rarr; SPIR-V</span></a>
+            <a href="https://github.com/jrouwe/JoltPhysics" target="_blank" rel="noopener"><b>Jolt Physics</b><span>Physics</span></a>
+            <a href="https://github.com/skypjack/entt" target="_blank" rel="noopener"><b>EnTT</b><span>ECS</span></a>
+            <a href="https://www.lua.org" target="_blank" rel="noopener"><b>Lua 5.4</b><span>Scripting</span></a>
+            <a href="https://github.com/ThePhD/sol2" target="_blank" rel="noopener"><b>sol2</b><span>Lua bindings</span></a>
+            <a href="https://github.com/mackron/miniaudio" target="_blank" rel="noopener"><b>miniaudio</b><span>Audio</span></a>
+            <a href="https://github.com/BinomialLLC/basis_universal" target="_blank" rel="noopener"><b>Basis Universal</b><span>Textures</span></a>
+            <a href="https://github.com/ocornut/imgui" target="_blank" rel="noopener"><b>Dear ImGui</b><span>Editor UI</span></a>
+            <a href="https://github.com/CedricGuillemet/ImGuizmo" target="_blank" rel="noopener"><b>ImGuizmo</b><span>Gizmos</span></a>
+            <a href="https://github.com/g-truc/glm" target="_blank" rel="noopener"><b>glm</b><span>Math</span></a>
+            <a href="https://github.com/nlohmann/json" target="_blank" rel="noopener"><b>nlohmann/json</b><span>JSON</span></a>
+            <a href="https://github.com/bombomby/optick" target="_blank" rel="noopener"><b>Optick</b><span>Profiling</span></a>
+            <a href="https://github.com/zeux/meshoptimizer" target="_blank" rel="noopener"><b>meshoptimizer</b><span>Mesh cooking</span></a>
+            <a href="https://github.com/jkuhlmann/cgltf" target="_blank" rel="noopener"><b>cgltf</b><span>glTF import</span></a>
+            <a href="https://github.com/Chlumsky/msdf-atlas-gen" target="_blank" rel="noopener"><b>msdf-atlas-gen</b><span>Font atlases</span></a>
+            <a href="https://developer.android.com/games/sdk/frame-pacing" target="_blank" rel="noopener"><b>Swappy</b><span>Frame pacing</span></a>
+        </div>
+    </div>
+</section>
+
+<!-- OUTRO =============================================================================== -->
+<section class="outro">
+    <div class="wrap">
+        <p class="outro-quote reveal">&ldquo;Why Surge? For the love of the game.&rdquo;</p>
+        <p class="outro-roadmap reveal">Roadmap, straight from the README: ship a game with it, an Apple backend, get a girlfriend?</p>
+        <div class="cta center reveal">
+            <a class="btn btn-amber" href="https://github.com/ridhwandll/Surge_Expired" target="_blank" rel="noopener">Star Surge on GitHub</a>
+            <a class="btn btn-ghost" href="#top">Back to the blocks</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="wrap footer-inner">
+        <img src="assets/img/ridtech.png" alt="rid TECH" width="72" height="71" loading="lazy">
+        <p>Surge is distributed under the <a href="https://github.com/ridhwandll/Surge_Expired/blob/master/LICENSE" target="_blank" rel="noopener">Surge Engine License</a>. Third-party libraries keep their own licenses.<br>
+        Set in Encode Sans and JetBrains Mono. Part of <a href="../../">Fahim Fuad's portfolio</a>.</p>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img alt="">
+    <p></p>
+</div>
+
+<script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+[
+    {
+        "slug": "n-body-simulator",
+        "title": "N-Body Simulator",
+        "date": "2026-04-09",
+        "summary": "A real-time gravitational N-body simulator in MATLAB: vectorized all-pairs forces, Velocity Verlet, collisions, energy monitoring and video export.",
+        "tags": ["Physics", "MATLAB", "Simulation"],
+        "cover": "content/posts/img/nbs.webp",
+        "file": "content/posts/n-body-simulator.md"
+    },
+    {
+        "slug": "scholarship",
+        "title": "RidScholarship",
+        "date": "2024-01-21",
+        "summary": "HSC 2023 results day: 48th in the general merit list and a Dhaka Board scholarship.",
+        "tags": ["Life"],
+        "file": "content/posts/scholarship.md"
+    }
+]

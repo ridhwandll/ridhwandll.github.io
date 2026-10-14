@@ -1,0 +1,65 @@
+{
+    "name": "Fahim Fuad",
+    "alias": "Rid",
+    "handle": "ridhwandll",
+    "role": "Graphics & Game Engine Programmer",
+    "location": "Bangladesh",
+    "affiliation": "Chemical Engineering, BUET",
+    "now": "Surge. Lately the Android export tooling and the particle system. Maybe I'll actually ship a game with it this time...",
+    "bio": [
+        "I'm Fahim Fuad, but most people online know me as Rid/Ridhwan. I'm from Bangladesh, currently persuing major in Chemical Engineering at BUET, and most of my free time goes into writing game engines and C++ libraries.",
+        "It started in 2020 with Spike & Electro, which was me following TheCherno's Game Engine series (read: copying/yoinking it). Spike supported OpenGL and DirectX 11(I added this as an extra on top of TheCherno's game engine series; DX11 was fun) as rendering backends, C# scripting and an editor, and it ran fine on a Radeon HD 5570 from 2011(I didn't have a good GPU yet back then to learn Vulkan). Surge is what came after: Vulkan, mobile-first, its own editor, and it exports straight to Android and Windows.",
+        "Side note: I was gone from programming world in 2022-2025 to focus on my studies and BUET entrance exam, so yeah my profile was dead during that time span",
+        "I mostly write C++. I've worked with Vulkan, OpenGL and DirectX 11, used PhysX before moving to Jolt, and implemented C# & Lua as a scripting language; I sometimes participate in Game Jams for fun",
+        "Apart from game engines, I am currently planning to open a YT channel (Come back Dani)",
+        "Away from the keyboard: Gym + Burgers + Unhinged personality. That's about it."
+    ],
+    "email": "fahimfuad.dev@gmail.com",
+    "resumePdf": "",
+    "socials": [
+        {
+            "label": "GitHub",
+            "handle": "ridhwandll",
+            "url": "https://github.com/ridhwandll",
+            "icon": "github"
+        },
+        {
+            "label": "Instagram",
+            "handle": "ridplayhate",
+            "url": "https://www.instagram.com/ridplayhate/",
+            "icon": "instagram"
+        },
+        {
+            "label": "Discord",
+            "handle": "Rid",
+            "url": "https://discord.com/users/776686994457362443",
+            "icon": "discord"
+        },
+        {
+            "label": "X / Twitter",
+            "handle": "@ridhwandll",
+            "url": "https://twitter.com/ridhwandll",
+            "icon": "x"
+        },
+        {
+            "label": "Facebook",
+            "handle": "ridplayhate",
+            "url": "https://www.facebook.com/ridplayhate/",
+            "icon": "facebook"
+        },
+        {
+            "label": "Steam",
+            "handle": "Rid88",
+            "url": "https://steamcommunity.com/id/Rid88/",
+            "icon": "steam"
+        },
+        {
+            "label": "Reddit",
+            "handle": "u/FahimFuad",
+            "url": "http://reddit.com/user/FahimFuad/",
+            "icon": "reddit"
+        }
+    ],
+    "nowUpdated": "Oct 2026",
+    "timezone": "Asia/Dhaka"
+}

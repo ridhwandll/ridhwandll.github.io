@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Projects | Fahim Fuad</title>
+    <meta name="description" content="Game engines, simulations, libraries and game jam games by Fahim Fuad.">
+    <meta name="theme-color" content="#070605">
+    <meta property="og:title" content="Projects | Fahim Fuad">
+    <meta property="og:description" content="Game engines, simulations, libraries and game jam games by Fahim Fuad.">
+    <meta property="og:image" content="https://ridhwandll.github.io/assets/img/projects/surge.webp">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="preload" href="../assets/fonts/EncodeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <script>try{if(sessionStorage.getItem('pt')){document.documentElement.classList.add('pt-enter');setTimeout(function(){document.documentElement.classList.remove('pt-enter')},1500)}}catch(e){}</script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/",
+            "marked": "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js",
+            "hljs/": "https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/es/"
+        }
+    }
+    </script>
+</head>
+<body data-section="projects">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="world" aria-hidden="true"></canvas>
+<header class="nav" data-nav></header>
+
+<main class="page" id="main">
+    <section class="page-head">
+        <div class="wrap">
+            <div class="scrim">
+                <h1 class="h-sec big">Projects</h1>
+                <p class="lede">Most of these are on my GitHub. You can find uncompleted engines, my game jam source code, C/C++ libraries made by me, experiments and coursework.</p>
+                <div class="filters reveal" id="filters" role="group" aria-label="Filter projects"></div>
+            </div>
+        </div>
+    </section>
+    <section class="wrap" style="padding-bottom:120px">
+        <div class="grid" id="grid"><p class="loading">loading</p></div>
+    </section>
+</main>
+
+<footer class="footer" data-footer></footer>
+<script type="module" src="../assets/js/pages/projects.js"></script>
+</body>
+</html>

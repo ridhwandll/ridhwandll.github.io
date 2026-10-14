@@ -1,0 +1,201 @@
+[
+    {
+        "slug": "surge",
+        "title": "Surge Engine",
+        "summary": "My current engine. C++20 on Vulkan, built to run on Android phones first and scale up on PC. It has its own editor, Jolt physics, Lua scripting, a particle system and one-click Android export.",
+        "year": "2021 - now",
+        "role": "Creator",
+        "category": "Engine",
+        "status": "Active",
+        "tags": [
+            "C++20",
+            "Vulkan",
+            "Jolt",
+            "Lua",
+            "Android"
+        ],
+        "cover": "assets/img/projects/surge.webp",
+        "page": "projects/surge/",
+        "repo": "https://github.com/ridhwandll/Surge_Expired",
+        "shape": "cube",
+        "featured": true
+    },
+    {
+        "slug": "nbody",
+        "title": "N-Body Gravitational Simulator",
+        "summary": "A gravity simulator I made in MATLAB for my ChE 208 course. Velocity Verlet integration, collisions, 16 presets from the Figure-8 orbit to a small solar system, and it can export a run as a video.",
+        "year": "2026",
+        "role": "Developer (ChE 208 project)",
+        "category": "Simulation",
+        "status": "Complete",
+        "tags": [
+            "MATLAB",
+            "Physics",
+            "Numerical methods"
+        ],
+        "cover": "assets/img/projects/nbody.webp",
+        "repo": "https://github.com/ridhwandll/NBodySim",
+        "links": [
+            {
+                "label": "Download v1.0",
+                "url": "https://github.com/ridhwandll/NBodySim/releases/tag/v1.0"
+            }
+        ],
+        "body": "content/projects/nbody.md",
+        "shape": "planet",
+        "featured": true
+    },
+    {
+        "slug": "spike",
+        "title": "Spike Engine",
+        "summary": "My first engine, and the one I learned on. C++17 with OpenGL and DirectX 11, C# scripting through Mono, Box2D and an editor. It ran fine on a Radeon HD 5570 from 2011.",
+        "year": "2020 - 2021",
+        "role": "Creator",
+        "category": "Engine",
+        "status": "Archived",
+        "tags": [
+            "C++17",
+            "OpenGL",
+            "DirectX 11",
+            "C#",
+            "Box2D"
+        ],
+        "cover": "assets/img/projects/spike-demo.webp",
+        "repo": "https://github.com/ridhwandll/Spike",
+        "gallery": [
+            "assets/img/projects/spike-demo.webp",
+            "assets/img/projects/spike-script.webp"
+        ],
+        "body": "content/projects/spike.md",
+        "shape": "cube",
+        "featured": true
+    },
+    {
+        "slug": "surgereflect",
+        "title": "SurgeReflect",
+        "summary": "A small C++17 reflection library that works with RTTI turned off. Surge still uses it.",
+        "year": "2021",
+        "role": "Creator",
+        "category": "Library",
+        "status": "Stable",
+        "tags": [
+            "C++17",
+            "Templates",
+            "Reflection"
+        ],
+        "repo": "https://github.com/ridhwandll/SurgeReflect",
+        "body": "content/projects/surgereflect.md",
+        "shape": "knot",
+        "featured": true
+    },
+    {
+        "slug": "shapesplitter",
+        "title": "ShapeSplitter",
+        "summary": "Made in 100 hours for the BUET CSE Game Jam.",
+        "year": "2026",
+        "role": "Game jam entry",
+        "category": "Game",
+        "status": "Jam build",
+        "tags": [
+            "C#",
+            "Game Jam"
+        ],
+        "repo": "https://github.com/ridhwandll/ShapeSplitter",
+        "shape": "planet",
+        "featured": true
+    },
+    {
+        "slug": "silentheels",
+        "title": "SilentHeels",
+        "summary": "Made in 7 days for the IUT Game Jam 2026.",
+        "year": "2026",
+        "role": "Game jam entry",
+        "category": "Game",
+        "status": "Jam build",
+        "tags": [
+            "C#",
+            "Game Jam"
+        ],
+        "repo": "https://github.com/ridhwandll/SilentHeels",
+        "shape": "helix",
+        "featured": true
+    },
+    {
+        "slug": "scuffedbloxx",
+        "title": "ScuffedBloxx",
+        "summary": "A game I made in a week with Surge, scripted in Lua.",
+        "year": "2026",
+        "role": "Developer",
+        "category": "Game",
+        "status": "Complete",
+        "tags": [
+            "Lua",
+            "Surge Engine"
+        ],
+        "repo": "https://github.com/ridhwandll/ScuffedBloxx",
+        "shape": "lattice",
+        "featured": true
+    },
+    {
+        "slug": "che24-treasure-hunt",
+        "title": "ChE '24 Treasure Hunt",
+        "summary": "A treasure hunt app for the BUET Chemical Engineering '24 reception.",
+        "year": "2026",
+        "role": "Developer",
+        "category": "App",
+        "status": "Complete",
+        "tags": [
+            "C#",
+            "Event app"
+        ],
+        "repo": "https://github.com/ridhwandll/ChE24_TreasureHunt",
+        "shape": "ring"
+    },
+    {
+        "slug": "runtime-api-switch",
+        "title": "Runtime Graphics API Switch",
+        "summary": "I wanted to know if switching graphics APIs at runtime gets faster without virtual functions. It doesn't: virtual calls were just as fast, sometimes faster.",
+        "year": "2021",
+        "role": "Experiment",
+        "category": "Library",
+        "status": "Experiment",
+        "tags": [
+            "C++",
+            "Benchmark",
+            "Shared libraries"
+        ],
+        "repo": "https://github.com/ridhwandll/RuntimeGraphcisAPISwitch",
+        "body": "content/projects/runtime-api-switch.md",
+        "shape": "lattice"
+    },
+    {
+        "slug": "raytracer",
+        "title": "RayTracer",
+        "summary": "Me working through Ray Tracing in One Weekend.",
+        "year": "2021",
+        "role": "Learning project",
+        "category": "Graphics",
+        "status": "Archived",
+        "tags": [
+            "C++",
+            "Path tracing"
+        ],
+        "cover": "assets/img/projects/raytracer.webp",
+        "repo": "https://github.com/ridhwandll/RayTracer",
+        "shape": "planet"
+    },
+    {
+        "slug": "tic-tac-toe",
+        "title": "Tic-Tac-Toe",
+        "summary": "My first C++ project, back in 2020.",
+        "year": "2020",
+        "role": "First project",
+        "category": "Archive",
+        "status": "Archived",
+        "tags": [
+            "C++"
+        ],
+        "repo": "https://github.com/ridhwandll/Tic-Tac-Toe",
+        "shape": "lattice"
+    }
+]
