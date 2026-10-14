@@ -314,7 +314,7 @@ async function renderFooter()
             <nav class="footer-links" aria-label="Social">
                 ${socials.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join('')}
             </nav>
-            <p class="footer-note">&copy; ${new Date().getFullYear()} ${esc(profile?.name ?? 'Fahim Fuad')}. Built by hand, the source is <a href="https://github.com/ridhwandll/ridhwandll.github.io" target="_blank" rel="noopener">on GitHub</a>.${updated ? ` Last updated ${updated}.` : ''}</p>
+            <p class="footer-note">&copy; ${new Date().getFullYear()} ${esc(profile?.name ?? 'Fahim Fuad')}. Built by hand, the source is <a href="https://github.com/ridhwandll/ridhwandll.github.io" target="_blank" rel="noopener">on GitHub</a>. <a href="#" data-consent-open>Cookie settings</a>.${updated ? ` Last updated ${updated}.` : ''}</p>
         </div>`;
 }
 
