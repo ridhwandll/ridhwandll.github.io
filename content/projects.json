@@ -21,6 +21,29 @@
         "featured": true
     },
     {
+        "slug": "scuffedbloxx",
+        "title": "ScuffedBloxx",
+        "summary": "A scuffed clone of the popular mobile game TowerBloxx I made in a week with Surge, scripted in Lua.",
+        "year": "2026",
+        "role": "Developer",
+        "category": "Game",
+        "status": "Complete",
+        "tags": [
+            "Lua",
+            "Surge Engine"
+        ],
+        "cover": "assets/img/projects/scuffedbloxx.png",
+        "repo": "https://github.com/ridhwandll/ScuffedBloxx",
+        "links": [
+            {
+                "label": "Download",
+                "url": "https://ridhwandll.itch.io/scuffedbloxx"
+            }
+        ],
+        "shape": "lattice",
+        "featured": true
+    },
+    {
         "slug": "nbody",
         "title": "N-Body Gravitational Simulator",
         "summary": "A gravity simulator I made in MATLAB for my ChE 208 course. Velocity Verlet integration, collisions, 16 presets from the Figure-8 orbit to a small solar system, and it can export a run as a video.",
@@ -91,7 +114,7 @@
     {
         "slug": "shapesplitter",
         "title": "ShapeSplitter",
-        "summary": "Made in 100 hours for the BUET CSE Game Jam.",
+        "summary": "Made in 100 hours for the BUET CSE Fest Game Jam.",
         "year": "2026",
         "role": "Game jam entry",
         "category": "Game",
@@ -101,8 +124,7 @@
             "Game Jam"
         ],
         "repo": "https://github.com/ridhwandll/ShapeSplitter",
-        "shape": "planet",
-        "featured": true
+        "shape": "planet"
     },
     {
         "slug": "silentheels",
@@ -117,24 +139,7 @@
             "Game Jam"
         ],
         "repo": "https://github.com/ridhwandll/SilentHeels",
-        "shape": "helix",
-        "featured": true
-    },
-    {
-        "slug": "scuffedbloxx",
-        "title": "ScuffedBloxx",
-        "summary": "A game I made in a week with Surge, scripted in Lua.",
-        "year": "2026",
-        "role": "Developer",
-        "category": "Game",
-        "status": "Complete",
-        "tags": [
-            "Lua",
-            "Surge Engine"
-        ],
-        "repo": "https://github.com/ridhwandll/ScuffedBloxx",
-        "shape": "lattice",
-        "featured": true
+        "shape": "helix"
     },
     {
         "slug": "che24-treasure-hunt",
@@ -166,7 +171,8 @@
         ],
         "repo": "https://github.com/ridhwandll/RuntimeGraphcisAPISwitch",
         "body": "content/projects/runtime-api-switch.md",
-        "shape": "lattice"
+        "shape": "lattice",
+        "featured": true
     },
     {
         "slug": "raytracer",
