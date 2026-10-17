@@ -115,6 +115,6 @@ It's mainly targeted towards game engines. It can be used for various purposes, 
 
 ## Projects and products using SurgeReflect
 
-- [Surge](https://discord.gg/kFcyut8ZvR)
+- [Surge](https://github.com/ridhwandll/Surge_Expired)
 
 Feel free to make  a PR or an issue with your project name and link if you are using SurgeReflect!

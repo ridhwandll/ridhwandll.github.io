@@ -45,6 +45,25 @@
         "featured": true
     },
     {
+        "slug": "surgereflect",
+        "title": "SurgeReflect",
+        "summary": "A small C++17 reflection library that works with RTTI turned off. Surge still uses it with some internal modifications.",
+        "year": "2021",
+        "role": "Creator",
+        "category": "Library",
+        "status": "Stable",
+        "tags": [
+            "C++17",
+            "Templates",
+            "Reflection"
+        ],
+        "cover": "assets/img/projects/SurgeReflect.png",
+        "repo": "https://github.com/ridhwandll/SurgeReflect",
+        "body": "content/projects/surgereflect.md",
+        "shape": "knot",
+        "featured": true
+    },
+    {
         "slug": "nbody",
         "title": "N-Body Gravitational Simulator",
         "summary": "A gravity simulator I made in MATLAB for my ChE 208 course. Velocity Verlet integration, collisions, 16 presets from the Figure-8 orbit to a small solar system, and it can export a run as a video.",
@@ -92,24 +111,6 @@
         ],
         "body": "content/projects/spike.md",
         "shape": "cube",
-        "featured": true
-    },
-    {
-        "slug": "surgereflect",
-        "title": "SurgeReflect",
-        "summary": "A small C++17 reflection library that works with RTTI turned off. Surge still uses it.",
-        "year": "2021",
-        "role": "Creator",
-        "category": "Library",
-        "status": "Stable",
-        "tags": [
-            "C++17",
-            "Templates",
-            "Reflection"
-        ],
-        "repo": "https://github.com/ridhwandll/SurgeReflect",
-        "body": "content/projects/surgereflect.md",
-        "shape": "knot",
         "featured": true
     },
     {
