@@ -40,6 +40,7 @@
                 "url": "https://ridhwandll.itch.io/scuffedbloxx"
             }
         ],
+        "body": "content/projects/scuffedbloxx.md",
         "shape": "lattice",
         "featured": true
     },
