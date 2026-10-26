@@ -1,9 +1,8 @@
 // Resume: content/resume.json + profile. Printable (Ctrl+P / the button) as a clean one-column PDF.
-import { $, esc, url, getProfile, getResume, startWorld, initReveal } from '../site.js';
+import { $, esc, url, getProfile, getResume, initReveal } from '../site.js';
 
 async function main()
 {
-    startWorld({ shape: 'galaxy', layout: { x: 0.9, y: 0.2 } });
     const [profile, resume] = await Promise.all([getProfile(), getResume()]);
 
     $('#resume-actions').innerHTML = `
@@ -31,10 +30,10 @@ async function main()
                 <h1>${esc(profile.name)}</h1>
                 <p>${esc(resume.headline || profile.role)}</p>
             </div>
-            <div class="tile resume-contact reveal">
+            <div class="tile resume-contact reveal" data-title="Contact">
                 ${contact.map(c => `<a href="${esc(c.href)}" ${/^https?:/.test(c.href) ? 'target="_blank" rel="noopener"' : ''}><span>${esc(c.label)}</span><b>${esc(c.value)}</b></a>`).join('')}
             </div>
-            <div class="tile resume-skills reveal">
+            <div class="tile resume-skills reveal" data-title="Skills">
                 ${(resume.skills || []).map(g => `<h3>${esc(g.group)}</h3><p>${g.items.map(esc).join(' · ')}</p>`).join('')}
                 ${resume.languages?.length ? `<h3>Languages</h3><p>${resume.languages.map(esc).join(' · ')}</p>` : ''}
             </div>

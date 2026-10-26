@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Fahim Fuad | Graphics &amp; Game Engine Programmer</title>
     <meta name="description" content="Fahim Fuad (Rid): graphics and game engine programmer from Bangladesh. Creator of Surge, a mobile-first Vulkan game engine.">
-    <meta name="theme-color" content="#070605">
+    <meta name="theme-color" content="#1a1a1a">
     <meta property="og:title" content="Fahim Fuad | Graphics, Game Engine Programmer">
     <meta property="og:description" content="Creator of Surge, a mobile-first Vulkan game engine. Projects, writing and resume.">
     <meta property="og:type" content="website">
@@ -13,15 +13,13 @@
     <meta property="og:image" content="https://ridhwandll.github.io/assets/img/projects/surge.webp">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
-    <link rel="preload" href="assets/fonts/EncodeSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/VT323-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/base.css">
     <script>try{if(sessionStorage.getItem('pt')){document.documentElement.classList.add('pt-enter');setTimeout(function(){document.documentElement.classList.remove('pt-enter')},1500)}}catch(e){}</script>
     <script type="importmap">
     {
         "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
-            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/",
             "marked": "https://cdn.jsdelivr.net/npm/marked@12.0.2/lib/marked.esm.js",
             "hljs/": "https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.9.0/es/"
         }
@@ -32,30 +30,33 @@
 </head>
 <body data-section="top">
 <a class="skip" href="#about">Skip to content</a>
-<canvas id="world" aria-hidden="true"></canvas>
 <header class="nav" data-nav></header>
 
 <main class="page">
-    <section class="hero" id="top" data-shape="galaxy" data-x="0" data-y="-0.34" data-y-mobile="-0.3">
-        <div class="hero-center">
-            <p class="hero-kicker" id="hero-kicker">graphics, game engines &amp; high-performance applications programmer; Oh yeah and a professional dumbass?</p>
-            <h1 class="hero-name" id="hero-name"><span class="word">FAHIM</span> <span class="word accent">FUAD</span></h1>
-            <p class="hero-role" id="hero-role">I mostly write game engines and libraries in C++. Right now working on <a href="projects/project.html?id=surge">Surge</a>.</p>
-            <div class="btns hero-btns">
-                <a class="btn btn-amber" href="projects/">See my projects</a>
-                <a class="btn btn-amber" href="resume/">Resume</a>
+    <section class="hero" id="top">
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <pre class="hud" id="hud" aria-hidden="true"></pre>
+        <div class="wrap hero-grid">
+            <div>
+                <p class="hero-kicker">graphics, game engines &amp; high-performance applications programmer; oh yeah and a professional dumbass?</p>
+                <h1 class="hero-name" id="hero-name" aria-label="Fahim Fuad"><span class="word" aria-hidden="true">FAHIM</span><span class="word" aria-hidden="true">FUAD</span></h1>
+                <p class="hero-role">I mostly write game engines and libraries in C++. Right now working on <a href="projects/project.html?id=surge">Surge</a>.</p>
+                <div class="btns">
+                    <a class="btn btn-amber" href="projects/">See my projects</a>
+                    <a class="btn" href="resume/">Resume</a>
+                </div>
+            </div>
+            <div class="console tile" data-title="Console | SurgePlayer.exe">
+                <pre id="boot" aria-label="Engine startup log"></pre>
             </div>
         </div>
-        <div class="hero-foot">
-            <p class="hero-meta" id="hero-meta">(psst, click the empty space)</p>
-            <p class="hero-meta" id="world-stats">&nbsp;</p>
-        </div>
-        <a class="scroll-cue" href="#about" aria-label="Scroll down"><span></span></a>
+        <p class="hero-hint" id="hero-hint">(psst, click the rocks)</p>
     </section>
 
-    <section class="section" id="about" data-shape="planet" data-x="0.6">
+    <section class="section" id="about">
         <div class="wrap">
-            <div class="left-col scrim">
+            <div class="left-col">
+                <p class="prompt"><b>PS D:\Rid&gt;</b> <i>Get-Content .\About.txt</i></p>
                 <h2 class="h-sec">Hey, I'm Rid.</h2>
                 <div class="bio" id="bio"><p class="loading">loading</p></div>
                 <p class="now" id="now"></p>
@@ -63,44 +64,37 @@
         </div>
     </section>
 
-    <section class="section" id="featured" data-shape="cube" data-x="0.62" data-y="0.02">
+    <section class="section" id="featured">
         <div class="wrap">
-            <div class="feature scrim" id="feature"><p class="loading">loading</p></div>
+            <p class="prompt"><b>PS D:\Rid&gt;</b> <i>Get-Process Surge | Format-List</i></p>
+            <div class="feature" id="feature"><p class="loading">loading</p></div>
         </div>
     </section>
 
-    <section class="rail-section" id="projects" data-shape="ring" data-x="0" data-y="-0.04">
-        <div class="rail-pin" id="rail-pin">
-            <div class="wrap rail-head">
-                <div class="scrim">
-                    <h2 class="h-sec">Other things I've made</h2>
-                    <p class="note">libraries, jams, experiments, coursework. <span class="rail-hint">keep scrolling.</span></p>
-                </div>
-                <div class="rail-meta">
-                    <span class="rail-count" id="rail-count">01 / 01</span>
-                    <span class="rail-bar"><i id="rail-progress"></i></span>
-                    <a class="text-link" href="projects/">all of them as a list</a>
-                </div>
-            </div>
-            <div class="rail-viewport" id="rail-viewport" aria-label="Projects">
-                <div class="rail-track" id="rail-track"></div>
-            </div>
+    <section class="section" id="projects">
+        <div class="wrap">
+            <p class="prompt"><b>PS D:\Rid&gt;</b> <i>Get-ChildItem .\Projects | Where-Object Featured</i></p>
+            <h2 class="h-sec">Other things I've made</h2>
+            <p class="note">libraries, jams, experiments, coursework. <a class="text-link" style="margin:0" href="projects/">all of them as a list</a></p>
+            <div class="grid" id="featured-grid"></div>
         </div>
     </section>
 
-    <section class="section" id="stack" data-shape="knot" data-x="0.6">
+    <section class="section" id="stack">
         <div class="wrap">
-            <div class="left-col scrim">
+            <div class="left-col">
+                <p class="prompt"><b>PS D:\Rid&gt;</b> <i>Get-Command -Module Rid</i></p>
                 <h2 class="h-sec">What I use</h2>
-                <p class="lede">Mostly C/C++, C#, lua and Vulkan Graphics API. Everything else depends on what the project needs; I can easily adapt to any programming language when needed (Python sucks).</p>
+                <p class="lede">Mostly C/C++, C#, Lua and Vulkan Graphics API. Everything else depends on what the project needs; I can easily adapt to any programming language when needed (Python sucks).</p>
                 <dl class="skills-list" id="skills"></dl>
             </div>
         </div>
     </section>
 
-    <section class="section" id="writing" data-shape="helix" data-x="0.64">
+    <section class="section" id="writing">
         <div class="wrap">
-            <div class="left-col scrim" style="max-width:720px">
+            <div class="left-col">
+                <p class="prompt"><b>PS D:\Rid&gt;</b> <i>Get-ChildItem .\Blog | Select-Object -First 3</i></p>
                 <h2 class="h-sec">Writing</h2>
                 <p class="note">I don't really post much. I should maybe rant more here...</p>
                 <ul class="post-list" id="posts"><li class="loading">loading</li></ul>
@@ -109,27 +103,13 @@
         </div>
     </section>
 
-    <section class="section contact" id="contact" data-shape="wave" data-x="0" data-y="-0.62">
-        <div class="wrap contact-grid">
-            <div class="contact-note scrim">
-                <h2 class="h-sec big">HIT ME UP</h2>
-                <p class="lede">Instagram is the fastest way to reach me. Engine talk, game jam teams, or just sending an unhinged reel! ALL ARE WELCOME</p>
-                <p class="clock" id="clock" hidden><i class="clock-dot"></i><span id="clock-text"></span></p>
-                <div class="btns" id="contact-cta"></div>
-                <div class="mail" id="mail"></div>
-            </div>
-            <div class="contact-card" id="contact-card" data-tilt="5">
-                <div class="cc-head">
-                    <img src="assets/img/mark.png" alt="" width="44" height="44" loading="lazy">
-                    <div>
-                        <b id="cc-name">Fahim Fuad</b>
-                        <span id="cc-role">graphics &amp; game engine programmer</span>
-                    </div>
-                    <span class="cc-handle" id="cc-handle">@ridhwandll</span>
-                </div>
-                <ul class="cc-links" id="socials"></ul>
-                <p class="cc-foot" id="cc-foot">Bangladesh</p>
-            </div>
+    <section class="section contact" id="contact">
+        <div class="wrap">
+            <p class="prompt"><b>PS D:\Rid&gt;</b> <i>Send-Message -To Rid</i></p>
+            <h2 class="h-sec big">HIT ME UP</h2>
+            <p class="lede">Instagram is the fastest way to reach me. Engine talk, game jam teams, or just sending an unhinged reel! ALL ARE WELCOME</p>
+            <div class="btns" id="contact-cta" style="margin-top:28px"></div>
+            <ul class="strip" id="socials" aria-label="Elsewhere"></ul>
         </div>
     </section>
 </main>

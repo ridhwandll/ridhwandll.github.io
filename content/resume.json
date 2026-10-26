@@ -154,7 +154,7 @@
                 "EnTT",
                 "Dear ImGui",
                 "Lua 5.4",
-                "mono",
+                "Mono",
                 "sol2",
                 "Basis Universal",
                 "cgltf",
@@ -177,7 +177,7 @@
             "group": "Others",
             "items": [
                 "Premiere Pro",
-                "Adobe Illustratior",
+                "Adobe Illustrator",
                 "Adobe Photoshop",
                 "Figma"
             ]

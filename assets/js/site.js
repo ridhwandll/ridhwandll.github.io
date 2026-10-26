@@ -92,7 +92,7 @@ export function initials(title)
     return title.replace(/[^A-Za-z]/g, '').slice(0, 2).toUpperCase();
 }
 
-// A voxel pattern unique to the project, for projects without a screenshot
+// A pixel pattern unique to the project, for projects without a screenshot
 export function generativeCover(seed, title, label = '')
 {
     let s = hash(seed);
@@ -111,15 +111,15 @@ export function generativeCover(seed, title, label = '')
             if (v > 0.62)
                 cells += `<rect x="${x * c + 2}" y="${y * c + 2}" width="${c - 4}" height="${c - 4}" fill="${ambers[Math.floor(rand() * ambers.length)]}" opacity="${(0.55 + rand() * 0.45).toFixed(2)}"/>`;
             else if (v > 0.35)
-                cells += `<rect x="${x * c + 2}" y="${y * c + 2}" width="${c - 4}" height="${c - 4}" fill="#2a231a"/>`;
+                cells += `<rect x="${x * c + 2}" y="${y * c + 2}" width="${c - 4}" height="${c - 4}" fill="#2a2a2a"/>`;
             else if (rand() < 0.05)
                 cells += `<rect x="${x * c + 14}" y="${y * c + 14}" width="12" height="12" fill="#ffa500" opacity=".5"/>`;
         }
     return `<svg class="gen-cover" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(title)}">
-        <rect width="640" height="400" fill="#110d08"/>${cells}
+        <rect width="640" height="400" fill="#141414"/>${cells}
         <rect x="24" y="268" width="132" height="108" fill="#ffa500"/>
-        <text x="90" y="340" text-anchor="middle" font-family="JetBrains Mono, monospace" font-weight="700" font-size="52" fill="#120c02">${esc(initials(title))}</text>
-        <text x="28" y="44" font-family="JetBrains Mono, monospace" font-size="15" fill="#efe8dc" opacity=".85">${esc(label.toLowerCase())}/</text>
+        <text x="90" y="350" text-anchor="middle" font-family="VT323, monospace" font-size="84" fill="#1a1a1a">${esc(initials(title))}</text>
+        <text x="28" y="48" font-family="VT323, monospace" font-size="28" fill="#ffd9a0" opacity=".85">${esc(label.toLowerCase())}\\</text>
     </svg>`;
 }
 
@@ -128,6 +128,22 @@ export function coverHTML(p, cls = '')
     if (p.cover)
         return `<img class="${cls}" src="${esc(url(p.cover))}" alt="${esc(p.title)}" loading="lazy" decoding="async">`;
     return generativeCover(p.slug, p.title, p.category || 'project');
+}
+
+// A project as an asset-browser card (Projects page and the home page)
+export function projectCard(p)
+{
+    return `
+        <a class="pcard tile reveal" href="${esc(projectHref(p))}" data-category="${esc(p.category)}">
+            <div class="cover">${coverHTML(p)}${p.status ? `<span class="status">${esc(p.status)}</span>` : ''}</div>
+            <div class="body">
+                <div class="meta"><span>${esc(p.category)}</span><span>${esc(p.year)}</span></div>
+                <h3>${esc(p.title)}</h3>
+                <p>${esc(p.summary)}</p>
+                <div class="tags">${(p.tags || []).slice(0, 4).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+                <span class="go">${p.page ? 'has its own site' : p.external ? 'external link' : p.body ? 'write-up' : 'readme'}</span>
+            </div>
+        </a>`;
 }
 
 // --- Markdown -------------------------------------------------------------------------------------
@@ -250,43 +266,6 @@ export async function renderMarkdown(text, { base, dropTitle = false } = {})
     return box;
 }
 
-// --- 3D world -------------------------------------------------------------------------------------
-
-export function webglAvailable()
-{
-    try
-    {
-        return !!(window.WebGL2RenderingContext && document.createElement('canvas').getContext('webgl2'));
-    }
-    catch { return false; }
-}
-
-// Starts the voxel background. Returns the world, or null when WebGL2 or the CDN is unavailable.
-export async function startWorld({ shape = 'planet', layout = {}, text, onStats } = {})
-{
-    const canvas = $('#world');
-    if (!canvas || !webglAvailable())
-    {
-        document.documentElement.classList.add('no-webgl');
-        return null;
-    }
-    try
-    {
-        const { VoxelWorld } = await import('./world.js');
-        const world = new VoxelWorld(canvas, { text, onStats });
-        await world.setShape(shape, layout);
-        world.start();
-        requestAnimationFrame(() => canvas.classList.add('ready'));
-        return world;
-    }
-    catch (err)
-    {
-        console.warn('[site] 3D disabled:', err);
-        document.documentElement.classList.add('no-webgl');
-        return null;
-    }
-}
-
 // --- Chrome ---------------------------------------------------------------------------------------
 
 function currentSection()
@@ -359,33 +338,20 @@ async function renderFooter()
         </div>`;
 }
 
-// Voxel-tile page transitions between internal pages
+// CRT page transitions between internal pages: the tube switches off to a line, the next page switches on
 function initTransitions()
 {
     const overlay = document.createElement('div');
-    overlay.className = 'pt';
+    overlay.className = 'crt';
     overlay.setAttribute('aria-hidden', 'true');
-    const cols = 8, rows = 5;
-    for (let y = 0; y < rows; y++)
-        for (let x = 0; x < cols; x++)
-        {
-            const t = document.createElement('i');
-            t.style.setProperty('--d', `${(x + y) * 28}ms`);
-            overlay.appendChild(t);
-        }
+    overlay.innerHTML = '<i></i>';
     document.body.appendChild(overlay);
 
-    const enter = document.documentElement.classList.contains('pt-enter');
-    if (enter)
+    if (document.documentElement.classList.contains('pt-enter'))
     {
-        overlay.classList.add('covered');
-        requestAnimationFrame(() => requestAnimationFrame(() =>
-        {
-            overlay.classList.remove('covered');
-            overlay.classList.add('reveal');
-            document.documentElement.classList.remove('pt-enter');
-            setTimeout(() => overlay.classList.remove('reveal'), 700);
-        }));
+        overlay.classList.add('on');
+        document.documentElement.classList.remove('pt-enter');
+        setTimeout(() => overlay.classList.remove('on'), 560);
     }
     try { sessionStorage.removeItem('pt'); } catch { /* storage blocked */ }
 
@@ -399,11 +365,11 @@ function initTransitions()
             return;
         e.preventDefault();
         try { sessionStorage.setItem('pt', '1'); } catch { /* storage blocked */ }
-        overlay.classList.add('cover');
-        setTimeout(() => { location.href = dest.href; }, 480);
+        overlay.classList.add('off');
+        setTimeout(() => { location.href = dest.href; }, 500);
     });
-    // Coming back through the bfcache: drop the cover
-    window.addEventListener('pageshow', (e) => { if (e.persisted) overlay.classList.remove('cover', 'covered'); });
+    // Coming back through the bfcache: switch the tube back on
+    window.addEventListener('pageshow', (e) => { if (e.persisted) overlay.classList.remove('off'); });
 }
 
 export function initReveal(root = document)
@@ -425,34 +391,6 @@ export function initReveal(root = document)
     });
 }
 
-// 3D tilt for cards: the card gets its own perspective so inner layers (translateZ) stay aligned
-export function initTilt(root = document)
-{
-    if (!finePointer || reducedMotion)
-        return;
-    $$('[data-tilt]:not([data-tilt-on])', root).forEach((el) =>
-    {
-        el.dataset.tiltOn = '';
-        const max = parseFloat(el.dataset.tilt) || 9;
-        el.addEventListener('pointermove', (e) =>
-        {
-            const r = el.getBoundingClientRect();
-            const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-            el.style.setProperty('--ry', `${(x - 0.5) * max * 2}deg`);
-            el.style.setProperty('--rx', `${(0.5 - y) * max * 2}deg`);
-            el.style.setProperty('--mx', `${x * 100}%`);
-            el.style.setProperty('--my', `${y * 100}%`);
-            el.classList.add('tilting');
-        });
-        el.addEventListener('pointerleave', () =>
-        {
-            el.style.setProperty('--rx', '0deg');
-            el.style.setProperty('--ry', '0deg');
-            el.classList.remove('tilting');
-        });
-    });
-}
-
 export function setTitle(t)
 {
     document.title = t ? `${t} | Fahim Fuad` : 'Fahim Fuad';
@@ -460,12 +398,9 @@ export function setTitle(t)
 
 renderNav();
 renderFooter();
-console.log('%cHey, you opened the console.', 'font: 700 14px sans-serif; color: #ffa500');
-console.log('The cubes are three.js, one InstancedMesh: assets/js/world.js. The engine I actually care about is at github.com/ridhwandll/Surge_Expired');
+console.log('%cHey, you opened the console.', 'font: 700 14px monospace; color: #ffa500');
+console.log('No engine here, just a 2D canvas: assets/js/pages/home.js. The engine I actually care about is at github.com/ridhwandll/Surge_Expired');
 initTransitions();
-document.addEventListener('DOMContentLoaded', () => { initReveal(); initTilt(); });
+document.addEventListener('DOMContentLoaded', () => initReveal());
 if (document.readyState !== 'loading')
-{
     initReveal();
-    initTilt();
-}

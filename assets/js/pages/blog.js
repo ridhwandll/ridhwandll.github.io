@@ -1,9 +1,8 @@
 // Blog index: posts from content/posts.json, filterable by tag.
-import { $, $$, esc, url, getPosts, startWorld, formatDate, initReveal } from '../site.js';
+import { $, $$, esc, url, getPosts, formatDate, initReveal } from '../site.js';
 
 async function main()
 {
-    startWorld({ shape: 'helix', layout: { x: 0.8 } });
     const posts = await getPosts();
     const tags = ['All', ...new Set(posts.flatMap(p => p.tags || []))];
     $('#filters').innerHTML = tags.map(t => `<button aria-pressed="${t === 'All'}" data-tag="${esc(t)}">#${esc(t.toLowerCase())}</button>`).join('');

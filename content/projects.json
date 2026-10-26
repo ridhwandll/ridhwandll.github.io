@@ -16,7 +16,6 @@
         ],
         "cover": "assets/img/projects/surge.webp",
         "repo": "https://github.com/ridhwandll/Surge_Expired",
-        "shape": "cube",
         "featured": true
     },
     {
@@ -39,7 +38,6 @@
                 "url": "https://ridhwandll.itch.io/scuffedbloxx"
             }
         ],
-        "shape": "lattice",
         "featured": true
     },
     {
@@ -57,7 +55,6 @@
         ],
         "cover": "assets/img/projects/SurgeReflect.png",
         "repo": "https://github.com/ridhwandll/SurgeReflect",
-        "shape": "knot",
         "featured": true
     },
     {
@@ -81,7 +78,6 @@
                 "url": "https://github.com/ridhwandll/NBodySim/releases/tag/v1.0"
             }
         ],
-        "shape": "planet",
         "featured": true
     },
     {
@@ -105,7 +101,6 @@
             "assets/img/projects/spike-demo.webp",
             "assets/img/projects/spike-script.webp"
         ],
-        "shape": "cube",
         "featured": true
     },
     {
@@ -120,8 +115,7 @@
             "C#",
             "Game Jam"
         ],
-        "repo": "https://github.com/ridhwandll/ShapeSplitter",
-        "shape": "planet"
+        "repo": "https://github.com/ridhwandll/ShapeSplitter"
     },
     {
         "slug": "silentheels",
@@ -135,8 +129,7 @@
             "C#",
             "Game Jam"
         ],
-        "repo": "https://github.com/ridhwandll/SilentHeels",
-        "shape": "helix"
+        "repo": "https://github.com/ridhwandll/SilentHeels"
     },
     {
         "slug": "che24-treasure-hunt",
@@ -150,8 +143,7 @@
             "C#",
             "Event app"
         ],
-        "repo": "https://github.com/ridhwandll/ChE24_TreasureHunt",
-        "shape": "ring"
+        "repo": "https://github.com/ridhwandll/ChE24_TreasureHunt"
     },
     {
         "slug": "runtime-api-switch",
@@ -167,7 +159,6 @@
             "Shared libraries"
         ],
         "repo": "https://github.com/ridhwandll/RuntimeGraphcisAPISwitch",
-        "shape": "lattice",
         "featured": true
     },
     {
@@ -183,8 +174,7 @@
             "Path tracing"
         ],
         "cover": "assets/img/projects/raytracer.webp",
-        "repo": "https://github.com/ridhwandll/RayTracer",
-        "shape": "planet"
+        "repo": "https://github.com/ridhwandll/RayTracer"
     },
     {
         "slug": "tic-tac-toe",
@@ -197,7 +187,6 @@
         "tags": [
             "C++"
         ],
-        "repo": "https://github.com/ridhwandll/Tic-Tac-Toe",
-        "shape": "lattice"
+        "repo": "https://github.com/ridhwandll/Tic-Tac-Toe"
     }
 ]

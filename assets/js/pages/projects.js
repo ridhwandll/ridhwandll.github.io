@@ -1,24 +1,8 @@
-// Projects index: filterable grid of tilted cards over a voxel lattice.
-import { $, $$, esc, getProjects, startWorld, projectHref, coverHTML, initReveal, initTilt } from '../site.js';
-
-export function projectCard(p)
-{
-    return `
-        <a class="pcard tile reveal" href="${esc(projectHref(p))}" data-tilt="6" data-category="${esc(p.category)}">
-            <div class="cover">${coverHTML(p)}${p.status ? `<span class="status">${esc(p.status)}</span>` : ''}</div>
-            <div class="body">
-                <div class="meta"><span>${esc(p.category)}</span><span>${esc(p.year)}</span></div>
-                <h3>${esc(p.title)}</h3>
-                <p>${esc(p.summary)}</p>
-                <div class="tags">${(p.tags || []).slice(0, 4).map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
-                <span class="go">${p.page ? 'has its own site' : p.external ? 'external link' : p.body ? 'write-up' : 'on GitHub'}</span>
-            </div>
-        </a>`;
-}
+// Projects index: a filterable grid of asset-browser cards.
+import { $, $$, esc, getProjects, projectCard, initReveal } from '../site.js';
 
 async function main()
 {
-    startWorld({ shape: 'lattice', layout: { x: 0.75, y: 0.1 } });
     const projects = await getProjects();
     const grid = $('#grid');
     const cats = ['All', ...new Set(projects.map(p => p.category))];
@@ -30,7 +14,6 @@ async function main()
         const list = cat === 'All' ? projects : projects.filter(p => p.category === cat);
         grid.innerHTML = list.map(projectCard).join('') || '<p class="empty">Nothing here yet.</p>';
         initReveal(grid);
-        initTilt(grid);
     };
     $('#filters').addEventListener('click', (e) =>
     {

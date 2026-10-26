@@ -16,7 +16,7 @@ Then open http://localhost:8000. If you edit a JSON file and see `Could not load
 ## 2. Where things are
 
 ```
-index.html                 Home (voxel name, about, featured, project scroller, stack, blog, contact)
+index.html                 Home (engine console + asteroids, about, featured, projects, stack, blog, contact)
 projects/index.html        All projects (filterable grid)
 projects/project.html      Generic project page: project.html?id=<slug>
 blog/index.html            All posts
@@ -34,7 +34,6 @@ content/resume.json        Resume sections and skills
 assets/img/projects/       Project covers and screenshots
 assets/css/base.css        All styling (colors are the variables at the top)
 assets/js/site.js          Nav links (NAV), footer, transitions, Markdown, covers
-assets/js/world.js         The 3D voxel world (shapes, cube count, lighting)
 assets/js/pages/*.js       One script per page
 ```
 
@@ -51,8 +50,7 @@ Edit `content/profile.json`:
 | `bio` | Paragraphs of the "Hey, I'm Rid." section. Write them the way you talk. |
 | `email` | Empty = hidden. Fill it to get a mail button on Contact and a line on the resume. |
 | `resumePdf` | Empty = hidden. Put a PDF at e.g. `assets/resume.pdf` and write that path to get a Download PDF button. |
-| `socials` | The contact card + footer links: `{ "label", "handle", "url", "icon" }`. `icon` is a file name from `assets/img/icons/` (github, discord, x, facebook, instagram, steam, reddit). For a new one, download its SVG from https://simpleicons.org into that folder; without an icon you get a generic link symbol. The Discord and GitHub entries also become the two buttons next to the card. |
-| `timezone` | Drives the live "It's 2:17 PM in Bangladesh right now" line on the contact section (an IANA name like `Asia/Dhaka`). Remove it to hide the line. |
+| `socials` | The platform strip at the end of the home page (and the footer on other pages): `{ "label", "handle", "url", "icon" }`. `icon` is a file name from `assets/img/icons/` (github, discord, x, facebook, instagram, steam, reddit). For a new one, download its SVG from https://simpleicons.org into that folder; without an icon you get a generic link symbol. The Instagram entry also becomes the "DM me on Instagram" button. `email` is added to the end of the strip. |
 
 ## 4. Projects
 
@@ -73,7 +71,6 @@ Every project is one object in `content/projects.json`. The order in the file is
     "links": [{ "label": "Play on itch.io", "url": "https://..." }],
     "gallery": ["assets/img/projects/my-game-1.webp", "assets/img/projects/my-game-2.webp"],
     "body": "content/projects/my-game.md",
-    "shape": "planet",
     "featured": true
 }
 ```
@@ -83,14 +80,13 @@ Every project is one object in `content/projects.json`. The order in the file is
 | `slug` | yes | Unique, lowercase, no spaces. It becomes the URL: `projects/project.html?id=my-game`. |
 | `title`, `summary`, `year`, `category` | yes | `category` builds the filter buttons on the Projects page automatically. |
 | `role`, `status`, `tags` | no | Shown as fact tiles and tags. |
-| `cover` | no | Without one, the site draws a unique voxel cover from the slug. 16:10 images look best; around 1280px wide WebP is plenty. |
+| `cover` | no | Without one, the site draws a unique pixel cover from the slug. 16:10 images look best; around 1280px wide WebP is plenty. |
 | `repo` | no | "Source on GitHub" button. The project page also shows the repo's README, fetched live from GitHub. |
 | `links` | no | Extra buttons (downloads, store pages, videos). |
 | `gallery` | no | Screenshots under the cover (click to enlarge). |
 | `body` | no | A Markdown write-up rendered on the project page instead of the GitHub README. |
 | `page` | no | The project has **its own website** inside the portfolio (see below). Cards link straight to it. |
 | `external` | no | The project lives **somewhere else** (a URL). Cards link straight to it. |
-| `shape` | no | The 3D shape behind the project page: `planet`, `cube`, `lattice`, `ring`, `knot`, `helix`, `galaxy`, `wave`, `none`. |
 | `featured` | no | `true` = shows in the project scroller on the home page. The first featured project is the big "featured" block. |
 
 ### Add a new project
@@ -145,7 +141,7 @@ Posts are sorted by `date` (YYYY-MM-DD), newest first. Add `"draft": true` to hi
 
 `content/resume.json` has a `summary`, a list of `sections` (each with `items`: `title`, `org`, `period`, optional `link` and `points`), `skills` groups and `languages`. Add or remove sections freely; they render in order. The skills groups also feed the "Stack" section on the home page.
 
-To make a PDF: open the Resume page and press **Print / save as PDF** (Ctrl+P). The print layout drops the 3D, nav and colors.
+To make a PDF: open the Resume page and press **Print / save as PDF** (Ctrl+P). The print layout drops the CRT effects, nav and colors.
 
 ## 7. Navigation
 
@@ -154,8 +150,10 @@ The nav is generated from the `NAV` array at the top of `assets/js/site.js`. Add
 ## 8. Look and feel
 
 - **Colors:** the variables at the top of `assets/css/base.css` (`--amber`, `--surface`, `--bg` ...).
-- **Fonts:** Encode Sans (text) and JetBrains Mono (typed things) are self-hosted in `assets/fonts/` (both OFL).
-- **3D world:** in `assets/js/world.js`, `VoxelWorld` picks 3600 cubes on desktop and 1400 on phones (`this.count`). On the home page each `<section>` chooses its shape with `data-shape`, and its position with `data-x` (-1 left ... 1 right) and `data-y`.
+- **Fonts:** VT323 (titles) and JetBrains Mono (everything else) are self-hosted in `assets/fonts/` (both OFL).
+- **CRT effects:** the scanlines, vignette and rolling bar are `body::before` / `body::after` near the top of `base.css`; the page-change effect is `.crt`.
+- **Panels:** any `.tile` with a `data-title="..."` gets an editor-style title bar.
+- **Home hero:** the startup log (`boot`) and the asteroid field (`asteroids`) are in `assets/js/pages/home.js`.
 
 ## 9. Publish
 
