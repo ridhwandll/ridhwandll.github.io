@@ -44,21 +44,27 @@ async function main()
     window.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.hidden = true; });
 
     // Body: the local write-up if there is one, otherwise the repo's README straight from GitHub
+    const body = $('#project-body');
+    const fetching = !p.body && p.repo;
+    if (fetching)
+        body.innerHTML = `<div class="prose tile" data-title="README.md | GitHub"><p class="fetching"><span class="spinner" aria-hidden="true"></span>Fetching README.md from GitHub</p></div>`;
     try
     {
         const readme = !p.body && await getReadme(p.repo);
         const box = p.body ? await renderMarkdown(await getText(p.body))
             : readme ? await renderMarkdown(readme.text, { base: readme, dropTitle: true }) : null;
+        body.replaceChildren();
         if (box)
         {
             box.className = 'prose tile reveal';
             box.dataset.title = readme ? 'README.md | GitHub' : `${p.slug}.md`;
-            $('#project-body').appendChild(box);
+            body.appendChild(box);
         }
     }
     catch (err)
     {
         console.warn(err);
+        body.innerHTML = fetching ? `<div class="prose tile" data-title="README.md | GitHub"><p class="fetching">Couldn't load the README right now. <a href="${esc(p.repo)}" target="_blank" rel="noopener">Read it on GitHub</a>.</p></div>` : '';
     }
 
     const prev = projects[(index - 1 + projects.length) % projects.length];

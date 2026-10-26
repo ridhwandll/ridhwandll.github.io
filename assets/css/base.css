@@ -93,6 +93,10 @@ body::before
 .loading { color: var(--dim); }
 .loading::after { content: '_'; animation: blink 1s steps(1) infinite; }
 .empty { padding: 40px; text-align: center; color: var(--muted); }
+.fetching { display: flex; align-items: center; gap: 14px; margin: 0; color: var(--muted); }
+.fetching a { color: var(--amber); }
+.spinner { flex: none; width: 16px; height: 16px; border: 2px solid var(--line); border-top-color: var(--amber); border-right-color: var(--amber); box-shadow: var(--glow); animation: spin 0.8s steps(8) infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
 .caret { display: inline-block; width: 0.6em; height: 1.15em; vertical-align: -0.22em; background: var(--amber); box-shadow: var(--glow); animation: blink 1s steps(1) infinite; }
 
 /* A PowerShell prompt line above headings: PS D:\Rid> Get-Something */
