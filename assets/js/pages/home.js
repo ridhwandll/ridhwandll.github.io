@@ -21,7 +21,7 @@ async function main()
     renderHeroName(profile);
     renderAbout(profile);
     renderFeature(projects);
-    const main = projects.find(x => x.featured && x.page) || projects[0];
+    const main = projects.find(x => x.featured) || projects[0];
     buildRail(projects.filter(p => p.featured && p !== main));
     renderSkills(resume.skills || []);
     renderPosts(posts.slice(0, 3));
@@ -120,7 +120,7 @@ function renderAbout(profile)
 
 function renderFeature(projects)
 {
-    const p = projects.find(x => x.featured && x.page) || projects[0];
+    const p = projects.find(x => x.featured) || projects[0];
     if (!p)
         return;
     $('#feature').innerHTML = `

@@ -9,7 +9,7 @@
                     "title": "Surge Engine",
                     "org": "Creator",
                     "period": "2021 - Present // 2022 - 2025 Absent",
-                    "link": "projects/surge/",
+                    "link": "projects/project.html?id=surge",
                     "points": [
                         "Vulkan 1.1 renderer for Windows x64 and Android arm64, with a render graph that works out barriers and skips passes that have nothing to draw.",
                         "Instancing, cascaded shadows, GTAO, HDR bloom, a GPU-friendly particle system and a retained-mode game UI & shader reflection via SPIR-V Cross",

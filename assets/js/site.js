@@ -156,29 +156,70 @@ async function loadMarkdown()
     return mdTools;
 }
 
-// Paths inside Markdown are relative to the site root, like everywhere else in content/
-export async function renderMarkdown(text)
+// README of a GitHub repo as { text, raw, blob }: raw and blob are the URLs its relative images and links
+// resolve against. null when the repo has no README. Cached per tab, since the API allows 60 calls/hour.
+export async function getReadme(repo)
+{
+    const m = /github\.com\/([^/]+)\/([^/#?]+)/.exec(repo || '');
+    if (!m)
+        return null;
+    const name = `${m[1]}/${m[2].replace(/\.git$/, '')}`;
+    try
+    {
+        const hit = sessionStorage.getItem(`readme:${name}`);
+        if (hit)
+            return JSON.parse(hit);
+    }
+    catch (e) {}
+    const r = await fetch(`https://api.github.com/repos/${name}/readme`);
+    if (r.status === 404)
+        return null;
+    if (!r.ok)
+        throw new Error(`${name} README: ${r.status}`);
+    const j = await r.json();
+    const bytes = Uint8Array.from(atob(j.content.replace(/\s/g, '')), c => c.charCodeAt(0));
+    const readme = { text: new TextDecoder().decode(bytes), raw: j.download_url, blob: j.html_url };
+    try { sessionStorage.setItem(`readme:${name}`, JSON.stringify(readme)); } catch (e) {}
+    return readme;
+}
+
+const EMOJI = { heavy_check_mark: '✔️', white_check_mark: '✅', x: '❌', warning: '⚠️', construction: '🚧' };
+
+// Paths inside Markdown are relative to the site root, like everywhere else in content/.
+// For a README pass base (from getReadme) so they point back into the repo, and dropTitle to skip its # Title.
+export async function renderMarkdown(text, { base, dropTitle = false } = {})
 {
     const { marked, hljs } = await loadMarkdown();
     const box = document.createElement('div');
     box.innerHTML = marked.parse(text.replace(/^﻿/, ''), { gfm: true });
+    const resolve = (h, dir) => base ? new URL(h, dir).href : url(h);
     $$('img', box).forEach((img) =>
     {
-        img.src = url(img.getAttribute('src'));
+        img.src = resolve(img.getAttribute('src'), base?.raw);
         img.loading = 'lazy';
         img.decoding = 'async';
     });
+    if (base)
+        $$('source[srcset]', box).forEach(s => { s.srcset = resolve(s.getAttribute('srcset'), base.raw); });
     $$('a[href]', box).forEach((a) =>
     {
         const h = a.getAttribute('href');
-        if (/^https?:/.test(h))
+        if (h.startsWith('#'))
+            return;
+        a.href = resolve(h, base?.blob);
+        if (/^https?:/.test(a.getAttribute('href')))
         {
             a.target = '_blank';
             a.rel = 'noopener';
         }
-        else if (!h.startsWith('#'))
-            a.href = url(h);
     });
+    // GitHub emoji shortcodes, outside code
+    const walk = document.createTreeWalker(box, NodeFilter.SHOW_TEXT);
+    for (let n; (n = walk.nextNode());)
+        if (!n.parentElement.closest('pre, code'))
+            n.textContent = n.textContent.replace(/:([a-z_]+):/g, (s, k) => EMOJI[k] || s);
+    if (dropTitle)
+        $('h1', box)?.remove();
     // The page title is the only h1: demote headings inside the article
     if ($('h1', box))
         for (let lvl = 5; lvl >= 1; lvl--)

@@ -15,7 +15,6 @@
             "Android"
         ],
         "cover": "assets/img/projects/surge.webp",
-        "page": "projects/surge/",
         "repo": "https://github.com/ridhwandll/Surge_Expired",
         "shape": "cube",
         "featured": true
@@ -40,7 +39,6 @@
                 "url": "https://ridhwandll.itch.io/scuffedbloxx"
             }
         ],
-        "body": "content/projects/scuffedbloxx.md",
         "shape": "lattice",
         "featured": true
     },
@@ -59,7 +57,6 @@
         ],
         "cover": "assets/img/projects/SurgeReflect.png",
         "repo": "https://github.com/ridhwandll/SurgeReflect",
-        "body": "content/projects/surgereflect.md",
         "shape": "knot",
         "featured": true
     },
@@ -84,7 +81,6 @@
                 "url": "https://github.com/ridhwandll/NBodySim/releases/tag/v1.0"
             }
         ],
-        "body": "content/projects/nbody.md",
         "shape": "planet",
         "featured": true
     },
@@ -109,7 +105,6 @@
             "assets/img/projects/spike-demo.webp",
             "assets/img/projects/spike-script.webp"
         ],
-        "body": "content/projects/spike.md",
         "shape": "cube",
         "featured": true
     },
@@ -172,7 +167,6 @@
             "Shared libraries"
         ],
         "repo": "https://github.com/ridhwandll/RuntimeGraphcisAPISwitch",
-        "body": "content/projects/runtime-api-switch.md",
         "shape": "lattice",
         "featured": true
     },

@@ -1,5 +1,5 @@
-// Generic project page: projects/project.html?id=<slug>, filled from content/projects.json (+ optional Markdown body).
-import { $, $$, esc, url, getProjects, getText, startWorld, projectHref, coverHTML, renderMarkdown, setTitle, initReveal, initTilt } from '../site.js';
+// Generic project page: projects/project.html?id=<slug>, filled from content/projects.json (+ Markdown body or GitHub README).
+import { $, $$, esc, url, getProjects, getText, getReadme, startWorld, projectHref, coverHTML, renderMarkdown, setTitle, initReveal, initTilt } from '../site.js';
 
 async function main()
 {
@@ -56,18 +56,21 @@ async function main()
     lb.addEventListener('click', () => { lb.hidden = true; });
     window.addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.hidden = true; });
 
-    if (p.body)
+    // Body: the local write-up if there is one, otherwise the repo's README straight from GitHub
+    try
     {
-        try
+        const readme = !p.body && await getReadme(p.repo);
+        const box = p.body ? await renderMarkdown(await getText(p.body))
+            : readme ? await renderMarkdown(readme.text, { base: readme, dropTitle: true }) : null;
+        if (box)
         {
-            const box = await renderMarkdown(await getText(p.body));
             box.className = 'prose tile reveal';
             $('#project-body').appendChild(box);
         }
-        catch (err)
-        {
-            console.warn(err);
-        }
+    }
+    catch (err)
+    {
+        console.warn(err);
     }
 
     const prev = projects[(index - 1 + projects.length) % projects.length];

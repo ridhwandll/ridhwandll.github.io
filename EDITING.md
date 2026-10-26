@@ -19,7 +19,6 @@ Then open http://localhost:8000. If you edit a JSON file and see `Could not load
 index.html                 Home (voxel name, about, featured, project scroller, stack, blog, contact)
 projects/index.html        All projects (filterable grid)
 projects/project.html      Generic project page: project.html?id=<slug>
-projects/surge/            Surge's own website (a project with its own page)
 blog/index.html            All posts
 blog/post.html             One post: post.html?p=<slug>
 resume/index.html          Resume (print button makes a clean PDF)
@@ -85,14 +84,14 @@ Every project is one object in `content/projects.json`. The order in the file is
 | `title`, `summary`, `year`, `category` | yes | `category` builds the filter buttons on the Projects page automatically. |
 | `role`, `status`, `tags` | no | Shown as fact tiles and tags. |
 | `cover` | no | Without one, the site draws a unique voxel cover from the slug. 16:10 images look best; around 1280px wide WebP is plenty. |
-| `repo` | no | "Source on GitHub" button. |
+| `repo` | no | "Source on GitHub" button. The project page also shows the repo's README, fetched live from GitHub. |
 | `links` | no | Extra buttons (downloads, store pages, videos). |
 | `gallery` | no | Screenshots under the cover (click to enlarge). |
-| `body` | no | A Markdown write-up rendered on the project page. |
+| `body` | no | A Markdown write-up rendered on the project page instead of the GitHub README. |
 | `page` | no | The project has **its own website** inside the portfolio (see below). Cards link straight to it. |
 | `external` | no | The project lives **somewhere else** (a URL). Cards link straight to it. |
 | `shape` | no | The 3D shape behind the project page: `planet`, `cube`, `lattice`, `ring`, `knot`, `helix`, `galaxy`, `wave`, `none`. |
-| `featured` | no | `true` = shows in the project scroller on the home page. The first featured project with a `page` is the big "featured" block. |
+| `featured` | no | `true` = shows in the project scroller on the home page. The first featured project is the big "featured" block. |
 
 ### Add a new project
 
@@ -105,17 +104,14 @@ Every project is one object in `content/projects.json`. The order in the file is
 
 You'll have projects in one of three states. Pick the matching recipe:
 
-**a) It's a GitHub repo with a README.** (This is how N-Body, Spike, SurgeReflect and the API-switch experiment were added.)
-1. Add the JSON entry with `"repo"`.
-2. Copy the README into `content/projects/<slug>.md`. Delete its first `# Title` line (the page already shows the title).
-3. Fix images: relative README images like `![](Output/Shot.png)` won't resolve here. Either download them into `assets/img/projects/` and write `assets/img/projects/shot.webp`, or use the raw GitHub URL `https://raw.githubusercontent.com/ridhwandll/<Repo>/<branch>/Output/Shot.png`.
-4. Set `"body": "content/projects/<slug>.md"`.
+**a) It's a GitHub repo with a README.**
+Add the JSON entry with `"repo"`. That's it: the project page fetches the README from GitHub every visit, so editing the README on GitHub updates the site. Its first `# Title` is dropped (the page already shows the title), and relative images and links point back into the repo. If you'd rather write something different from the README, set `"body"` and the local Markdown is used instead.
 
-**b) It already has its own website** (static HTML/CSS/JS, like Surge's site).
+**b) It already has its own website** (static HTML/CSS/JS).
 1. Copy the whole site folder to `projects/<slug>/` (its `index.html` must be at `projects/<slug>/index.html`).
 2. Make sure its links to its own files are **relative** (`assets/app.js`, not `/assets/app.js`), because it now lives in a subfolder.
 3. Add the JSON entry with `"page": "projects/<slug>/"`. Every card and the home page scroller now open it directly.
-4. Give visitors a way back: add this anywhere in its header (Surge's page uses the same thing, styled in its CSS as `.crumb`):
+4. Give visitors a way back: add this anywhere in its header:
    ```html
    <a href="../../">&lt;- Fahim Fuad</a> / <a href="../">projects</a>
    ```
